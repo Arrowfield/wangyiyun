@@ -1,0 +1,301 @@
+$my-color : #D33A31;
+
+section {
+  #my-container {
+    width: 1100px;
+    //border:1px solid red;
+    margin: 0 auto 1rem;
+
+    &>div:first-child {
+      display: flex;
+      margin-top: 2rem;
+      line-height: 31px;
+      font-weight: bold;
+
+      em:first-child {
+        font-family: my-font1;
+      }
+
+      i {
+        padding: 0 0.5rem;
+      }
+
+      em:last-child {
+        color: gray;
+        font-style: normal;
+      }
+    }
+
+    div.my-first {
+      margin-top: 1.2rem;
+      padding: 0rem 1.2rem;
+      border: 1px solid #ddd;
+      color: gray;
+      display: flex;
+
+      b {
+        width: 4rem;
+        height: 3rem;
+        padding-top: 0.8rem;
+      }
+
+      b:last-child {
+        cursor: pointer;
+      }
+
+      &>ul {
+        //margin-left:1.6rem;
+        padding: 0 2rem;
+        width: 920px;
+
+        li {
+          float: left;
+          margin-right: 1.8rem;
+          padding: 0.8rem 0;
+
+          a {
+            font-size: 0.8rem;
+            color: black;
+          }
+        }
+
+        li.my-hidden {
+          padding: 0;
+          display: none;
+        }
+
+        ul.my-ul {
+          padding-left: 0;
+        }
+      }
+    }
+
+    div.my-second {
+      padding: 0rem 1.2rem;
+      border-width: 0 1px 1px;
+      border-style: solid;
+      border-color: #ddd;
+      color: gray;
+      display: flex;
+
+      b {
+        width: 4rem;
+        height: 3rem;
+        padding-top: 0.8rem;
+      }
+
+      &>ul {
+        padding: 0 2rem;
+        width: 920px;
+
+        li {
+          float: left;
+          margin-right: 1.8rem;
+          padding: 0.8rem 0;
+
+          a {
+            font-size: 0.8rem;
+            color: black;
+          }
+        }
+      }
+
+      li {
+        div.my-choice {
+
+          line-height: 25px;
+
+          &>input {
+            width: 68px;
+            height: 30px;
+            vertical-align: bottom;
+          }
+
+          &>button {
+            width: 54px;
+            height: 30px;
+            font-size: 0.8rem;
+            background: #e0dfdf;
+            border: 0;
+            cursor: pointer;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          b:first-child {
+            font-size: 0.8rem;
+            color: gray;
+          }
+        }
+      }
+    }
+
+    &>h6.my-list {
+      font-weight: bold;
+      //font-size: 0.9rem;
+
+      b {
+        padding-left: 0.8rem;
+        color: gray;
+        font-size: 1.2rem;
+        font-style: normal;
+        cursor: pointer;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+
+    div.my-remen {
+      width: 1100px;
+      margin: 0 auto;
+
+      ul.my-ul {
+        display: flex;
+        width: 100%;
+        //border:1px solid gray;
+        //justify-content: space-between;
+        margin-top: 2.5rem;
+        flex-wrap: wrap;
+
+        li {
+          width: 263px;
+          margin-top:2rem;
+          margin-right:16px;
+          p>a {
+            display: block;
+            margin-top: 0.4rem;
+            height: 40px;
+            font-size: 0.8rem;
+            color: gray;
+          }
+
+          p {
+            margin: 0;
+
+            span {
+              color: red;
+            }
+          }
+
+          img {
+            background: rgb(245, 248, 248);
+            width: 263px;
+            height: 263px;
+          }
+        }
+        li:nth-child(4n){
+          margin-right:0;
+        }
+      }
+    }
+  }
+}
+
+nav {
+  width: 440px;
+  margin: 0 auto;
+  text-align: center;
+
+  ul {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      text-align: center;
+      line-height: 32px;
+      margin-right: 10px;
+      border: 1px solid gray;
+      &:hover{
+        border:1px solid black;
+      }
+    }
+
+    li:last-child {
+      margin-right: 0;
+      width: 70px;
+      padding: 0 0.6rem;
+    }
+
+    li:first-child {
+      width: 70px;
+      padding: 0 0.6rem;
+    }
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.active {
+  background: #D33A31;
+}
+
+aside {
+  position: fixed;
+  top: 25%;
+  left: 93%;
+  z-index: 1;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      width: 60px;
+      text-align: center;
+      height: 60px;
+      padding: 1.1rem 0.6rem;
+      color: gray;
+      font-size: 0.7rem;
+      background: wheat;
+      cursor: pointer;
+    }
+
+    li:first-child {
+      cursor: auto;
+    }
+
+    li:nth-child(2) {
+      padding: 1.1rem 0.3rem;
+      cursor: auto;
+    }
+
+    li:nth-child(3) {
+      i {
+        position: relative;
+
+        span {
+          position: absolute;
+          top: -6px;
+          left: 11px;
+          z-index: 1;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          font-size: 12px;
+          background: red;
+          color: white;
+          text-align:center;
+        }
+      }
+    }
+    li:last-child{
+      padding-bottom:1.2rem;
+      height:47px;
+      padding-top:0;
+      display: none;
+    }
+  }
+}

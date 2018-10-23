@@ -1,0 +1,118 @@
+//设置字体溢出显示省略号的方法定义
+@mixin my-text() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+section {
+  div.my-container {
+    margin: 1rem auto 0;
+    width: 1100px;
+
+    b.my-b:first-child {
+      display: inline-block;
+      padding-bottom: 0.8rem;
+      margin-top: 0.8rem;
+    }
+
+    hr {
+      background: black;
+    }
+
+    ul.my-choice {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding-bottom: 3rem;
+
+      li:first-child {
+        padding-left: 1.1rem;
+      }
+    }
+
+    div.my-all {
+      line-height: 36px;
+      background: rgb(221, 217, 217);
+
+      b {
+        display: inline-block;
+        line-height: 39px;
+        height: 39px;
+        padding-left: 3rem;
+      }
+
+      b:nth-child(2) {
+        float: right;
+        padding-right: 3rem;
+      }
+    }
+
+    i.icon-manjian {
+      font-size: 1.5rem;
+      vertical-align: -4.5px;
+    }
+
+    ul.my-list {
+      margin-bottom:3rem;
+      li{
+        padding: 1.1rem 1.1rem;
+        border-bottom:1px solid gray;
+        display: flex;
+        img{
+          background: rgb(202, 201, 201);
+        }
+        p.my-detail{
+          margin-left:1.1rem;
+          width:340px;
+          a{
+            display: block;
+            font-size:0.8rem;
+            color:gray;
+            @include my-text;
+          }
+        }
+      }
+      .my-b0{
+        padding-bottom:0.1rem;
+        height:20px;
+        margin-top:8px;
+      }
+      li:last-child{
+        padding:0 0 0 20px;
+        height: 30px;
+        input{
+          margin-top:10px;
+        }
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  hr {
+    margin-top: 0;
+  }
+
+  .my-input {
+    width: 20px;
+    height: 20px;
+    border: 1px solid gray;
+    background: white;
+    vertical-align: -4px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 0.8rem;
+  }
+  input.my-center{
+    vertical-align: middle;
+  }
+  b{
+    font-style:normal;
+    display: inline-block;
+  }
+}

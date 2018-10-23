@@ -1,0 +1,127 @@
+section div.my-container {
+  margin: 1rem auto 0;
+  width: 1100px;
+}
+
+section div.my-container b.my-b:first-child {
+  display: inline-block;
+  padding-bottom: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+section div.my-container hr {
+  background: black;
+}
+
+section div.my-container ul.my-choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 3rem;
+}
+
+section div.my-container ul.my-choice li:first-child {
+  padding-left: 1.1rem;
+}
+
+section div.my-container div.my-all {
+  line-height: 36px;
+  background: #ddd9d9;
+}
+
+section div.my-container div.my-all b {
+  display: inline-block;
+  line-height: 39px;
+  height: 39px;
+  padding-left: 3rem;
+}
+
+section div.my-container div.my-all b:nth-child(2) {
+  float: right;
+  padding-right: 3rem;
+}
+
+section div.my-container i.icon-manjian {
+  font-size: 1.5rem;
+  vertical-align: -4.5px;
+}
+
+section div.my-container ul.my-list {
+  margin-bottom: 3rem;
+}
+
+section div.my-container ul.my-list li {
+  padding: 1.1rem 1.1rem;
+  border-bottom: 1px solid gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section div.my-container ul.my-list li img {
+  background: #cac9c9;
+}
+
+section div.my-container ul.my-list li p.my-detail {
+  margin-left: 1.1rem;
+  width: 340px;
+}
+
+section div.my-container ul.my-list li p.my-detail a {
+  display: block;
+  font-size: 0.8rem;
+  color: gray;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+section div.my-container ul.my-list .my-b0 {
+  padding-bottom: 0.1rem;
+  height: 20px;
+  margin-top: 8px;
+}
+
+section div.my-container ul.my-list li:last-child {
+  padding: 0 0 0 20px;
+  height: 30px;
+}
+
+section div.my-container ul.my-list li:last-child input {
+  margin-top: 10px;
+}
+
+section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+section hr {
+  margin-top: 0;
+}
+
+section .my-input {
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  background: white;
+  vertical-align: -4px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+
+section input.my-center {
+  vertical-align: middle;
+}
+
+section b {
+  font-style: normal;
+  display: inline-block;
+}
+/*# sourceMappingURL=cart.css.map */
