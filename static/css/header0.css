@@ -252,8 +252,52 @@ header div.my-change::after {
   color: white;
 }
 
-.modal-header:span:nth-child(2) {
-  float: right;
+.modal-header > span:nth-child(2) {
   color: gainsboro;
+  cursor: pointer;
+}
+
+.modal-header > span:nth-child(2):hover {
+  color: gray;
+}
+
+.modal-body {
+  padding: 44px 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-body div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.modal-body div:nth-child(1) button {
+  width: 203px;
+  border-radius: 5px;
+  color: white;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.modal-body div:nth-child(1) button:nth-child(2) {
+  background: url("../img/header01/button2.png") no-repeat;
 }
 /*# sourceMappingURL=header0.css.map */

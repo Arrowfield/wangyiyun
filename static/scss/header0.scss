@@ -244,8 +244,33 @@ header div.my-change::after {
   background: #2D2D2D;
   padding:0.6rem 0.8rem;
   color: white;
-  &:span:nth-child(2){
-    float:right;
+  &>span:nth-child(2){
     color:gainsboro;
+    cursor: pointer;
+    &:hover{
+      color:gray;
+    }
+  }
+}
+.modal-body{
+  padding:44px 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  div:nth-child(1){
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+    button{
+      width:203px;
+      border-radius:5px;
+      color:white;
+      margin:1rem 0;
+      text-align: center;
+    }
+    button:nth-child(2){
+      background: url("../img/header01/button2.png") no-repeat;
+    }
   }
 }
