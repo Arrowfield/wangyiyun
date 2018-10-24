@@ -299,5 +299,6 @@ header div.my-change::after {
 
 .modal-body div:nth-child(1) button:nth-child(2) {
   background: url("../img/header01/button2.png") no-repeat;
+  background-position: 0 416px;
 }
 /*# sourceMappingURL=header0.css.map */
