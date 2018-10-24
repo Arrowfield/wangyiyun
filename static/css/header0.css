@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .my-fontsize {
   font-size: 0.8rem;
 }
@@ -238,5 +239,21 @@ header div.my-change::after {
 
 .active2 {
   background: black;
+}
+
+/*有关模态框的样式的编写*/
+.modal-content {
+  margin-top: 40%;
+}
+
+.modal-header {
+  background: #2D2D2D;
+  padding: 0.6rem 0.8rem;
+  color: white;
+}
+
+.modal-header:span:nth-child(2) {
+  float: right;
+  color: gainsboro;
 }
 /*# sourceMappingURL=header0.css.map */
