@@ -148,6 +148,7 @@ header .my-padding {
     }
   }
   div.my-login{
+    overflow: visible !important;
     a{
       display: inline-block;
       color:gray;
@@ -156,6 +157,10 @@ header .my-padding {
       padding-left:0.2rem;
       &:hover{
         color:lightgray;
+      }
+      &:focus{
+        outline:none;
+        border:none;
       }
     }
   }

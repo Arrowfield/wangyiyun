@@ -151,6 +151,10 @@ header .my-padding > div:nth-child(5):hover div.my-hidden {
   display: block;
 }
 
+header .my-padding div.my-login {
+  overflow: visible !important;
+}
+
 header .my-padding div.my-login a {
   display: inline-block;
   color: gray;
@@ -161,6 +165,11 @@ header .my-padding div.my-login a {
 
 header .my-padding div.my-login a:hover {
   color: lightgray;
+}
+
+header .my-padding div.my-login a:focus {
+  outline: none;
+  border: none;
 }
 
 div.my-hidden {
