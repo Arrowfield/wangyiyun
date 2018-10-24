@@ -94,3 +94,11 @@ em,i,b {
   text-align: left;
   font-size: inherit;
 }
+button:focus{
+    outline: none;
+}
+ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
