@@ -81,4 +81,32 @@ $(function () {
   $('[data-download=app]').click(function(){
     alert("即将下载app...");
   })
+  //功能：播放音乐的功能
+  $('[data-play=play]').click(function(){
+    //alert("进行歌曲播放");
+    $i = $(this);
+    if($i.hasClass('icon-bofang')){
+      $i.removeClass('icon-bofang').addClass('icon-plus-pause');
+    }else{
+      $i.removeClass('icon-plus-pause').addClass('icon-bofang');
+    }
+  })
+  //功能：实现拖动的功能
+  var $parent = $('.my-progress');
+  var $child = $('.my-profress>div');
+  $('.my-progress>div').mousedown(function(e){
+    //鼠标按下事件 获取当前div的left/right
+    var isMove = true;
+    var x = e.pageX - $('.my-progress').offset().left;
+    var y = e.pageY - $('.my-progress').offset().top;
+    console.log($('.my-progress').offset().left);
+    $(document).mousemove(function(e){
+      if(isMove){
+        if($child.css("left")<0){$child.css("left",0)}
+        $('.my-progress>div').css({left:e.pageX-x,top:-3});//offset 移动的
+      }
+    }).mouseup(function(){
+      isMove = false;
+    });
+  })
 })
