@@ -628,14 +628,23 @@ section ul {
 aside.aside-bottom {
   width: 100%;
   position: fixed;
-  top: 52%;
+  top: 92%;
   left: 0;
   background: #776e6e url(../img/index/playbar.png) repeat;
   background-position: left -3px;
   height: 51px;
   z-index: 1;
+  opacity: 0;
   outline: 1px solid rgba(0, 0, 0, 0.4);
   /*伪元素表示在当前的元素之前或者之后进行值的插入*/
+}
+
+aside.aside-bottom i {
+  cursor: pointer;
+}
+
+aside.aside-bottom:hover {
+  opacity: 1;
 }
 
 aside.aside-bottom > div.aside-play {
@@ -669,42 +678,125 @@ aside.aside-bottom > div.aside-play div.my-control {
 aside.aside-bottom > div.aside-play div.my-control a {
   color: white;
   text-decoration: none;
+  padding-top: 1px;
 }
 
 aside.aside-bottom > div.aside-play div.my-control a i {
   font-size: 25px;
   /*36 28*/
+  color: gray;
 }
 
 aside.aside-bottom > div.aside-play div.my-control a:nth-child(2) {
-  margin: 0 8px;
+  margin: 0 10px;
+  padding-bottom: 2px;
 }
 
 aside.aside-bottom > div.aside-play div.my-control a:nth-child(2) i {
-  font-size: 36px;
+  font-size: 34px;
+  color: white;
 }
 
-aside.aside-bottom > div.aside-play div.center-item img {
-  float: left;
+aside.aside-bottom > div.aside-play div.center-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 35px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 51px;
+}
+
+aside.aside-bottom > div.aside-play div.center-item div.img-item {
+  margin-right: 20px;
+}
+
+aside.aside-bottom > div.aside-play div.center-item div.img-item img {
+  border-radius: 3px;
+  border: 1px solid black;
+}
+
+aside.aside-bottom > div.aside-play div.center-item > div:nth-child(2) {
+  padding-top: 3px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
 }
 
 aside.aside-bottom > div.aside-play div.center-item em {
   font-size: 0.6rem;
+  margin-right: 10px;
 }
 
-aside.aside-bottom > div.aside-play div.center-item em:nth-child(2) {
+aside.aside-bottom > div.aside-play div.center-item > div > em:nth-child(1) {
   color: white;
 }
 
-aside.aside-bottom > div.aside-play div.center-item em:nth-child(3) {
+aside.aside-bottom > div.aside-play div.center-item > div > em:nth-child(2) {
   color: gray;
 }
 
 aside.aside-bottom > div.aside-play div.center-item div.my-progress {
   width: 493px;
-  height: 5px;
+  height: 10px;
   background: #000;
-  opacity: 0.2;
+  opacity: 0.8;
+  border-radius: 30px;
+  margin-top: 4px;
+  position: relative;
+}
+
+aside.aside-bottom > div.aside-play div.center-item div.my-progress > div {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  margin-top: -3px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+aside.aside-bottom > div.aside-play div.center-item div.my-progress > div > i {
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  z-index: 2;
+  background: red;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  margin-left: -3.5px;
+  margin-top: -3.5px;
+}
+
+aside.aside-bottom > div.aside-play div.center-item span {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 6px;
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+aside.aside-bottom > div.aside-play div.center-item span i {
+  color: gray;
+}
+
+aside.aside-bottom > div.aside-play div.right-item i {
+  color: gray;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+aside.aside-bottom > div.aside-play div.my-volume {
+  margin-left: 27px;
+}
+
+aside.aside-bottom > div.aside-play div.my-volume i {
+  font-size: 18px;
+  color: gray;
+  margin-right: 2px;
 }
 
 aside.aside-bottom div.btn-hide {
@@ -716,5 +808,14 @@ aside.aside-bottom div.btn-hide {
   background: url(../img/index/playbar.png) no-repeat;
   background-position: 0 -383px;
   position: absolute;
+}
+
+aside.aside-bottom div.btn-hide span {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 17px;
+  color: gray;
+  cursor: pointer;
 }
 /*# sourceMappingURL=index.css.map */

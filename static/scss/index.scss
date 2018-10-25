@@ -630,17 +630,20 @@ section {
 aside.aside-bottom {
   width: 100%;
   position: fixed;
-  top: 52%;
+  top: 92%;
   left: 0;
+  i{
+    cursor: pointer;
+  }
   background: rgb(119, 110, 110) url(../img/index/playbar.png) repeat;
   background-position:left -3px; 
   height: 51px;
   z-index: 1;
-  //opacity: 0;
+  opacity: 0;
   //box-shadow:0 -3px 5px #888888;/*边框阴影*/
   outline:1px solid rgba(00, 00, 00, 0.4);
   &:hover {
-    //opacity: 1;
+    opacity: 1;
   }
   &>div.aside-play{
     margin:0 auto;
@@ -655,35 +658,104 @@ aside.aside-bottom {
       a{
         color:white;
         text-decoration: none;
+        padding-top:1px;
         i{
           font-size:25px;/*36 28*/
+          color:gray;
+          
         }
       }
       a:nth-child(2){ 
-        margin:0 8px;
+        margin:0 10px;
+        padding-bottom :2px;
         i{
-          font-size:36px;
+          font-size:34px;
+          color:white;
         }
       }
     }
     div.center-item{
-      img{
-        float: left;
+      display: flex;
+      margin-right:35px;
+      align-items: center;
+      height:51px;
+      div.img-item{
+        //border-radius: 10px;
+        margin-right:20px;
+        //border:1px solid black;
+        img{
+          border-radius:3px;
+          border:1px solid black;
+        }
+      }
+      &>div:nth-child(2){
+        padding-top:3px;
+        align-self: stretch;
       }
       em{
         font-size:0.6rem;
+        margin-right:10px;
       }
-      em:nth-child(2){
+      &>div>em:nth-child(1){
         color:white;
       }
-      em:nth-child(3){
+      &>div>em:nth-child(2){
         color:gray;
       }
       div.my-progress{
         width:493px;
-        height:5px;
+        height:10px;
         background: #000;
-        opacity: 0.2;
+        opacity: 0.8;
+        border-radius:30px;
+        margin-top:4px;
+        position: relative;
+        &>div{
+          width:15px;
+          height:15px;
+          background: #fff;
+          border-radius: 50%;
+          margin-top:-3px;
+          position: absolute;
+          left:0;
+          top:0;
+          &>i{
+            width:7px;
+            height:7px;
+            position: absolute;
+            z-index: 2;
+            background: red;
+            border-radius: 50%;
+            top:50%;
+            left:50%;
+            margin-left:-3.5px;
+            margin-top:-3.5px;
+          }
+        }
+      }
+      span{
+        align-self: flex-end;
+        margin-bottom: 6px;
+        margin-left:16px;
+        font-size: 14px;
+        i{
+          color:gray;
+        }
+      }
+    }
+    div.right-item{
+      i{
+        color:gray;
+        font-size: 18px;
+        margin-left:10px;
+      }
+    }
+    div.my-volume{
+      margin-left:27px;
+      i{
+        font-size: 18px;
+        color:gray;
+        margin-right:2px;
       }
     }
   }
@@ -697,5 +769,13 @@ aside.aside-bottom {
     background: url(../img/index/playbar.png) no-repeat;
     background-position: 0 -383px;
     position: absolute;
+    span{
+      position: absolute;
+      z-index: 1;
+      top:0;
+      left:17px;
+      color:gray;
+      cursor:pointer
+    }
   }
 }
