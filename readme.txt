@@ -8,3 +8,9 @@
 /*git pull --rebase origin master*/
 /*git push -u origin master*/
 /*git remote set-url origin https://github.com/Arrowfield/Supermarket.git*/
+(4)服务器的类别：
+	1、phonegap；
+	2、php；
+	3、node；
+	4、ngoke；
+	5、local；
