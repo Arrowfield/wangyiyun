@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*只要有三个以上的项目水平居中显示的方式*/
 section div.my-container {
   min-width: 1349px;
 }
@@ -627,7 +628,7 @@ section ul {
 aside.aside-bottom {
   width: 100%;
   position: fixed;
-  top: 92%;
+  top: 52%;
   left: 0;
   background: #776e6e url(../img/index/playbar.png) repeat;
   background-position: left -3px;
@@ -641,6 +642,69 @@ aside.aside-bottom > div.aside-play {
   margin: 0 auto;
   width: 980px;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+aside.aside-bottom > div.aside-play div.my-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 40px;
+}
+
+aside.aside-bottom > div.aside-play div.my-control a {
+  color: white;
+  text-decoration: none;
+}
+
+aside.aside-bottom > div.aside-play div.my-control a i {
+  font-size: 25px;
+  /*36 28*/
+}
+
+aside.aside-bottom > div.aside-play div.my-control a:nth-child(2) {
+  margin: 0 8px;
+}
+
+aside.aside-bottom > div.aside-play div.my-control a:nth-child(2) i {
+  font-size: 36px;
+}
+
+aside.aside-bottom > div.aside-play div.center-item img {
+  float: left;
+}
+
+aside.aside-bottom > div.aside-play div.center-item em {
+  font-size: 0.6rem;
+}
+
+aside.aside-bottom > div.aside-play div.center-item em:nth-child(2) {
+  color: white;
+}
+
+aside.aside-bottom > div.aside-play div.center-item em:nth-child(3) {
+  color: gray;
+}
+
+aside.aside-bottom > div.aside-play div.center-item div.my-progress {
+  width: 493px;
+  height: 5px;
+  background: #000;
+  opacity: 0.2;
 }
 
 aside.aside-bottom div.btn-hide {

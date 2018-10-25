@@ -20,7 +20,12 @@ $my-width5:673.22/3px;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
+/*只要有三个以上的项目水平居中显示的方式*/
+@mixin my-center(){
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 section {
   div.my-container {
     min-width: 1349px; //设置最小宽度
@@ -625,7 +630,7 @@ section {
 aside.aside-bottom {
   width: 100%;
   position: fixed;
-  top: 92%;
+  top: 52%;
   left: 0;
   background: rgb(119, 110, 110) url(../img/index/playbar.png) repeat;
   background-position:left -3px; 
@@ -641,6 +646,46 @@ aside.aside-bottom {
     margin:0 auto;
     width:980px;
     color:white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    div.my-control{
+      @include my-center();
+      margin-right:40px;
+      a{
+        color:white;
+        text-decoration: none;
+        i{
+          font-size:25px;/*36 28*/
+        }
+      }
+      a:nth-child(2){ 
+        margin:0 8px;
+        i{
+          font-size:36px;
+        }
+      }
+    }
+    div.center-item{
+      img{
+        float: left;
+      }
+      em{
+        font-size:0.6rem;
+      }
+      em:nth-child(2){
+        color:white;
+      }
+      em:nth-child(3){
+        color:gray;
+      }
+      div.my-progress{
+        width:493px;
+        height:5px;
+        background: #000;
+        opacity: 0.2;
+      }
+    }
   }
   /*伪元素表示在当前的元素之前或者之后进行值的插入*/
   div.btn-hide{
