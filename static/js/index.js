@@ -93,20 +93,29 @@ $(function () {
   })
   //功能：实现拖动的功能
   var $parent = $('.my-progress');
-  var $child = $('.my-profress>div');
-  $('.my-progress>div').mousedown(function(e){
-    //鼠标按下事件 获取当前div的left/right
-    var isMove = true;
-    var x = e.pageX - $('.my-progress').offset().left;
-    var y = e.pageY - $('.my-progress').offset().top;
-    console.log($('.my-progress').offset().left);
-    $(document).mousemove(function(e){
-      if(isMove){
-        if($child.css("left")<0){$child.css("left",0)}
-        $('.my-progress>div').css({left:e.pageX-x,top:-3});//offset 移动的
-      }
-    }).mouseup(function(){
-      isMove = false;
-    });
+  var $child = $('.my-progress>div')
+  var leftPar = $parent.offset().left;//相对页面的偏移量
+  var topPar = $parent.offset().top;
+  var isMove = false;
+  var offset,offsetY;
+  //鼠标属性有offsetX/pagex/clientX 
+  $child.mousedown(function(e){
+    //设置鼠标在中间才触发事件
+    isMove = true;
+    offsetX = e.offsetX;
+    offsetY = e.offsetY;
+    //console.log(offsetX,offsetY);
+  })
+  .mouseup(function(){
+    isMove = false;
+  })
+  $(document).mousemove(function(e){
+    if(isMove){
+      //var top = e.clientY - offsetY-topPar;
+      var left = e.clientX - offsetX-leftPar;
+      if(left < 0){left = 0}
+      if(left > 480 ){left = 480}
+      $child.css({"left":left});
+    }
   })
 })

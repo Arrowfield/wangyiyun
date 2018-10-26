@@ -634,7 +634,7 @@ aside.aside-bottom {
   background-position: left -3px;
   height: 51px;
   z-index: 1;
-  opacity: 0;
+  opacity: 1;
   outline: 1px solid rgba(0, 0, 0, 0.4);
   /*伪元素表示在当前的元素之前或者之后进行值的插入*/
 }
@@ -756,6 +756,11 @@ aside.aside-bottom > div.aside-play div.center-item div.my-progress > div {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+aside.aside-bottom > div.aside-play div.center-item div.my-progress > div:hover {
+  -webkit-box-shadow: gray 0 0 10px;
+          box-shadow: gray 0 0 10px;
 }
 
 aside.aside-bottom > div.aside-play div.center-item div.my-progress > div > i {
