@@ -75,6 +75,11 @@ a:hover {
 a,a *,.f-hand,.f-hand * {
     cursor: pointer;
 }*/
+*,*::before,*::after {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
 @font-face {
   font-family: "my-font0";
   src: url(../font/font0.ttf);

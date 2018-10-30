@@ -1,0 +1,30 @@
+html,body{
+  width:100%;
+}
+.main-box{
+  width:100%;
+  height:100%;
+  color:gray;
+}
+.main-box>div{
+  width:100%;
+  // height:600px;
+}
+.my-bg1{
+  background :url("../img/yinyueren/bg1.jpg") no-repeat;
+}
+.my-bg2{
+  background:red url("../img/yinyueren/bg2.jpg") no-repeat;
+}
+.my-bg3{
+  background:red url("../img/yinyueren/bg3.jpg") no-repeat;
+}
+.my-bg4{
+  background: url("../img/yinyueren/bg1.jpg") no-repeat;
+}
+.my-bg5{
+  background:red url("../img/yinyueren/bg2.jpg") no-repeat;
+}
+.my-bg6{
+  background:red url("../img/yinyueren/bg3.jpg") no-repeat;
+}
