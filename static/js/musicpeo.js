@@ -25,7 +25,7 @@ $(document).ready(function(){
         return;
       }
       //console.log($key);
-      $('body,html').stop().animate({'scrollTop':$('.main-box>div').eq($key).offset().top},700,function(){
+      $('body,html').stop().animate({'scrollTop':$('.main-box>div').eq($key).offset().top},1000,function(){
         canscroll = true;
       })
     }
@@ -36,7 +36,7 @@ function changeSize(){
   var window_height = $(window).height();
   $('.main-box>div').css('height',window_height);
   //console.log(window_height);
-  $('body,html').stop().animate({'scrollTop':$('.main-box>div').eq($key).offset().top},700,function(){
+  $('body,html').stop().animate({'scrollTop':$('.main-box>div').eq($key).offset().top},1000,function(){
     canscroll = true;
   })
 }
