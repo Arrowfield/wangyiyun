@@ -634,7 +634,7 @@ aside.aside-bottom {
   background-position: left -3px;
   height: 51px;
   z-index: 1;
-  opacity: 1;
+  opacity: 0;
   outline: 1px solid rgba(0, 0, 0, 0.4);
   /*伪元素表示在当前的元素之前或者之后进行值的插入*/
 }
@@ -822,5 +822,9 @@ aside.aside-bottom div.btn-hide span {
   left: 17px;
   color: gray;
   cursor: pointer;
+}
+
+.my-opacity {
+  opacity: 1 !important;
 }
 /*# sourceMappingURL=index.css.map */

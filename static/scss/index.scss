@@ -639,7 +639,7 @@ aside.aside-bottom {
   background-position:left -3px; 
   height: 51px;
   z-index: 1;
-  opacity: 1;
+  opacity: 0;
   //box-shadow:0 -3px 5px #888888;/*边框阴影*/上方设置阴影
   outline:1px solid rgba(00, 00, 00, 0.4);
   &:hover {
@@ -782,4 +782,7 @@ aside.aside-bottom {
       cursor:pointer
     }
   }
+}
+.my-opacity{
+  opacity: 1 !important;
 }
