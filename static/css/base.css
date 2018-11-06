@@ -1,7 +1,49 @@
-body {
+body,
+html {
   background: #f2f2f2;
+  width: 100%;
+  overflow-x: hidden;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "my-font0";
+  src: url(../font/font0.ttf);
+}
+
+@font-face {
+  font-family: "my-font1";
+  src: url(../font/font1.ttf);
+}
+
+.isHidden {
+  display: none;
+}
+
+em,
+i,
+b {
+  font-style: normal;
+  text-align: left;
+  font-size: inherit;
+}
+
+button:focus {
+  outline: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 /*body,html,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,header,menu,section,p,input,td,th {
   padding: 0;
   margin: 0;
@@ -75,35 +117,3 @@ a:hover {
 a,a *,.f-hand,.f-hand * {
     cursor: pointer;
 }*/
-*,*::before,*::after {
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
-}
-@font-face {
-  font-family: "my-font0";
-  src: url(../font/font0.ttf);
-}
-
-@font-face {
-  font-family: "my-font1";
-  src: url(../font/font1.ttf);
-}
-
-.isHidden {
-  display: none;
-}
-
-em,i,b {
-  font-style: normal;
-  text-align: left;
-  font-size: inherit;
-}
-button:focus{
-    outline: none;
-}
-ul{
-    margin:0;
-    padding:0;
-    list-style: none;
-}
