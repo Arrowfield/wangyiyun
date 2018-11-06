@@ -240,6 +240,8 @@ header div.my-change::after {
 .modal-content{
   margin-top:20%;
   width:590px;
+  height: 382px;
+  overflow: hidden;
 }
 .modal-header{
   background: #2D2D2D;
@@ -317,5 +319,10 @@ header div.my-change::after {
       background: url("../img/header01/logo.png") no-repeat;
       background-position: -271px -670px;
     }
+  }
+  .register{
+    width:100%;
+    height:100%;
+    border:1px solid gray;
   }
 }
