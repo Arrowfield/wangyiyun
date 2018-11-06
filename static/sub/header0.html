@@ -62,48 +62,75 @@
           <div class="login">
             <div class="modal-header">
               <span>登录</span>
-              <span data-dismiss="modal">&times;</span>  
+              <span data-dismiss="modal" data-change="change" class="my-times">&times;</span>
             </div>
             <div class="modal-body">
-            <div>
-              <img src="../img/header01/platform.png" width="247" alt="HTML5">
-              <button type="button">手机号登录</button>
-              <button data-reg="register" type="button">注册</button>
-            </div>
-            <ul>
-              <li>
-                <div></div><em>微信登录</em>
-              </li>
-              <li>
-                <div></div><em>QQ登录</em>
-              </li>
-              <li>
-                <div></div><em>微博登录</em>
-              </li>
-              <li>
-                <div></div><em>网易云邮箱账号登录</em>
-              </li>
-            </ul>
+              <div>
+                <img src="../img/header01/platform.png" width="247" alt="HTML5">
+                <button type="button">手机号登录</button>
+                <button data-reg="register" type="button">注册</button>
+              </div>
+              <ul>
+                <li>
+                  <div></div><em>微信登录</em>
+                </li>
+                <li>
+                  <div></div><em>QQ登录</em>
+                </li>
+                <li>
+                  <div></div><em>微博登录</em>
+                </li>
+                <li>
+                  <div></div><em>网易云邮箱账号登录</em>
+                </li>
+              </ul>
             </div>
           </div>
           <!--单击注册时显示-->
           <div class="register">
             <div class="modal-header">
               <span>手机号注册</span>
-              <span data-dismiss="modal">&times;</span>  
+              <span data-dismiss="modal" data-change="change" class="my-times">&times;</span>
             </div>
             <div class="register-body">
-              <div class="unews">
-                <label>用户名</label>
-                <input type="text" name="uname">
+              <label>手机号:</label>
+              <div class="select">
+                <select>
+                  <option>+86</option>
+                  <option>+852</option>
+                </select>
+                <input type="text" name="uname" placeholder="请输入手机号">
               </div>
-              <div class="unews">
-                <label>密码</label>
-                <input type="password" name="upwd">
-              </div>
+              <label>密码:</label>
+              <input type="password" name="upwd" placeholder="请输入密码，不得少于6位数">
+              <button data-check="check">下一步</button>
             </div>
             <div class="modal-footer">
-              <div><a href="javascript:">返回登录页 &gt;</a></div>
+              <div><a href="javascript:">&lt;返回登录页</a></div>
+            </div>
+          </div>
+          <!--显示验证码-->
+          <div class="check">
+            <div class="modal-header">
+              <span>手机号注册</span>
+              <span data-dismiss="modal" data-change="change" class="my-times">&times;</span>
+            </div>
+            <div class="register-body ">
+              <p class="my-p">你的手机号：<em>+86 181****8854</em></p>
+              <p>为了安全，我们会发送短信验证码</p>
+              <div class="inputs">
+                <input maxlength="1" type="text"/>
+                <input maxlength="1" type="text"/>
+                <input maxlength="1" type="text"/>
+                <input maxlength="1" type="text"/>
+              </div>
+              <div>
+                <span></span>
+              </div>
+              <button>下一步</button>
+            </div>
+            <div class="modal-footer">
+              <div><a href="javascript:" data-toLogin="toLogin">&lt;返回登录页</a></div>
             </div>
           </div>
         </div>
@@ -111,3 +138,4 @@
     </div>
   </div>
 </header>
+<!--有关跳转的思想：做成类似栈类型的数据结构-->

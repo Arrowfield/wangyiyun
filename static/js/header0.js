@@ -8,5 +8,16 @@ $(function(){
   //注册按钮事件的绑定、
   $('[data-reg=register]').click(function(){
     $('.login').css('display','none');
+    $('.register').css('display','block');
   })
+  //为下一步按钮绑定事件
+  $('[data-check=check]').click(function(){
+    $('.check').css('display','block').siblings().css('display','none')
+  })
+  //单击X号恢复初始状态
+  $('[data-change=change]').click(function(){
+    $('.login').css('display',"block").siblings().css('display','none')
+  })
+  //返回登录界面
+  //$()
 })
