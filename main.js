@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const session = require('express-session');
 const pro = require('./router/pro');
+const user = require('./router/user');
 var   app = express();
 app.listen(3000);
 app.use(session({
@@ -22,3 +23,4 @@ app.use(express.static('./static'));
 app.use(bodyParser.urlencoded({extended:false}));
 //挂载路由[使用路由器来管理路由]
 app.use('/pro',pro);
+app.use('/user',user);

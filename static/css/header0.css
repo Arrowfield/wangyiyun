@@ -497,4 +497,40 @@ header div.my-change::after {
 .modal .time a {
   display: none;
 }
+
+.modal .login-next {
+  display: none;
+}
+
+.modal .login-next .select {
+  margin: 40px 0 10px;
+}
+
+.modal .login-next .modal-footer.my-a {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal .login-next .modal-footer.my-a a {
+  font-size: 13px;
+  color: gray;
+}
+
+.modal .my-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+.modal .my-check input {
+  vertical-align: -2px;
+}
 /*# sourceMappingURL=header0.css.map */

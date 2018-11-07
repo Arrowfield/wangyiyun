@@ -67,7 +67,7 @@
             <div class="modal-body">
               <div>
                 <img src="../img/header01/platform.png" width="247" alt="HTML5">
-                <button type="button">手机号登录</button>
+                <button data-log="login" type="button">手机号登录</button>
                 <button data-reg="register" type="button">注册</button>
               </div>
               <ul>
@@ -119,20 +119,49 @@
               <p class="my-p">你的手机号：<em>+86 181****8854</em></p>
               <p>为了安全，我们会发送短信验证码</p>
               <div class="inputs">
-                <input maxlength="1" type="text" autofocus/>
-                <input maxlength="1" type="text"/>
-                <input maxlength="1" type="text"/>
-                <input maxlength="1" type="text"/>
+                <input maxlength="1" type="text" autofocus />
+                <input maxlength="1" type="text" />
+                <input maxlength="1" type="text" />
+                <input maxlength="1" type="text" />
               </div>
               <div class="time">
                 <span>验证码输入错误</span>
                 <em>60s</em>
                 <a href="javascript:">重新获取</a>
               </div>
-              <button>下一步</button>
+              <button data-success="success">下一步</button>
             </div>
             <div class="modal-footer">
               <div><a href="javascript:" data-toLogin="toLogin">&lt;返回登录页</a></div>
+            </div>
+          </div>
+          <!--手机登录界面-->
+          <div class="login-next">
+            <div class="modal-header">
+              <span>手机号登录</span>
+              <span data-dismiss="modal" data-change="change" class="my-times">&times;</span>
+            </div>
+            <div class="register-body">
+              <div class="select">
+                <select>
+                  <option>+86</option>
+                  <option>+852</option>
+                </select>
+                <input type="text" id="uname" name="uname" placeholder="请输入手机号">
+              </div>
+              <input type="password" id="upwd" name="upwd" placeholder="请输入密码">
+              <div class="my-check">
+                <div>
+                  <input type="checkbox">
+                  <em>自动登录</em>
+                </div>
+                <em>忘记密码？</em>
+              </div>
+              <button data-login="login">登录</button>
+            </div>
+            <div class="modal-footer my-a">
+              <div><a href="javascript:">&lt;返回登录页</a></div>
+              <a href="#">没有账号？免费注册&gt;</a>
             </div>
           </div>
         </div>
@@ -141,7 +170,6 @@
   </div>
   <template id="LoginSuccess">
     <div>
-      123
     </div>
   </template>
 </header>

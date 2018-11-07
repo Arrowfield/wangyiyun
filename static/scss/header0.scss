@@ -418,4 +418,27 @@ header div.my-change::after {
       display: none;
     }
   }
+  .login-next{
+    display:none;
+    .select{
+      margin:40px 0 10px;
+    }
+    .modal-footer.my-a{
+      justify-content: space-between;
+      a{
+        font-size:13px;
+        color:gray;
+      }
+    }
+  }
+  .my-check{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:10px;
+    input{
+      vertical-align: -2px;
+      
+    }
+  }
 }
