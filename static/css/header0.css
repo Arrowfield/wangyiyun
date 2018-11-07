@@ -98,6 +98,10 @@ header .my-padding > ul li:nth-child(6)::after {
   border-radius: 50px 50px;
 }
 
+header .my-padding div.my-exit {
+  display: none;
+}
+
 header .my-padding > div:nth-child(3) {
   border-radius: 50px 50px;
   margin: 1.2rem 0.2rem 1.2rem 4rem;
@@ -153,7 +157,7 @@ header .my-padding > div:nth-child(5)::after {
   content: "";
   position: absolute;
   z-index: 1;
-  left: 2.5rem;
+  left: 2rem;
   top: 2rem;
   border-width: 5px 5px 0;
   border-style: solid;
@@ -172,7 +176,7 @@ header .my-padding div.my-login a {
   display: inline-block;
   color: gray;
   font-size: 0.6rem;
-  padding-top: 0.39rem;
+  padding-top: 1.58rem;
   padding-left: 0.2rem;
 }
 

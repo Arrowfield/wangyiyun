@@ -81,6 +81,15 @@ $(function () {
     $.ajax({url: url,data: {uname,upwd},type: "POST",
       success: function (res) {
         console.log(res)
+        if(res.code ==1 ){
+          $('#demo').css("display","none");
+          $('.modal-backdrop.show').css('display','none');
+          $('.my-login').css("display","none");
+          alert('登录成功')
+          $('.my-exit').css('display','block');
+        }else{
+          alert('请检查用户名或密码')
+        }
       }
     })
   })
