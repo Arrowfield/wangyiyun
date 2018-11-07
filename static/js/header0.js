@@ -85,6 +85,7 @@ $(function () {
           $('#demo').css("display","none");
           $('.modal-backdrop.show').css('display','none');
           $('.my-login').css("display","none");
+          $('.my-hidden.my-after-login').css('display','none');
           alert('登录成功')
           $('.my-exit').css('display','block');
         }else{
