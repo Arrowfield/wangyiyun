@@ -375,7 +375,6 @@ header div.my-change::after {
 .modal .register {
   width: 100%;
   height: 100%;
-  border: 1px solid gray;
 }
 
 .modal .register-body {

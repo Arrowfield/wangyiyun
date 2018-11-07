@@ -39,4 +39,11 @@ $(function () {
       }
     }
   }
+  //组件封装（使用vue）
+  var LoginSuccess = Vue.component({
+    template:"",
+    data:function(){
+      return{}
+    }
+  }) 
 })

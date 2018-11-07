@@ -1,6 +1,6 @@
 header div.my-container {
   min-width: 1349px;
-  background: #f2f2f2;
+  background: white;
 }
 
 header div.my-container > div {
@@ -67,7 +67,7 @@ header div.my-container > div div:nth-child(2) div:first-child input:focus {
 header div.my-container > div div:nth-child(2) div:first-child i {
   font-size: 21px;
   font-weight: bold;
-  padding-top: 0.2rem;
+  padding-top: 0.15rem;
 }
 
 header div.my-container > div div:nth-child(2) > span {
@@ -106,7 +106,6 @@ header div.my-container > div div:nth-child(2) > div:last-child > div.my-hover {
 }
 
 header div.my-container > div div:nth-child(2) > div:last-child > div.my-hover.my-login {
-  background: #f2f2f2;
   border-radius: 0;
 }
 
