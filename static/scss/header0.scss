@@ -359,7 +359,7 @@ header div.my-change::after {
     }
   }
   .check .register-body{
-    padding-top:58px;
+    padding-top:30px;
   }
   .modal-footer{
     justify-content: start;
@@ -405,6 +405,17 @@ header div.my-change::after {
     em{
       vertical-align: bottom;
       color:black;
+    }
+  }
+  .time{
+    display: flex;
+    justify-content: space-between;
+    padding-top:8px;
+    span{
+      opacity: 0;
+    }
+    a{
+      display: none;
     }
   }
 }

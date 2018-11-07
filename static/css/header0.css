@@ -409,7 +409,7 @@ header div.my-change::after {
 }
 
 .modal .check .register-body {
-  padding-top: 58px;
+  padding-top: 30px;
 }
 
 .modal .modal-footer {
@@ -479,5 +479,23 @@ header div.my-change::after {
 .modal .my-p em {
   vertical-align: bottom;
   color: black;
+}
+
+.modal .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 8px;
+}
+
+.modal .time span {
+  opacity: 0;
+}
+
+.modal .time a {
+  display: none;
 }
 /*# sourceMappingURL=header0.css.map */

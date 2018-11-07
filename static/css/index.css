@@ -285,6 +285,7 @@ section div.my-container > div:nth-child(3) div.my-left div.my-car1 > div ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 10px;
 }
 
 section div.my-container > div:nth-child(3) div.my-left div.my-car1 > div ul li {
