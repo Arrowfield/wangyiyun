@@ -8,6 +8,10 @@ header > div.my-container {
   min-width: 1349px;
 }
 
+header > div.my-container .my-hidden.my-before-login {
+  display: none;
+}
+
 header .my-padding {
   width: 1079.19px;
   display: -webkit-box;

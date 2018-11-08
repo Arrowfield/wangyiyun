@@ -9,6 +9,9 @@ $myWidth:1079.19px;
 header>div.my-container {
   background: #242424;
   min-width: 1349px;
+  .my-hidden.my-before-login{
+    display: none;
+  }
 }
 
 header .my-padding {
@@ -445,4 +448,5 @@ header div.my-change::after {
       
     }
   }
+  
 }

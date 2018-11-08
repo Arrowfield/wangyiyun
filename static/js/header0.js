@@ -82,12 +82,16 @@ $(function () {
       success: function (res) {
         console.log(res)
         if(res.code ==1 ){
+          //隐藏模态框
           $('#demo').css("display","none");
           $('.modal-backdrop.show').css('display','none');
+          //隐藏登录界面
           $('.my-login').css("display","none");
           $('.my-hidden.my-after-login').css('display','none');
-          alert('登录成功')
+          //显示登录成功界面
           $('.my-exit').css('display','block');
+          $('.my-before-login').removeAttr("style");
+          alert('登录成功')
         }else{
           alert('请检查用户名或密码')
         }
