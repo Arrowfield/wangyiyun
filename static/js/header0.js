@@ -4,9 +4,9 @@ $(function () {
     //检测用户自否登录（在SESSION没有销毁的情况下）//销毁条件：（1）用户退出浏览器（2）24分钟
     var url = "http://127.0.0.1:3000/user/islogin";
     $.ajax({url:url,type:"GET",success:function(result){
-      console.log(result);
       //使用session判断用户是否登录
       if(result.code == 1){
+        sessionStorage.setItem("uid",result.msg[0].uid);
         loginSuccess();
       }else{
         console.log('用户未登录');

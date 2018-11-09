@@ -29,6 +29,9 @@ section {
       li:first-child {
         padding-left: 1.1rem;
       }
+      li:nth-child(2){
+        margin-right:240px;
+      }
     }
 
     div.my-all {
@@ -71,18 +74,50 @@ section {
             color:gray;
             @include my-text;
           }
+          span{
+            color:gray;
+            font-size:15px;
+          }
+        }
+        .price{
+          margin-left:95px;
+          line-height: 83px;
+        }
+        .number{
+          margin-top:27.5px;
+          margin-left:80px;
+          button{
+            width:28px;
+            height: 28px;
+          }
+          input{
+            width:28px;
+            height: 28px;
+            text-align: center;
+            vertical-align: bottom;
+          }
         }
       }
       .my-b0{
-        padding-bottom:0.1rem;
-        height:20px;
-        margin-top:8px;
       }
       li:last-child{
-        padding:0 0 0 20px;
-        height: 30px;
+        padding:0 0 0 1.1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         input{
-          margin-top:10px;
+          
+        }
+        .add{
+          font-size: 20px;
+          color:red;
+        }
+        .my-btn{
+          padding:13px 60px;
+          background: rgb(247, 97, 97);
+          color:white;
+          border:0;
+          margin-left:80px;
         }
       }
     }

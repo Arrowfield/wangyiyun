@@ -5,7 +5,8 @@ $(function () {
     $.ajax({url:url,type:'GET',success: function(result) {
       console.log(result)
       if(result.code == 1){
-
+        $('.login-before').hide();
+        $('.login-after').removeClass('login-after');
       }else{
         console.log('用户没有登录');
       }
@@ -45,4 +46,5 @@ $(function () {
   /*首页-->商城---新窗口 不能返回*/
   /*输入框查询-->商品列表-->当前窗口 可以返回*/
   /*单击数码影音-->当前页--> 可以返回*/
+  /*每次页面的刷新就重新启动生命周期*/
 })

@@ -17,4 +17,6 @@ $(function () {
       $(result).replaceAll('footer');
     }
   })
+  //将数据库中用户的购物车信息导出
+  
 })

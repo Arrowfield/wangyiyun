@@ -171,6 +171,10 @@ header div.my-container > div div:nth-child(2) > div:last-child ul.my-response::
   z-index: 1;
 }
 
+header div.my-icon .login-after {
+  display: none !important;
+}
+
 header div.my-icon:hover ul.my-response {
   display: block;
 }

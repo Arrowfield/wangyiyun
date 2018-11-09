@@ -28,6 +28,10 @@ section div.my-container ul.my-choice li:first-child {
   padding-left: 1.1rem;
 }
 
+section div.my-container ul.my-choice li:nth-child(2) {
+  margin-right: 240px;
+}
+
 section div.my-container div.my-all {
   line-height: 36px;
   background: #ddd9d9;
@@ -80,19 +84,57 @@ section div.my-container ul.my-list li p.my-detail a {
   text-overflow: ellipsis;
 }
 
-section div.my-container ul.my-list .my-b0 {
-  padding-bottom: 0.1rem;
-  height: 20px;
-  margin-top: 8px;
+section div.my-container ul.my-list li p.my-detail span {
+  color: gray;
+  font-size: 15px;
+}
+
+section div.my-container ul.my-list li .price {
+  margin-left: 95px;
+  line-height: 83px;
+}
+
+section div.my-container ul.my-list li .number {
+  margin-top: 27.5px;
+  margin-left: 80px;
+}
+
+section div.my-container ul.my-list li .number button {
+  width: 28px;
+  height: 28px;
+}
+
+section div.my-container ul.my-list li .number input {
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  vertical-align: bottom;
 }
 
 section div.my-container ul.my-list li:last-child {
-  padding: 0 0 0 20px;
-  height: 30px;
+  padding: 0 0 0 1.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-section div.my-container ul.my-list li:last-child input {
-  margin-top: 10px;
+section div.my-container ul.my-list li:last-child .add {
+  font-size: 20px;
+  color: red;
+}
+
+section div.my-container ul.my-list li:last-child .my-btn {
+  padding: 13px 60px;
+  background: #f76161;
+  color: white;
+  border: 0;
+  margin-left: 80px;
 }
 
 section ul {

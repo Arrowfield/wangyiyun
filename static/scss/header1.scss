@@ -4,6 +4,7 @@ header {
     min-width: 1349px;
     // background: #f2f2f2;
     background: white;
+
     &>div {
       width: 1100px;
       margin: 0 auto;
@@ -68,7 +69,7 @@ header {
             font-size: 56px;
             line-height: 36px;
             position: relative;
-            cursor:pointer;
+            cursor: pointer;
 
             &>span {
               position: absolute;
@@ -94,16 +95,20 @@ header {
             overflow: hidden;
             margin-left: 2rem;
           }
-          &>div.my-hover.my-login{
+
+          &>div.my-hover.my-login {
             // background: #f2f2f2;
             border-radius: 0;
-            b{
-              padding-top:0.3rem;
+
+            b {
+              padding-top: 0.3rem;
             }
-            a{
-              color:gray;
+
+            a {
+              color: gray;
             }
           }
+
           &>span {
             position: absolute;
             display: block;
@@ -162,11 +167,13 @@ header {
       }
     }
   }
-  div.my-icon{
-    .login-after{
-      // display: none !important;
+
+  div.my-icon {
+    .login-after {
+      display: none !important;
     }
   }
+
   div.my-icon:hover ul.my-response {
     display: block;
   }
@@ -181,14 +188,17 @@ header {
     width: 37px;
     height: 37px;
   }
-  ul.login-before{
+
+  ul.login-before {
     display: none;
   }
-  .my-ul{
+
+  .my-ul {
     display: none;
   }
-  .my-span{
-    left:105% !important;
+
+  .my-span {
+    left: 105% !important;
   }
 }
 
