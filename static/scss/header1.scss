@@ -116,7 +116,6 @@ header {
           }
 
           ul.my-response {
-            display: none;
             margin: 0;
             padding: 0;
             position: absolute;
@@ -163,9 +162,13 @@ header {
       }
     }
   }
-
+  div.my-icon{
+    .login-after{
+      // display: none !important;
+    }
+  }
   div.my-icon:hover ul.my-response {
-    display: block !important;
+    display: block;
   }
 
   .my-img {
@@ -177,6 +180,15 @@ header {
   .my-img1 {
     width: 37px;
     height: 37px;
+  }
+  ul.login-before{
+    display: none;
+  }
+  .my-ul{
+    display: none;
+  }
+  .my-span{
+    left:105% !important;
   }
 }
 

@@ -129,7 +129,6 @@ header div.my-container > div div:nth-child(2) > div:last-child > span {
 }
 
 header div.my-container > div div:nth-child(2) > div:last-child ul.my-response {
-  display: none;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -173,7 +172,7 @@ header div.my-container > div div:nth-child(2) > div:last-child ul.my-response::
 }
 
 header div.my-icon:hover ul.my-response {
-  display: block !important;
+  display: block;
 }
 
 header .my-img {
@@ -185,5 +184,17 @@ header .my-img {
 header .my-img1 {
   width: 37px;
   height: 37px;
+}
+
+header ul.login-before {
+  display: none;
+}
+
+header .my-ul {
+  display: none;
+}
+
+header .my-span {
+  left: 105% !important;
 }
 /*# sourceMappingURL=header1.css.map */

@@ -1,4 +1,16 @@
 $(function () {
+  //用户进入该界面进行用户是否登录检测
+  (function(){
+    var url = "http://127.0.0.1:3000/user/islogin";
+    $.ajax({url:url,type:'GET',success: function(result) {
+      console.log(result)
+      if(result.code == 1){
+
+      }else{
+        console.log('用户没有登录');
+      }
+    }})
+  })()
   //功能：指示箭头的切换
   $('[class=my-icon]').mouseenter(function () {
     var $div = $(this);
@@ -20,7 +32,7 @@ $(function () {
         put = "氧气耳机"
       }
       //localStorage.setItem("msg",put);
-      location.replace(`http://127.0.0.1:3000/pro.html?msg=${put}`);
+      location.replace(`pro.html?msg=${put}`);
       //location.href = "http://127.0.0.1:3000/pro.html";//同时可以执行javascript;
     }
   })
@@ -28,7 +40,7 @@ $(function () {
   //功能：购物车跳转界面
   $('[data-cart=cart]').click(function () {
     //location.assign('http://127.0.0.1:3000/cart.html');//当前窗口与打开 可后退
-    window.open("http://127.0.0.1:3000/cart.html", "_blank"); //新窗口打开 可打开多个
+    window.open("cart.html", "_blank"); //新窗口打开 可打开多个
   })
   /*首页-->商城---新窗口 不能返回*/
   /*输入框查询-->商品列表-->当前窗口 可以返回*/

@@ -14,7 +14,7 @@ app.use(session({
 }));
 //解决跨域问题
 app.use(cors({
-  origin: ['http://localhost:3000'],
+  origin: ['http://127.0.0.1:3000','http://176.137.16.237:3000'],
   credentials: true
 }));
 //托管静态资源
