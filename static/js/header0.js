@@ -16,12 +16,12 @@ $(function () {
   })()
   //跟每一个A标签绑定页面跳转事件
   $('[data-exit=exit]').click(function () {
-    alert('退出');
     var url = "http://127.0.0.1:3000/user/signout"
     $.ajax({url:url,type:"GET",success:(result)=>{
       //console.log(result);
       if(result.code == 1){
         logout();
+        window.location.reload();
       }
     }})
   })
@@ -117,6 +117,9 @@ $(function () {
     //显示登录成功界面
     $('.my-exit').css('display','block');
     $('.my-before-login').removeAttr("style");
+    //显示用户粉丝界面
+    $('.my-right>div:first-child').hide();
+    $('.my-right-hidden').removeAttr('style');
   }
   //函数封装（用户退出登录后显示的效果）
   function logout(){
@@ -130,5 +133,8 @@ $(function () {
      //关闭登录成功界面
      $('.my-exit').css('display','none');
      $('.my-before-login').css("display","none");
+     //
+     $('.my-right>div:first-child').show();
+     $('.my-right-hidden').hide();
   }
 })

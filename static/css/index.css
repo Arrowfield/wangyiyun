@@ -476,8 +476,10 @@ section div.my-container > div:nth-child(3) div.my-right {
 }
 
 section div.my-container > div:nth-child(3) div.my-right .my-right-hidden {
-  display: none;
   text-align: left;
+  padding: 1rem 1.8rem;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e3e3e3), to(#FBFBFB));
+  background-image: linear-gradient(bottom, #e3e3e3, #FBFBFB);
 }
 
 section div.my-container > div:nth-child(3) div.my-right .my-right-hidden .hidden-top {
@@ -499,23 +501,59 @@ section div.my-container > div:nth-child(3) div.my-right .my-right-hidden .ting 
 }
 
 section div.my-container > div:nth-child(3) div.my-right .my-right-hidden .ting > p {
-  margin-bottom: 3px;
+  margin-bottom: 6px;
+}
+
+section div.my-container > div:nth-child(3) div.my-right .my-right-hidden .ting p:first-child {
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+section div.my-container > div:nth-child(3) div.my-right .my-right-hidden .ting p:nth-child(2) {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 0.2px 1px;
+  text-align: center;
+  width: 42px;
+  font-size: 12px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 section div.my-container > div:nth-child(3) div.my-right .my-right-hidden .ting button {
-  padding: 7px 37px;
-  background: #6666f3;
+  padding: 3px 21px;
+  background: #5786ec;
   text-align: center;
+  color: white;
 }
 
-section div.my-container > div:nth-child(3) div.my-right div:first-child {
+section div.my-container > div:nth-child(3) div.my-right .my-right-hidden .hidden-buttom ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: gray;
+  margin-top: 20px;
+}
+
+section div.my-container > div:nth-child(3) div.my-right .my-right-hidden .hidden-buttom ul li {
+  text-align: center;
+  border-right: 1px solid #d6d1d1;
+  width: 53px;
+}
+
+section div.my-container > div:nth-child(3) div.my-right .my-right-hidden .hidden-buttom ul li p {
+  margin: 0;
+}
+
+section div.my-container > div:nth-child(3) div.my-right div:first-child:not(.hidden-top) {
   padding: 1rem 1.8rem;
   font-size: 0.6rem;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#e3e3e3), to(#FBFBFB));
   background-image: linear-gradient(bottom, #e3e3e3, #FBFBFB);
 }
 
-section div.my-container > div:nth-child(3) div.my-right div:first-child p {
+section div.my-container > div:nth-child(3) div.my-right div:first-child:not(.hidden-top) p {
   width: 12.1rem;
   color: gray;
 }

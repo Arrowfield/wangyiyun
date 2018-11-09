@@ -471,9 +471,10 @@ section {
         text-align: center;
         width: $my-width2;
         .my-right-hidden{
-          display: none;
           // padding:10px;
           text-align: left;
+          padding:1rem 1.8rem;
+          background-image: linear-gradient(bottom, #e3e3e3, #FBFBFB);
           .hidden-top{
             display:flex;
             justify-content: space-between;
@@ -485,16 +486,46 @@ section {
           .ting{
             padding-left:20px;
             &>p{
-              margin-bottom:3px;
+              margin-bottom:6px;
+            }
+            p:first-child{
+              color:black;
+              font-size: 14px;
+              font-weight:bold;
+            }
+            p:nth-child(2){
+              border:1px solid gray;
+              border-radius: 5px;
+              padding:0.2px 1px;
+              text-align: center;
+              width:42px;
+              font-size:12px;
+              transform: scale(0.8); 
             }
             button{
-              padding:7px 37px;
-              background: rgb(102, 102, 243);
+              padding:3px 21px;
+              background: rgb(87, 134, 236);
               text-align: center;
+              color:white;
+            }
+          }
+          .hidden-buttom{
+            ul{
+              display: flex;
+              color:gray;
+              margin-top:20px;
+              li{
+                text-align: center;
+                border-right:1px solid rgb(214, 209, 209);
+                width:53px;
+                p{
+                  margin:0;
+                }
+              }
             }
           }
         }
-        div:first-child {
+        div:first-child:not(.hidden-top) {
           padding: 1rem 1.8rem;
           font-size: 0.6rem;
           background-image: linear-gradient(bottom, #e3e3e3, #FBFBFB);
