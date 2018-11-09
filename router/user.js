@@ -104,7 +104,7 @@ router.get('/cartnews', (req, res) => {
     });
     return;
   }
-  var sql = " SELECT * FROM t_product WHERE pid =(SELECT product_id FROM t_shoppingcart_item WHERE user_id = ? ) ";
+  var sql = " SELECT * FROM xz_laptop WHERE lid =(SELECT product_id FROM xz_shoppingcart_item WHERE user_id = ? ) ";
   pool.query(sql, [uid], (err, result) => {
     if (err) throw err;
     res.send({

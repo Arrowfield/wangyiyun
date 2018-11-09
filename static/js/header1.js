@@ -3,7 +3,6 @@ $(function () {
   (function(){
     var url = "http://127.0.0.1:3000/user/islogin";
     $.ajax({url:url,type:'GET',success: function(result) {
-      console.log(result)
       if(result.code == 1){
         $('.login-before').hide();
         $('.login-after').removeClass('login-after');
