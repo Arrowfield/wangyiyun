@@ -470,7 +470,30 @@ section {
         border-left: 1px solid gray;
         text-align: center;
         width: $my-width2;
-
+        .my-right-hidden{
+          display: none;
+          // padding:10px;
+          text-align: left;
+          .hidden-top{
+            display:flex;
+            justify-content: space-between;
+            img{
+              padding:3px;
+              border:1px solid rgb(204, 202, 202);
+            }
+          }
+          .ting{
+            padding-left:20px;
+            &>p{
+              margin-bottom:3px;
+            }
+            button{
+              padding:7px 37px;
+              background: rgb(102, 102, 243);
+              text-align: center;
+            }
+          }
+        }
         div:first-child {
           padding: 1rem 1.8rem;
           font-size: 0.6rem;

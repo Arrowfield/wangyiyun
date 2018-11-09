@@ -475,6 +475,39 @@ section div.my-container > div:nth-child(3) div.my-right {
   width: 252.19px;
 }
 
+section div.my-container > div:nth-child(3) div.my-right .my-right-hidden {
+  display: none;
+  text-align: left;
+}
+
+section div.my-container > div:nth-child(3) div.my-right .my-right-hidden .hidden-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section div.my-container > div:nth-child(3) div.my-right .my-right-hidden .hidden-top img {
+  padding: 3px;
+  border: 1px solid #cccaca;
+}
+
+section div.my-container > div:nth-child(3) div.my-right .my-right-hidden .ting {
+  padding-left: 20px;
+}
+
+section div.my-container > div:nth-child(3) div.my-right .my-right-hidden .ting > p {
+  margin-bottom: 3px;
+}
+
+section div.my-container > div:nth-child(3) div.my-right .my-right-hidden .ting button {
+  padding: 7px 37px;
+  background: #6666f3;
+  text-align: center;
+}
+
 section div.my-container > div:nth-child(3) div.my-right div:first-child {
   padding: 1rem 1.8rem;
   font-size: 0.6rem;
