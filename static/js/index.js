@@ -121,6 +121,7 @@ $(function () {
   //功能：绑定点击锁就固定
   $('.btn-hide').click(function(){
     var $i = $(this).children().children("i");
+
     $('aside.aside-bottom').toggleClass("my-opacity");
     if($i.hasClass('icon-deblock')){
       $i.removeClass('icon-deblock').addClass('icon-lock');

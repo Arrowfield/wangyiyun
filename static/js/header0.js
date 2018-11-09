@@ -1,9 +1,29 @@
 $(function () {
+  //当用户重新刷新页面时，即该页面的就自动销毁
+  (function(){
+    //检测用户自否登录（在SESSION没有销毁的情况下）//销毁条件：（1）用户退出浏览器（2）24分钟
+    var url = "http://127.0.0.1:3000/user/islogin";
+    $.ajax({url:url,type:"GET",success:function(result){
+      console.log(result);
+      //使用session判断用户是否登录
+      if(result.code == 1){
+        loginSuccess();
+      }else{
+        console.log('用户未登录');
+      }
+    }})
+    //巨坑：不能使用localhost这个域名访问；否则cookie就不会记录session
+  })()
   //跟每一个A标签绑定页面跳转事件
   $('[data-exit=exit]').click(function () {
     alert('退出');
-    var $a = $(this);
-    $(this).parent('div.my-hidden').css("dispaly", 'none');
+    var url = "http://127.0.0.1:3000/user/signout"
+    $.ajax({url:url,type:"GET",success:(result)=>{
+      //console.log(result);
+      if(result.code == 1){
+        logout();
+      }
+    }})
   })
   //注册按钮事件的绑定
   $('[data-reg=register]').click(function () {
@@ -78,22 +98,14 @@ $(function () {
       success: function (res) {
         console.log(res)
         if(res.code ==1 ){
-          loginSuccess();
-          alert('登录成功');
+          //登陆成功重新刷新页面
+          window.location.reload();
         }else{
           alert('请检查用户名或密码')
         }
       }
     })
   })
-  //当用户重新刷新页面时，即该页面的就自动销毁
-  (function(){
-    //检测用户自否登录（在SESSION没有销毁的情况下）//销毁条件：（1）用户退出浏览器（2）24分钟
-    var url = "http://127.0.0.1:3000/user/islogin";
-    $.ajax({url:url,type:"GET",success:function(result){
-      console.log(result)
-    }})
-  })()
   //函数封装（用户登录成功后显示的效果）
   function loginSuccess(){
     //隐藏模态框
@@ -108,6 +120,15 @@ $(function () {
   }
   //函数封装（用户退出登录后显示的效果）
   function logout(){
-    
+     //显示模态框
+     $('#demo').removeAttr("style");
+     //关闭遮罩
+     $('.modal-backdrop.show').css('display','none');
+     //显示登录界面
+     $('.my-login').removeAttr('style');
+     $('.my-hidden.my-after-login').removeAttr('style');
+     //关闭登录成功界面
+     $('.my-exit').css('display','none');
+     $('.my-before-login').css("display","none");
   }
 })

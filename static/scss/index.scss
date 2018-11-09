@@ -20,12 +20,14 @@ $my-width5:673.22/3px;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
 /*只要有三个以上的项目水平居中显示的方式*/
-@mixin my-center(){
+@mixin my-center() {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 section {
   div.my-container {
     min-width: 1349px; //设置最小宽度
@@ -284,7 +286,7 @@ section {
               padding: 0;
               margin: 0;
               justify-content: space-between;
-              padding:0 10px;
+              padding: 0 10px;
 
               li {
                 float: left;
@@ -631,159 +633,189 @@ section {
 aside.aside-bottom {
   width: 100%;
   position: fixed;
-  top: 92%;
+  top: 100%;
   left: 0;
-  i{
+
+  i {
     cursor: pointer;
   }
+
   background: rgb(119, 110, 110) url(../img/index/playbar.png) repeat;
-  background-position:left -3px; 
+  background-position:left -3px;
   height: 51px;
+  margin-top:-51px;
   z-index: 1;
   opacity: 0;
   //box-shadow:0 -3px 5px #888888;/*边框阴影*/上方设置阴影
   outline:1px solid rgba(00, 00, 00, 0.4);
+
   &:hover {
     opacity: 1;
   }
-  &>div.aside-play{
-    margin:0 auto;
-    width:980px;
-    color:white;
+
+  &>div.aside-play {
+    margin: 0 auto;
+    width: 980px;
+    color: white;
     display: flex;
     justify-content: start;
     align-items: center;
-    div.my-control{
+
+    div.my-control {
       @include my-center();
-      margin-right:40px;
-      a{
-        color:white;
+      margin-right: 40px;
+
+      a {
+        color: white;
         text-decoration: none;
-        padding-top:1px;
-        i{
-          font-size:25px;/*36 28*/
-          color:gray;
-          
+        padding-top: 1px;
+
+        i {
+          font-size: 25px;
+          /*36 28*/
+          color: gray;
+
         }
       }
-      a:nth-child(2){ 
-        margin:0 10px;
-        padding-bottom :2px;
-        i{
-          font-size:34px;
-          color:white;
+
+      a:nth-child(2) {
+        margin: 0 10px;
+        padding-bottom: 2px;
+
+        i {
+          font-size: 34px;
+          color: white;
         }
       }
     }
-    div.center-item{
+
+    div.center-item {
       display: flex;
-      margin-right:35px;
+      margin-right: 35px;
       align-items: center;
-      height:51px;
-      div.img-item{
+      height: 51px;
+
+      div.img-item {
         //border-radius: 10px;
-        margin-right:20px;
+        margin-right: 20px;
+
         //border:1px solid black;
-        img{
-          border-radius:3px;
-          border:1px solid black;
+        img {
+          border-radius: 3px;
+          border: 1px solid black;
         }
       }
-      &>div:nth-child(2){
-        padding-top:3px;
+
+      &>div:nth-child(2) {
+        padding-top: 3px;
         align-self: stretch;
       }
-      em{
-        font-size:0.6rem;
-        margin-right:10px;
+
+      em {
+        font-size: 0.6rem;
+        margin-right: 10px;
       }
-      &>div>em:nth-child(1){
-        color:white;
+
+      &>div>em:nth-child(1) {
+        color: white;
       }
-      &>div>em:nth-child(2){
-        color:gray;
+
+      &>div>em:nth-child(2) {
+        color: gray;
       }
-      div.my-progress{
-        width:493px;
-        height:10px;
+
+      div.my-progress {
+        width: 493px;
+        height: 10px;
         background: #000;
         opacity: 0.8;
-        border-radius:30px;
-        margin-top:4px;
+        border-radius: 30px;
+        margin-top: 4px;
         position: relative;
-        &>div{
-          width:15px;
-          height:15px;
+
+        &>div {
+          width: 15px;
+          height: 15px;
           background: #fff;
           border-radius: 50%;
-          margin-top:-3px;
+          margin-top: -3px;
           position: absolute;
-          left:0;
-          top:0;
-          &:hover{
-            box-shadow: gray 0 0 10px;//四周设置阴影
+          left: 0;
+          top: 0;
+
+          &:hover {
+            box-shadow: gray 0 0 10px; //四周设置阴影
           }
+
           //transition: all .3s linear;
-          &>i{
-            width:7px;
-            height:7px;
+          &>i {
+            width: 7px;
+            height: 7px;
             position: absolute;
             z-index: 2;
             background: red;
             border-radius: 50%;
-            top:50%;
-            left:50%;
-            margin-left:-3.5px;
-            margin-top:-3.5px;
+            top: 50%;
+            left: 50%;
+            margin-left: -3.5px;
+            margin-top: -3.5px;
           }
         }
       }
-      span{
+
+      span {
         align-self: flex-end;
         margin-bottom: 6px;
-        margin-left:16px;
+        margin-left: 16px;
         font-size: 14px;
-        i{
-          color:gray;
+
+        i {
+          color: gray;
         }
       }
     }
-    div.right-item{
-      i{
-        color:gray;
+
+    div.right-item {
+      i {
+        color: gray;
         font-size: 18px;
-        margin-left:10px;
+        margin-left: 10px;
       }
     }
-    div.my-volume{
-      margin-left:27px;
-      i{
+
+    div.my-volume {
+      margin-left: 27px;
+
+      i {
         font-size: 18px;
-        color:gray;
-        margin-right:2px;
+        color: gray;
+        margin-right: 2px;
       }
     }
   }
+
   /*伪元素表示在当前的元素之前或者之后进行值的插入*/
-  div.btn-hide{
-    width:65px;
-    height:70px;
+  div.btn-hide {
+    width: 65px;
+    height: 70px;
     background: #000;
-    top:-27%;
-    left:92%;
+    top: -27%;
+    left: 92%;
     background: url(../img/index/playbar.png) no-repeat;
     background-position: 0 -383px;
     position: absolute;
-    span{
+
+    span {
       position: absolute;
       z-index: 1;
-      top:0;
-      left:17px;
-      color:gray;
-      cursor:pointer
+      top: 0;
+      left: 17px;
+      color: gray;
+      cursor: pointer
     }
   }
 }
-.my-opacity{
+
+.my-opacity {
   opacity: 1 !important;
 }

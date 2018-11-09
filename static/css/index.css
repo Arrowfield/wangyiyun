@@ -629,11 +629,12 @@ section ul {
 aside.aside-bottom {
   width: 100%;
   position: fixed;
-  top: 92%;
+  top: 100%;
   left: 0;
   background: #776e6e url(../img/index/playbar.png) repeat;
   background-position: left -3px;
   height: 51px;
+  margin-top: -51px;
   z-index: 1;
   opacity: 0;
   outline: 1px solid rgba(0, 0, 0, 0.4);
