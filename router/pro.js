@@ -17,9 +17,9 @@ router.get('/prolist', (req, res) => {
     var pno = parseInt(req.query.pno);
     var pSize = parseInt(req.query.pSize);
     var title = req.query.title;
-    if(!title){
+    if (!title) {
       title = "%";
-    }else{
+    } else {
       title = "%" + title + "%";
     }
     if (!pno) {
@@ -29,15 +29,18 @@ router.get('/prolist', (req, res) => {
       pSize = 10;
     }
     console.log(title);
-    var $begin = (pno - 1) * pSize;  
-    console.log($begin,pSize);
+    var $begin = (pno - 1) * pSize;
+    console.log($begin, pSize);
     var sql = "SELECT title as t,price as p,md as m";
     sql += " FROM xz_laptop inner join xz_laptop_pic";
     sql += " on xz_laptop.lid = xz_laptop_pic.laptop_id";
     sql += " WHERE xz_laptop.title LIKE ? LIMIT ? , ?";
-    pool.query(sql, [title,$begin, pSize], (err, result) => {
+    pool.query(sql, [title, $begin, pSize], (err, result) => {
       if (err) throw err;
-      res.send({code:1,msg:result});
+      res.send({
+        code: 1,
+        msg: result
+      });
     });
   }
 
@@ -51,7 +54,7 @@ router.get('/prolist', (req, res) => {
     var sql = "SELECT title as t,price as p,md as m";
     sql += " FROM xz_laptop inner join xz_laptop_pic";
     sql += " on xz_laptop.lid = xz_laptop_pic.laptop_id";
-    sql += " WHERE title LIKE ?";//同时进行分页
+    sql += " WHERE title LIKE ?"; //同时进行分页
     pool.query(sql, [keywords], (err, result) => {
       if (err) throw err;
       if (result.length > 0) {
@@ -79,7 +82,10 @@ router.get('/prolist', (req, res) => {
     pool.query(sql, [min, max], (err, result) => {
       if (err) throw err;
       if (result.length > 0) {
-        res.send({code:1,msg:result});
+        res.send({
+          code: 1,
+          msg: result
+        });
       } else {
         res.send({
           code: -1,

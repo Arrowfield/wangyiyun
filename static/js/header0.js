@@ -71,32 +71,43 @@ $(function () {
     //发送post请求验证信息
     var uname = $('#uname').val()
     var upwd = $('#upwd').val()
-    vali(
-      "#uname",
-      /(^(\+86|0086)?1[3-8]\d{9}$)|(^[^.@]+@[^.@]+\.(com|cn|net)(\.cn)?$)|(^[\u4e00-\u9fa5]+$)/,
-      e
-    );
+    vali("#uname",/(^(\+86|0086)?1[3-8]\d{9}$)|(^[^.@]+@[^.@]+\.(com|cn|net)(\.cn)?$)|(^[\u4e00-\u9fa5]+$)/, e);
     vali("#upwd",/^.{6,}$/,e);
     var url = "http://127.0.0.1:3000/user/signin";
     $.ajax({url: url,data: {uname,upwd},type: "POST",
       success: function (res) {
         console.log(res)
         if(res.code ==1 ){
-          //隐藏模态框
-          $('#demo').css("display","none");
-          $('.modal-backdrop.show').css('display','none');
-          //隐藏登录界面
-          $('.my-login').css("display","none");
-          $('.my-hidden.my-after-login').css('display','none');
-          //显示登录成功界面
-          $('.my-exit').css('display','block');
-          $('.my-before-login').removeAttr("style");
-          alert('登录成功')
+          loginSuccess();
+          alert('登录成功');
         }else{
           alert('请检查用户名或密码')
         }
       }
     })
   })
-
+  //当用户重新刷新页面时，即该页面的就自动销毁
+  (function(){
+    //检测用户自否登录（在SESSION没有销毁的情况下）//销毁条件：（1）用户退出浏览器（2）24分钟
+    var url = "http://127.0.0.1:3000/user/islogin";
+    $.ajax({url:url,type:"GET",success:function(result){
+      console.log(result)
+    }})
+  })()
+  //函数封装（用户登录成功后显示的效果）
+  function loginSuccess(){
+    //隐藏模态框
+    $('#demo').css("display","none");
+    $('.modal-backdrop.show').css('display','none');
+    //隐藏登录界面
+    $('.my-login').css("display","none");
+    $('.my-hidden.my-after-login').css('display','none');
+    //显示登录成功界面
+    $('.my-exit').css('display','block');
+    $('.my-before-login').removeAttr("style");
+  }
+  //函数封装（用户退出登录后显示的效果）
+  function logout(){
+    
+  }
 })

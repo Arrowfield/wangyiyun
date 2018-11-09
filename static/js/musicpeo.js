@@ -3,10 +3,11 @@ $(function(){
   //功能：实现页面切换过渡效果（头部导航 滚动页面自动定位）
   //console.log(123)
 })
+
+//先
 var $key = 0;
-var canscroll = true;
-//后
 $(document).ready(function(){
+  var canscroll = true;
   changeSize();
   $(window).on('resize', function(event) {
 		event.preventDefault();
