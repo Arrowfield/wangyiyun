@@ -94,7 +94,7 @@ $(function () {
     $('div.my-second').hide();
     $('em.msg').html(msg);
     $.ajax({
-      url: `http://127.0.0.1:3000/pro/prolist?keywords=${msg}`,
+      url: `http://176.137.16.237:3001/pro/prolist?keywords=${msg}`,
       type: "GET",
       success: (res) => {
         addPro(res,msg);

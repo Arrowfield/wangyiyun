@@ -6,7 +6,7 @@ const session = require('express-session');
 const pro = require('./router/pro');
 const user = require('./router/user');
 var app = express();
-app.listen(3000);
+app.listen(3001);
 app.use(session({
   secret: "my_session",
   resave: false,

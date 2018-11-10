@@ -1,7 +1,8 @@
 $(function () {
   //用户进入该界面进行用户是否登录检测
   (function(){
-    var url = "http://127.0.0.1:3000/user/islogin";
+    //var url = "http://127.0.0.1:3000/user/islogin";
+    var url = "http://176.137.16.237:3001/user/islogin";
     $.ajax({url:url,type:'GET',success: function(result) {
       if(result.code == 1){
         $('.login-before').hide();

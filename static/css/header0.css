@@ -416,7 +416,7 @@ header div.my-change::after {
 }
 
 .modal .check .register-body {
-  padding-top: 30px;
+  padding-top: 43px;
 }
 
 .modal .modal-footer {
@@ -468,25 +468,29 @@ header div.my-change::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 10px;
 }
 
 .modal .inputs input {
   border: 0;
   border-bottom: 2px solid gray;
-  padding-bottom: 10px;
   width: 20%;
   text-align: center;
   font-size: 20px;
+  padding-bottom: 0;
 }
 
 .modal .my-p {
   margin-bottom: 0;
+  font-size: 12px;
 }
 
 .modal .my-p em {
   vertical-align: bottom;
   color: black;
+}
+
+.modal .my-safe {
+  font-size: 13px;
 }
 
 .modal .time {
@@ -497,7 +501,6 @@ header div.my-change::after {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 8px;
-  padding: 0 10px;
 }
 
 .modal .time span {

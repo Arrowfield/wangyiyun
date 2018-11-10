@@ -3,7 +3,8 @@ $(function () {
   (function(){
     //使用用户的ID查询用户购物车的相关信息
     var uid = sessionStorage.getItem('uid');
-    var url = 'http://127.0.0.1:3000/user/cartnews'
+    //var url = 'http://127.0.0.1:3000/user/cartnews'
+    var url = 'http://176.137.16.237:3001/user/cartnews'
     console.log(uid);
     $.ajax({url:url,type:"GET",data:{uid:uid},success:function(result){
       console.log(result.msg[0])

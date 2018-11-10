@@ -2,7 +2,8 @@ $(function () {
   //当用户重新刷新页面时，即该页面的就自动销毁
   (function(){
     //检测用户自否登录（在SESSION没有销毁的情况下）//销毁条件：（1）用户退出浏览器（2）24分钟
-    var url = "http://127.0.0.1:3000/user/islogin";
+    //var url = "http://127.0.0.1:3000/user/islogin";
+    var url = "http://176.137.16.237:3001/user/islogin";
     $.ajax({url:url,type:"GET",success:function(result){
       //使用session判断用户是否登录
       if(result.code == 1){
@@ -16,7 +17,8 @@ $(function () {
   })()
   //跟每一个A标签绑定页面跳转事件
   $('[data-exit=exit]').click(function () {
-    var url = "http://127.0.0.1:3000/user/signout"
+    //var url = "http://127.0.0.1:3000/user/signout"
+    var url = "http://176.137.16.237:3001/user/signout"
     $.ajax({url:url,type:"GET",success:(result)=>{
       //console.log(result);
       if(result.code == 1){
@@ -93,7 +95,8 @@ $(function () {
     var upwd = $('#upwd').val()
     vali("#uname",/(^(\+86|0086)?1[3-8]\d{9}$)|(^[^.@]+@[^.@]+\.(com|cn|net)(\.cn)?$)|(^[\u4e00-\u9fa5]+$)/, e);
     vali("#upwd",/^.{6,}$/,e);
-    var url = "http://127.0.0.1:3000/user/signin";
+    //var url = "http://127.0.0.1:3000/user/signin";
+    var url = "http://176.137.16.237:3001/user/signin"
     $.ajax({url: url,data: {uname,upwd},type: "POST",
       success: function (res) {
         console.log(res)
