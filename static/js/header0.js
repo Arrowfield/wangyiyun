@@ -140,4 +140,14 @@ $(function () {
      $('.my-right>div:first-child').show();
      $('.my-right-hidden').hide();
   }
+  //事件绑定
+  //$('.inputs>input').setAttribute('readonly',true)
+
+  $('.inputs>input').keyup(function(){
+    var $input = $(this);
+    $input.css('border-bottom','2px red solid');
+    if($input.index() > 3){return;}
+    $input.next().removeAttr('readonly');
+    $input.next().focus();
+  })
 })
