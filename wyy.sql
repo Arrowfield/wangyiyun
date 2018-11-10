@@ -194,3 +194,8 @@ INSERT INTO xz_user VALUES
 (NULL, 'dingding', '123456', 'ding@qq.com', '13501234567', 'img/avatar/default.png', '丁伟', '1'),
 (NULL, 'dangdang', '123456', 'dang@qq.com', '13501234568', 'img/avatar/default.png', '林当', '1');
 
+/**用户购物车信息**/
+INSERT INTO xz_shoppingcart_item VALUES
+(NULL,2,1,1,1),
+(NULL,1,1,6,1);
+

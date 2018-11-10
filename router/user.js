@@ -104,7 +104,9 @@ router.get('/cartnews', (req, res) => {
     });
     return;
   }
-  var sql = " SELECT * FROM xz_laptop WHERE lid =(SELECT product_id FROM xz_shoppingcart_item WHERE user_id = ? ) ";
+  var sql = "select is_checked,count,md,title,subtitle,price from xz_shoppingcart_item left join";
+      sql += " xz_laptop_pic on xz_shoppingcart_item.product_id = xz_laptop_pic.laptop_id left join";
+      sql += " xz_laptop on xz_shoppingcart_item.product_id = xz_laptop.lid where xz_shoppingcart_item.user_id = ?";
   pool.query(sql, [uid], (err, result) => {
     if (err) throw err;
     res.send({
@@ -115,3 +117,7 @@ router.get('/cartnews', (req, res) => {
 })
 module.exports = router;
 //整理代码
+/*select is_checked,count,md,title,subtitle,price from xz_shoppingcart_item left join
+  xz_laptop_pic on xz_shoppingcart_item.product_id = xz_laptop_pic.laptop_id left join
+  xz_laptop on xz_shoppingcart_item.product_id = xz_laptop.lid where xz_shoppingcart_item.user_id = 1
+*/

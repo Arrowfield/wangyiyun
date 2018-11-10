@@ -14,6 +14,7 @@
   <script src="./js/jquery-3.2.1.js"></script>
   <!--script src="./js/popper.js"></script-->
   <script src="./js/bootstrap.js"></script>
+  <script src="./js/vue.js"></script>
   <!--CSS-->
   <link rel="stylesheet" href="./css/cart.css">
 </head>
@@ -51,7 +52,7 @@
             <br>
             <span class="intro">黑色听键+陨石金耳机</span>
           </p>
-          <span class='price'>￥230.00</span>
+          <span class='price'>￥{{res.price}}</span>
           <div class='number'>
             <button>
               <i class="icon iconfont icon-jiajian-1"></i>
@@ -60,7 +61,7 @@
             </button>
           </div>
           <span class="price">￥230.00</span>
-          <span class="price">&times;</span>
+          <span class="price" style="margin:0;width:50px">&times;</span>
         </li>
         <li>
           <div>

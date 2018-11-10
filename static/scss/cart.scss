@@ -25,6 +25,7 @@ section {
       width: 100%;
       justify-content: space-between;
       padding-bottom: 3rem;
+      padding-right:20px;
 
       li:first-child {
         padding-left: 1.1rem;
@@ -80,12 +81,14 @@ section {
           }
         }
         .price{
-          margin-left:95px;
+          margin-left:44px;
           line-height: 83px;
+          width:175px;
+          text-align: center;
         }
         .number{
           margin-top:27.5px;
-          margin-left:80px;
+          margin-left:10px;
           button{
             width:28px;
             height: 28px;

@@ -22,6 +22,7 @@ section div.my-container ul.my-choice {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 3rem;
+  padding-right: 20px;
 }
 
 section div.my-container ul.my-choice li:first-child {
@@ -90,13 +91,15 @@ section div.my-container ul.my-list li p.my-detail span {
 }
 
 section div.my-container ul.my-list li .price {
-  margin-left: 95px;
+  margin-left: 44px;
   line-height: 83px;
+  width: 175px;
+  text-align: center;
 }
 
 section div.my-container ul.my-list li .number {
   margin-top: 27.5px;
-  margin-left: 80px;
+  margin-left: 10px;
 }
 
 section div.my-container ul.my-list li .number button {

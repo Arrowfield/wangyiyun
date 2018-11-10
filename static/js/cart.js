@@ -7,6 +7,12 @@ $(function () {
     console.log(uid);
     $.ajax({url:url,type:"GET",data:{uid:uid},success:function(result){
       console.log(result)
+      var vm = new Vue({
+        el:"",
+        data:{
+          res:result.msg[0]
+        }
+      })
     }})
   })()
   //功能：引入头部文件以及CSS样式
