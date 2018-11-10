@@ -468,6 +468,7 @@ header div.my-change::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 10px;
 }
 
 .modal .inputs input {
@@ -496,6 +497,7 @@ header div.my-change::after {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 8px;
+  padding: 0 10px;
 }
 
 .modal .time span {

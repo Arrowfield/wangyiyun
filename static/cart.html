@@ -42,7 +42,7 @@
           全场满￥0免运费
         </b>
       </div>
-      <ul class="my-list">
+      <ul class="my-list" id="my-list">
         <li>
           <input type="checkbox" class="my-input my-center">
           <img src="./img/cart/pro0.jpg" alt="HTML5">
@@ -52,7 +52,7 @@
             <br>
             <span class="intro">黑色听键+陨石金耳机</span>
           </p>
-          <span class='price'>￥{{res.price}}</span>
+          <span class='price'>￥{{res.price.toFixed(2)}}</span>
           <div class='number'>
             <button>
               <i class="icon iconfont icon-jiajian-1"></i>

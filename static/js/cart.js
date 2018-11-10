@@ -6,9 +6,9 @@ $(function () {
     var url = 'http://127.0.0.1:3000/user/cartnews'
     console.log(uid);
     $.ajax({url:url,type:"GET",data:{uid:uid},success:function(result){
-      console.log(result)
+      console.log(result.msg[0])
       var vm = new Vue({
-        el:"",
+        el:"#my-list",
         data:{
           res:result.msg[0]
         }
