@@ -13,6 +13,7 @@ $(function () {
       }
     }})
   })()
+  //购物车数据的展示
   //功能：指示箭头的切换
   $('[class=my-icon]').mouseenter(function () {
     var $div = $(this);

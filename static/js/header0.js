@@ -160,4 +160,17 @@ $(function () {
   })
   $('.inputs>input')[0].removeAttribute('readonly');
   //时间2018/11/10开始做新的功能
+  //模态框头部拖拽
+  $('.modal-header').on({
+    mousedown:function(e){
+      var el = $('.modal-content')
+      var os = el.offset();
+      var left = e.pageX - os.left,top = e.pageY - os.top;
+      $(document).on("mousemove.drag",function(e){
+        el.offset({top:e.pageY-top,left:e.pageX-left})
+      }).on('mouseup',function(e){
+        $(document).off('mousemove.drag')
+      })
+    }
+  })
 })

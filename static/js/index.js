@@ -92,30 +92,20 @@ $(function () {
     }
   })
   //功能：实现拖动的功能
-  var $parent = $('.my-progress');
-  var $child = $('.my-progress>div')
-  var leftPar = $parent.offset().left;//相对页面的偏移量
-  var topPar = $parent.offset().top;
-  var isMove = false;
-  var offset,offsetY;
-  //鼠标属性有offsetX/pagex/clientX 
-  $child.mousedown(function(e){
-    //设置鼠标在中间才触发事件
-    isMove = true;
-    offsetX = e.offsetX;
-    offsetY = e.offsetY;
-    //console.log(offsetX,offsetY);
-  })
-  .mouseup(function(){
-    isMove = false;
-  })
-  $(document).mousemove(function(e){
-    if(isMove){
-      //var top = e.clientY - offsetY-topPar;
-      var left = e.clientX - offsetX-leftPar;
-      if(left < 0){left = 0}
-      if(left > 480 ){left = 480}
-      $child.css({"left":left});
+  $('.my-progress>div').on({
+    mousedown:function(e){
+      var el = $(this);
+      var os = el.offset();
+      var left = e.pageX - os.left;
+      $('.my-progress').on('mousemove.drag',function(e){
+        e.preventDefault();
+        var relLeft = e.pageX - left;
+        if(relLeft < 384.5){relLeft = os.left}
+        console.log(relLeft)
+        el.offset({left:relLeft})
+      }).on('mouseup',function(){
+        $('.my-progress').off('mousemove.drag')
+      })
     }
   })
   //功能：绑定点击锁就固定

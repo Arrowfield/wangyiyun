@@ -41,6 +41,9 @@ $(function () {
               bool = val.is_checked && bool;
             })
             this.checkAll = bool;
+          },
+          isChange(i){
+            if(this.list[i].count<1){this.list[i].count = 1}
           }
         },
         computed:{

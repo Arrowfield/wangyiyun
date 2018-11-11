@@ -54,7 +54,7 @@
           <div class='number'>
             <button @click="sub(index)">
               <i class="icon iconfont icon-jiajian-1"></i>
-            </button><input type="text" min="1" v-model="tmp.count" maxlength="3"><button @click="add(index)">
+            </button><input type="text" min="1" @change="isChange(index)" v-model="tmp.count" maxlength="3"><button @click="add(index)">
               <i class="icon iconfont icon-jiajian-"></i>
             </button>
           </div>
