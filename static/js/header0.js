@@ -23,7 +23,7 @@ $(function () {
     $('#demo').show().css('background','rgba(0,0,0,.5)');
     mychange('.login')
   })
-  $('[data-change=change]').click(()=>{
+  $('[data-change=change]').click(function(){
     if(timer){time=60;clearInterval(timer)}
     $('#demo').hide();
     mychange('.login')
@@ -31,8 +31,10 @@ $(function () {
   //退出登录事件
   $('[data-exit=exit]').click(function () {
     //var url = "http://127.0.0.1:3000/user/signout"
+    //销毁sessionStorage
+    sessionStorage.removeItem('uid');
     var url = baseUrl + "user/signout"
-    $.ajax({url:url,type:"GET",success:(result)=>{
+    $.ajax({url:url,type:"GET",success:function(result){
       //console.log(result);
       if(result.code == 1){
         logout();
@@ -74,13 +76,6 @@ $(function () {
       $('.time>a').css('display', 'block')
     }
   }
-  //组件封装（使用vue）
-  var LoginSuccess = Vue.component({
-    template: "",
-    data: function () {
-      return {}
-    }
-  })
   //注册成功
   $('[data-success=success]').click(function () {
     alert('即将进入注册功能');
@@ -107,8 +102,9 @@ $(function () {
     vali("#uname",/(^(\+86|0086)?1[3-8]\d{9}$)|(^[^.@]+@[^.@]+\.(com|cn|net)(\.cn)?$)|(^[\u4e00-\u9fa5]+$)/, e);
     vali("#upwd",/^.{6,}$/,e);
     //var url = "http://127.0.0.1:3000/user/signin";
+    //IE:不支持解构 不支持箭头函数
     var url = baseUrl + "user/signin"
-    $.ajax({url: url,data: {uname,upwd},type: "POST",
+    $.ajax({url: url,data: {uname:uname,upwd:upwd},type: "POST",
       success: function (res) {
         console.log(res)
         if(res.code ==1 ){

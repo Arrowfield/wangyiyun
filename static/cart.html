@@ -23,12 +23,12 @@
   <header></header>
   <hr class="mt-0">
   <section>
-    <div class="my-container">
+    <div id="my-container" class="my-container">
       <!--开始-->
       <b class="my-b">购物车</b>
       <hr>
       <ul class="my-choice">
-        <li><input type="checkbox" class="my-input"><em>全选</em></li>
+        <li><input @click="allChecked" v-model="checkAll" type="checkbox" class="my-input"><em>全选</em></li>
         <li>商品</li>
         <li>金额</li>
         <li>数量</li>
@@ -36,48 +36,54 @@
         <li>操作</li>
       </ul>
       <div class="my-all">
-        <b>全部商品（<span>1</span>）</b>
+        <b>全部商品（<span>{{count}}</span>）</b>
         <b>
           <i class="icon iconfont icon-manjian text-danger"></i>
           全场满￥0免运费
         </b>
       </div>
       <ul class="my-list" id="my-list">
-        <li>
-          <input type="checkbox" class="my-input my-center">
-          <img src="./img/cart/pro0.jpg" alt="HTML5">
+        <li v-for="(tmp,index) in list" :key="index">
+          <input type="checkbox" @change="handleChange" v-model="tmp.is_checked" class="my-input my-center">
+          <img :src="'http://127.0.0.1:3001/'+tmp.md" alt="HTML5">
           <p class="my-detail">
-            <a href="#">【网易云音乐专供款】XT800金属磁吸耳机+
-            蓝牙接收器套装击音定制版</a>
-            <br>
-            <span class="intro">黑色听键+陨石金耳机</span>
+            <a href="#">{{tmp.title}}</a>
+            <span class="intro">{{tmp.subtitle}}</span>
           </p>
-          <span class='price'>￥{{res.price.toFixed(2)}}</span>
+          <span class='price'>￥{{tmp.price.toFixed(2)}}</span>
           <div class='number'>
-            <button>
+            <button @click="sub(index)">
               <i class="icon iconfont icon-jiajian-1"></i>
-            </button><input type="text" value="1" maxlength="3"><button>
+            </button><input type="text" min="1" v-model="tmp.count" maxlength="3"><button @click="add(index)">
               <i class="icon iconfont icon-jiajian-"></i>
             </button>
           </div>
-          <span class="price">￥230.00</span>
-          <span class="price" style="margin:0;width:50px">&times;</span>
+          <span class="price">￥{{tmp.count*tmp.price}}</span>
+          <span class="price delete" title="删除" style="margin:0;width:50px">&times;</span>
+        </li>
+        <li v-if="!list">
+          <div class="cart-kong">
+            <h1>购物车空空的！赶紧去<a href="./store.html">逛逛...</a></h1>
+          </div>
         </li>
         <li>
           <div>
-            <input type="checkbox" class="my-input">
+            <input @click="allChecked" v-model="checkAll" type="checkbox" class="my-input">
             <em class="my-b0">全选</em>
-            已选择 1 件商品
+            已选择 {{count}} 件商品
           </div>
           <div>
             <em>已享受免运费</em>
-            <em>合计：<i class="add">￥139.00</i></em>
+            <em>合计：<i class="add">￥{{total}}</i></em>
             <button class="my-btn">结算</button>
           </div>
         </li>
       </ul>
     </div>
   </section>
+  <aside id="mask01">
+    <h1>请先用网易云账号登录</h1><span></span>
+  </aside>
   <footer></footer>
   <script src="./js/cart.js"></script>
 </body>

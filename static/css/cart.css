@@ -69,6 +69,8 @@ section div.my-container ul.my-list li {
 
 section div.my-container ul.my-list li img {
   background: #cac9c9;
+  width: 80px;
+  height: 80px;
 }
 
 section div.my-container ul.my-list li p.my-detail {
@@ -79,10 +81,11 @@ section div.my-container ul.my-list li p.my-detail {
 section div.my-container ul.my-list li p.my-detail a {
   display: block;
   font-size: 0.8rem;
-  color: gray;
+  color: black;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-weight: bold;
 }
 
 section div.my-container ul.my-list li p.my-detail span {
@@ -95,6 +98,16 @@ section div.my-container ul.my-list li .price {
   line-height: 83px;
   width: 175px;
   text-align: center;
+}
+
+section div.my-container ul.my-list li .delete {
+  cursor: pointer;
+  -webkit-transition: all .3 linear;
+  transition: all .3 linear;
+}
+
+section div.my-container ul.my-list li .delete:hover {
+  color: red;
 }
 
 section div.my-container ul.my-list li .number {
@@ -140,6 +153,14 @@ section div.my-container ul.my-list li:last-child .my-btn {
   margin-left: 80px;
 }
 
+section div.my-container ul.my-list .cart-kong {
+  margin: 0 auto;
+}
+
+section div.my-container ul.my-list .cart-kong a {
+  text-decoration: none;
+}
+
 section ul {
   margin: 0;
   padding: 0;
@@ -168,5 +189,24 @@ section input.my-center {
 section b {
   font-style: normal;
   display: inline-block;
+}
+
+aside {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+aside h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -24px;
 }
 /*# sourceMappingURL=cart.css.map */

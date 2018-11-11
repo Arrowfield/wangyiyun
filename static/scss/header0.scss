@@ -354,6 +354,7 @@ header div.my-change::after {
     margin:0 auto;
     flex-direction: column;
     width:60.1%;
+    overflow: hidden;
     label{
       margin-top:0.5rem;
     }
@@ -386,6 +387,9 @@ header div.my-change::after {
     flex-wrap: nowrap;
     select{
       border-right:none;
+    }
+    input{
+      //width:60%;暂时不修该 知道就行了 要该就欢全部 这个不多还可以
     }
   }
   input:focus{

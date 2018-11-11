@@ -16,7 +16,6 @@ $(function () {
     type: "GET",
     success: function (res) {
       $(res).replaceAll("footer");
-      $('<script src="./js/footer0.js"></script>').appendTo("body");
     }
   });
   //功能：实现图片淡入淡出的效果

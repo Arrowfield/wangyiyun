@@ -200,5 +200,5 @@ INSERT INTO xz_shoppingcart_item VALUES
 (Null,1,4,3,0),
 (NULL,1,1,6,1);
 /*清空表的数据*/
-DELETE FROM xz_shoppingcart_item;
+#DELETE FROM xz_shoppingcart_item;
 

@@ -400,6 +400,7 @@ header div.my-change::after {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 60.1%;
+  overflow: hidden;
 }
 
 .modal .register-body label {

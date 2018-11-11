@@ -65,6 +65,8 @@ section {
         display: flex;
         img{
           background: rgb(202, 201, 201);
+          width:80px;
+          height:80px;
         }
         p.my-detail{
           margin-left:1.1rem;
@@ -72,8 +74,9 @@ section {
           a{
             display: block;
             font-size:0.8rem;
-            color:gray;
+            color:black;
             @include my-text;
+            font-weight:bold;
           }
           span{
             color:gray;
@@ -85,6 +88,13 @@ section {
           line-height: 83px;
           width:175px;
           text-align: center;
+        }
+        .delete{
+          cursor: pointer;
+          transition: all .3 linear;
+          &:hover{
+            color: red;
+          }
         }
         .number{
           margin-top:27.5px;
@@ -123,6 +133,12 @@ section {
           margin-left:80px;
         }
       }
+      .cart-kong{
+        margin:0 auto;
+        a{
+          text-decoration: none;
+        }
+      }
     }
   }
 
@@ -152,5 +168,23 @@ section {
   b{
     font-style:normal;
     display: inline-block;
+  }
+}
+aside{
+  width:100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 1;
+  background: rgba(0,0,0,.5);
+  display: none;
+  h1{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    margin-left:-200px;
+    margin-top:-24px;
+
   }
 }
