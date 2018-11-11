@@ -1,9 +1,12 @@
 $(function () {
   //当用户重新刷新页面时，即该页面的就自动销毁
+  var baseUrl = sessionStorage.getItem('url');
+  var timer = null;
+  var time = 60;
   (function(){
     //检测用户自否登录（在SESSION没有销毁的情况下）//销毁条件：（1）用户退出浏览器（2）24分钟
     //var url = "http://127.0.0.1:3000/user/islogin";
-    var url = "http://176.137.16.237:3001/user/islogin";
+    var url = baseUrl + "user/islogin";
     $.ajax({url:url,type:"GET",success:function(result){
       //使用session判断用户是否登录
       if(result.code == 1){
@@ -15,10 +18,20 @@ $(function () {
     }})
     //巨坑：不能使用localhost这个域名访问；否则cookie就不会记录session
   })()
-  //跟每一个A标签绑定页面跳转事件
+  //登录事件
+  $('.goto-login').click(function(){
+    $('#demo').show().css('background','rgba(0,0,0,.5)');
+    mychange('.login')
+  })
+  $('[data-change=change]').click(()=>{
+    if(timer){time=60;clearInterval(timer)}
+    $('#demo').hide();
+    mychange('.login')
+  })
+  //退出登录事件
   $('[data-exit=exit]').click(function () {
     //var url = "http://127.0.0.1:3000/user/signout"
-    var url = "http://176.137.16.237:3001/user/signout"
+    var url = baseUrl + "user/signout"
     $.ajax({url:url,type:"GET",success:(result)=>{
       //console.log(result);
       if(result.code == 1){
@@ -29,37 +42,36 @@ $(function () {
   })
   //注册按钮事件的绑定
   $('[data-reg=register]').click(function () {
-    $('.login').css('display', 'none');
-    $('.register').css('display', 'block');
+    mychange('.register')
   })
   //为下一步按钮绑定事件
   $('[data-check=check]').click(function () {
-    $('.check').css('display', 'block').siblings().css('display', 'none')
+    mychange('.check');
+    //启动定时器
+    mySetInterval();   
   })
-  //单击X号恢复初始状态
-  $('[data-change=change]').click(function () {
-    $('.login').css('display', "block").siblings().css('display', 'none')
-  })
+  //为模态框绑定拖动事件
+  $('modal-header')
   //返回登录界面
   $('.modal-footer>div>a').click(function () {
-    $('.login').css('display', "block").siblings().css('display', 'none')
+    mychange('.login')
   })
   //函数定义
+  function mychange(selector){
+    $(selector).show().siblings().hide();
+  }
+  //函数定义
   function mySetInterval() {
-    //启动定时器
-    //60s的倒计时
-    var time = 60
-    var timer = null
     timer = setInterval(fn, 1000)
-
-    function fn() {
-      $('.time>em').html(time + 's');
-      time--;
-      if (time == 0) {
-        clearInterval(timer);
-        $('.time>em').css('display', 'none')
-        $('.time>a').css('display', 'block')
-      }
+  }
+  function fn() {
+    $('.time>em').html(time + 's');
+    time--;
+    if (time == 0) {
+      console.log(timer);
+      clearInterval(timer);
+      $('.time>em').css('display', 'none')
+      $('.time>a').css('display', 'block')
     }
   }
   //组件封装（使用vue）
@@ -75,8 +87,7 @@ $(function () {
   })
   //手机登录界面
   $('[data-log=login]').click(function () {
-    // alert('进入登录功能');
-    $('.login-next').css('display', "block").siblings().css('display', 'none')
+    mychange('.login-next')
   })
   //登录
   //绑定监听事件
@@ -96,7 +107,7 @@ $(function () {
     vali("#uname",/(^(\+86|0086)?1[3-8]\d{9}$)|(^[^.@]+@[^.@]+\.(com|cn|net)(\.cn)?$)|(^[\u4e00-\u9fa5]+$)/, e);
     vali("#upwd",/^.{6,}$/,e);
     //var url = "http://127.0.0.1:3000/user/signin";
-    var url = "http://176.137.16.237:3001/user/signin"
+    var url = baseUrl + "user/signin"
     $.ajax({url: url,data: {uname,upwd},type: "POST",
       success: function (res) {
         console.log(res)
@@ -141,8 +152,9 @@ $(function () {
      $('.my-right-hidden').hide();
   }
   //事件绑定
-  //$('.inputs>input').setAttribute('readonly',true)
-
+  $.each($('.inputs>input'),function(index,val){
+    val.setAttribute('readonly',true);
+  })
   $('.inputs>input').keyup(function(){
     var $input = $(this);
     $input.css('border-bottom','2px red solid');
@@ -150,4 +162,6 @@ $(function () {
     $input.next().removeAttr('readonly');
     $input.next().focus();
   })
+  $('.inputs>input')[0].removeAttribute('readonly');
+  //时间2018/11/10开始做新的功能
 })

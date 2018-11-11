@@ -40,7 +40,7 @@
         </div>
         <!--隐藏的部分2-->
         <div class="my-login">
-          <b><a href="javascript:" data-toggle="modal" data-target="#demo">登录</a></b>
+          <b><a href="javascript:"class="goto-login">登录</a></b>
         </div>
         <div class="my-hidden my-after-login">
           <ul>
@@ -56,113 +56,111 @@
     <div class="pt-1 my-change"></div>
     <!--模态框的使用-->
     <div id="demo" class="modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <!--没有单击注册时显示-->
-          <div class="login">
-            <div class="modal-header">
-              <span>登录</span>
-              <span data-dismiss="modal" data-change="change" class="my-times">&times;</span>
+      <div class="modal-content">
+        <!--没有单击注册时显示-->
+        <div class="login">
+          <div class="modal-header">
+            <span>登录</span>
+            <span data-change="change" class="my-times">&times;</span>
+          </div>
+          <div class="modal-body">
+            <div>
+              <img src="../img/header01/platform.png" width="247" alt="HTML5">
+              <button data-log="login" type="button">手机号登录</button>
+              <button data-reg="register" type="button">注册</button>
             </div>
-            <div class="modal-body">
+            <ul>
+              <li>
+                <div></div><em>微信登录</em>
+              </li>
+              <li>
+                <div></div><em>QQ登录</em>
+              </li>
+              <li>
+                <div></div><em>微博登录</em>
+              </li>
+              <li>
+                <div></div><em>网易云邮箱账号登录</em>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--单击注册时显示-->
+        <div class="register">
+          <div class="modal-header">
+            <span>手机号注册</span>
+            <span data-dismiss="modal" data-change="change" class="my-times">&times;</span>
+          </div>
+          <div class="register-body">
+            <label>手机号:</label>
+            <div class="select">
+              <select>
+                <option>+86</option>
+                <option>+852</option>
+              </select>
+              <input type="text" name="uname" placeholder="请输入手机号">
+            </div>
+            <label>密码:</label>
+            <input type="password" name="upwd" placeholder="请输入密码，不得少于6位数">
+            <button data-check="check">下一步</button>
+          </div>
+          <div class="modal-footer">
+            <div><a href="javascript:">&lt;返回登录页</a></div>
+          </div>
+        </div>
+        <!--显示验证码-->
+        <div class="check">
+          <div class="modal-header">
+            <span>手机号注册</span>
+            <span data-dismiss="modal" data-change="change" class="my-times">&times;</span>
+          </div>
+          <div class="register-body ">
+            <p class="my-p">你的手机号：<em>+86 181****8854</em></p>
+            <p class="my-safe">为了安全，我们会给你发送短信验证码</p>
+            <div class="inputs">
+              <input maxlength="1" type="text" autofocus />
+              <input maxlength="1" type="text" />
+              <input maxlength="1" type="text" />
+              <input maxlength="1" type="text" />
+            </div>
+            <div class="time">
+              <span style="opacity: 1"><i class="icon iconfont icon-jinggao"></i>&nbsp;验证码输入错误</span>
+              <em>60s</em>
+              <a href="javascript:">重新获取</a>
+            </div>
+            <button data-success="success">下一步</button>
+          </div>
+          <div class="modal-footer">
+            <div><a href="javascript:" data-toLogin="toLogin">&lt;返回登录页</a></div>
+          </div>
+        </div>
+        <!--手机登录界面-->
+        <div class="login-next">
+          <div class="modal-header">
+            <span>手机号登录</span>
+            <span data-dismiss="modal" data-change="change" class="my-times">&times;</span>
+          </div>
+          <div class="register-body">
+            <div class="select">
+              <select>
+                <option>+86</option>
+                <option>+852</option>
+              </select>
+              <input type="text" id="uname" name="uname" placeholder="请输入手机号">
+            </div>
+            <input type="password" id="upwd" name="upwd" placeholder="请输入密码">
+            <div class="my-check">
               <div>
-                <img src="../img/header01/platform.png" width="247" alt="HTML5">
-                <button data-log="login" type="button">手机号登录</button>
-                <button data-reg="register" type="button">注册</button>
+                <input type="checkbox">
+                <em>自动登录</em>
               </div>
-              <ul>
-                <li>
-                  <div></div><em>微信登录</em>
-                </li>
-                <li>
-                  <div></div><em>QQ登录</em>
-                </li>
-                <li>
-                  <div></div><em>微博登录</em>
-                </li>
-                <li>
-                  <div></div><em>网易云邮箱账号登录</em>
-                </li>
-              </ul>
+              <em>忘记密码？</em>
             </div>
+            <button data-login="login">登录</button>
           </div>
-          <!--单击注册时显示-->
-          <div class="register">
-            <div class="modal-header">
-              <span>手机号注册</span>
-              <span data-dismiss="modal" data-change="change" class="my-times">&times;</span>
-            </div>
-            <div class="register-body">
-              <label>手机号:</label>
-              <div class="select">
-                <select>
-                  <option>+86</option>
-                  <option>+852</option>
-                </select>
-                <input type="text" name="uname" placeholder="请输入手机号">
-              </div>
-              <label>密码:</label>
-              <input type="password" name="upwd" placeholder="请输入密码，不得少于6位数">
-              <button data-check="check">下一步</button>
-            </div>
-            <div class="modal-footer">
-              <div><a href="javascript:">&lt;返回登录页</a></div>
-            </div>
-          </div>
-          <!--显示验证码-->
-          <div class="check">
-            <div class="modal-header">
-              <span>手机号注册</span>
-              <span data-dismiss="modal" data-change="change" class="my-times">&times;</span>
-            </div>
-            <div class="register-body ">
-              <p class="my-p">你的手机号：<em>+86 181****8854</em></p>
-              <p class="my-safe">为了安全，我们会发送短信验证码</p>
-              <div class="inputs">
-                <input maxlength="1" type="text" autofocus />
-                <input maxlength="1" type="text" />
-                <input maxlength="1" type="text" />
-                <input maxlength="1" type="text" />
-              </div>
-              <div class="time">
-                <span>验证码输入错误</span>
-                <em>60s</em>
-                <a href="javascript:">重新获取</a>
-              </div>
-              <button data-success="success">下一步</button>
-            </div>
-            <div class="modal-footer">
-              <div><a href="javascript:" data-toLogin="toLogin">&lt;返回登录页</a></div>
-            </div>
-          </div>
-          <!--手机登录界面-->
-          <div class="login-next">
-            <div class="modal-header">
-              <span>手机号登录</span>
-              <span data-dismiss="modal" data-change="change" class="my-times">&times;</span>
-            </div>
-            <div class="register-body">
-              <div class="select">
-                <select>
-                  <option>+86</option>
-                  <option>+852</option>
-                </select>
-                <input type="text" id="uname" name="uname" placeholder="请输入手机号">
-              </div>
-              <input type="password" id="upwd" name="upwd" placeholder="请输入密码">
-              <div class="my-check">
-                <div>
-                  <input type="checkbox">
-                  <em>自动登录</em>
-                </div>
-                <em>忘记密码？</em>
-              </div>
-              <button data-login="login">登录</button>
-            </div>
-            <div class="modal-footer my-a">
-              <div><a href="javascript:">&lt;返回登录页</a></div>
-              <a href="#">没有账号？免费注册&gt;</a>
-            </div>
+          <div class="modal-footer my-a">
+            <div><a href="javascript:">&lt;返回登录页</a></div>
+            <a href="#">没有账号？免费注册&gt;</a>
           </div>
         </div>
       </div>
