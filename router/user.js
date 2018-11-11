@@ -104,7 +104,7 @@ router.get('/cartnews', (req, res) => {
     });
     return;
   }
-  var sql = "select is_checked,count,md,title,subtitle,price from xz_shoppingcart_item left join";
+  var sql = "select product_id,is_checked,count,md,title,subtitle,price from xz_shoppingcart_item left join";
       sql += " xz_laptop_pic on xz_shoppingcart_item.product_id = xz_laptop_pic.laptop_id left join";
       sql += " xz_laptop on xz_shoppingcart_item.product_id = xz_laptop.lid where xz_shoppingcart_item.user_id = ?";
   pool.query(sql, [uid], (err, result) => {
