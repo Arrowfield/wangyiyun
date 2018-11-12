@@ -94,5 +94,16 @@ router.get('/prolist', (req, res) => {
       }
     })
   }
-});
+})
+router.get('/detail',(req,res)=>{
+  var pid = req.query.pid;
+  var sql = "SELECT * FROM xz_laptop WHERE lid = ?";
+  pool.query(sql,[pid],(err,result)=>{
+    if(result.length>0){
+      res.send({code:1,msg:result})
+    }else{
+      res.send({code:-1,msg:"未找到该商品或该商品已经下架"})
+    }
+  })
+})
 module.exports = router;

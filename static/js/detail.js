@@ -17,17 +17,33 @@ $(function(){
         $(result).replaceAll('footer');
       }
     })
+    //获取商品的ID
+    var url = decodeURIComponent(location.href);
+    var pid = url.split("?")[1].split('=')[1];//返回字符串 形如：uname=dingdinupwd=123456
+    //pid = pid.split('=')[1];//返回uid的值
+    var proDetail = {};
+    var baseUrl = sessionStorage.getItem("url");
+    var url = baseUrl + "pro/detail?pid="+pid;
+    $.ajax({url:url,type:"GET",success:function(result){
+      proDetail = result.msg[0]
+      console.log(proDetail)
+    }})
+    console.log(proDetail)
     var MyMagn = {
       template:"#mymagn",
       data:function(){
-        return {}
+        return {
+          proDetail
+        }
+      },
+      created() {
+        console.log(proDetail)
       }
     }
     Vue.component("all",{//全局组件
       template:"#all",
       data:function(){
         return {
-
         }
       },
       components:{

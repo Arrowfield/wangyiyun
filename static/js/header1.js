@@ -5,7 +5,9 @@ $(function () {
     //var url = "http://127.0.0.1:3000/user/islogin";
     var url = baseUrl + "user/islogin";
     var count = sessionStorage.getItem('count');
-    $('[data-cart=cart]>span').text(count);
+    if(count){
+      $('[data-cart=cart]>span').text(count);
+    }
     $.ajax({url:url,type:'GET',success: function(result) {
       if(result.code == 1){
         $('.login-before').hide();

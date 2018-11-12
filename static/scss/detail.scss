@@ -1,0 +1,235 @@
+/*从蘑菇街架过来之后的样式*/
+#app{
+}
+.mymagn{
+  width:1100px;
+  margin:50px auto;
+  display: flex;
+  justify-content: center;
+}
+.my-right{
+  font-size:14px;
+  color:gray;
+  padding:0 20px;
+}
+.pro_size span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  margin-right: 0.4rem;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+  font-weight: bold;
+}
+
+.pro_color img {
+  width: 45px;
+  margin-right: 0.8rem;
+}
+/*结束*/
+.my_img {
+  width: 40px;
+  height: 40px;
+}
+
+.my_img1 {
+  width: 400px;
+  height: 500px;
+}
+
+/* 中图的尺寸是400 X 500
+   大图的尺寸按照4:3 计算： 533 X 666
+*/
+.my_img2 {
+  width: 60px;
+  height: 60px;
+}
+
+.my_img3 {
+  width: 120px;
+  height: 160px;
+}
+
+.my_img4 {
+  width: 160px;
+  height: 240px;
+}
+
+.my_bg {
+  background-color: #950505;
+}
+
+.my_bg1 {
+  background-color: #dee2e6;
+}
+
+.my_bg2 {
+  background-color: papayawhip;
+}
+
+.my_bg3 {
+  background-color: pink;
+}
+
+.my_bg4 {
+  background-color: #ddd;
+}
+
+.my_vertical_nav {
+  background-color: #5a6268;
+  color: white;
+}
+
+.my_vertical_nav li a {
+  color: white;
+}
+
+.my_input_w {
+  width: 23rem;
+  height: 34px;
+  border: 1px solid deeppink;
+  outline: none;
+  font-size: 0.5rem;
+  color: #5a6268;
+  vertical-align: top;
+}
+
+.my_button_bg {
+  background-color: #FE217E;
+  width: 100px;
+  height: 34px;
+  color: white;
+  border: 0;
+}
+
+table tr td {
+  padding: 0.4rem 0.3rem;
+}
+
+.my_hidden {
+  width: 400px;
+  position: relative;
+  /*overflow-y: hidden;*/
+}
+
+.my_margin1 {
+  margin-left: 17rem;
+}
+
+.my_bg1 p span {
+  vertical-align: middle;
+}
+
+.my_btn {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.my_input {
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  vertical-align: top;
+}
+
+.my_small {
+  font-size: 0.6rem;
+}
+
+.my_top_border {
+  border-top: 2px solid red;
+}
+
+.my_fontFamily {
+  font-family: myFirstFont;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url("../myfont/myfont.ttf");
+}
+
+.my_fixed {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#my_xiaoshou ul li {
+  float: left;
+}
+
+#my_button {
+  position: relative;
+  overflow: hidden;
+}
+
+.my_button {
+  position: absolute;
+  z-index: 10;
+  width: 738px;
+  height: 200px;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+/**放大镜功能实现的相关样式**/
+#mask {
+  width: 300px;
+  height: 300px;
+  background: gray;
+  opacity: 0.3;
+  z-index: 9;
+  top: 0;
+  left: 0;
+}
+
+#super-mask {
+  width: 400px;
+  height: 500px;
+  z-index: 10;
+  background: gray;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+}
+
+#div-lg {
+  width: 500px;
+  height: 500px;
+  z-index: 10;
+  background: gainsboro;
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.125)
+}
+
+#my_magn {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0px;
+  width: 800px;
+  transition: all .5s linear;
+}
+
+/*为ul设置宽度*/
+#my_magn li {
+  float: left;
+  padding-top: 10px;
+  text-align: center;
+  padding-left: 14px;
+}
+
+.my_card>div {
+  overflow: hidden;
+  width: 308px;
+  display: inline-block;
+}
+
+/*放大镜功能样式的结束*/
