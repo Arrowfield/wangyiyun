@@ -1,11 +1,12 @@
 $(function () {
   //将数据库中用户的购物车信息导出
   var baseUrl = sessionStorage.getItem('url');
+  
   (function(){
     //使用用户的ID查询用户购物车的相关信息
     var uid = sessionStorage.getItem('uid');
     if(uid){
-      var url = baseUrl+'user/cartnews'
+      var url = baseUrl+'user/cartnews';
       $.ajax({url:url,type:"GET",data:{uid:uid},success:function(result){
       console.log(result.msg)
       new Vue({

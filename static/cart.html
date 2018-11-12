@@ -47,7 +47,7 @@
           <input type="checkbox" @change="handleChange" v-model="tmp.is_checked" class="my-input my-center">
           <img :src="'http://127.0.0.1:3001/'+tmp.md" alt="HTML5">
           <p class="my-detail">
-            <a :href="'./detail.html?pid='+tmp.product_id">{{tmp.title}}</a>
+            <a :href="'./detail.html?pid='+tmp.lid">{{tmp.title}}</a>
             <span class="intro">{{tmp.subtitle}}</span>
           </p>
           <span class='price'>￥{{tmp.price.toFixed(2)}}</span>

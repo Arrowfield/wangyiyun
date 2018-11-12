@@ -33,6 +33,7 @@ $(function () {
     //var url = "http://127.0.0.1:3000/user/signout"
     //销毁sessionStorage
     sessionStorage.removeItem('uid');
+    sessionStorage.setItem('count',0);
     var url = baseUrl + "user/signout"
     $.ajax({url:url,type:"GET",success:function(result){
       //console.log(result);
@@ -107,7 +108,13 @@ $(function () {
     $.ajax({url: url,data: {uname:uname,upwd:upwd},type: "POST",
       success: function (res) {
         console.log(res)
-        if(res.code ==1 ){
+        if(res.result.code ==1 ){
+          //存储用户的购物车的总数量
+          var count = 0;
+          res.count.forEach((val)=>{
+            count += val.count;
+          })
+          sessionStorage.setItem("count",count)
           //登陆成功重新刷新页面
           window.location.reload();
         }else{

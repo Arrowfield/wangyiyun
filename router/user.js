@@ -9,17 +9,49 @@ var router = express.Router();
 router.post('/signin', (req, res) => { //路径名应修改为signin 请求方式应该为get
   var uname = req.body.uname;
   var upwd = req.body.upwd;
-  //if (!uname) {
-  //res.send({ code: 403, msg: "用户名不能为空" });
-  //return;
-  //}
-  //if (!upwd) {
-  //res.send({ code: 404, msg: "密码不能为空" });
-  //return;
-  //}
-  var sql = " SELECT uid FROM xz_user WHERE uname = ? AND upwd = ?";
-  sql += " OR phone = ? AND upwd = ? OR email = ? AND upwd = ?";
-  pool.query(sql, [uname, upwd, uname, upwd, uname, upwd], (err, result) => {
+  if (!uname) {
+    res.send({ code: 403, msg: "用户名不能为空" });
+    return;
+  }
+  if (!upwd) {
+    res.send({ code: 404, msg: "密码不能为空" });
+    return;
+  }
+  (async function () {
+    var obj = {result:{},count:0}
+    var sql = " SELECT uid FROM xz_user WHERE uname = ? AND upwd = ?";
+    sql += " OR phone = ? AND upwd = ? OR email = ? AND upwd = ?";
+    await new Promise(function(open){
+      pool.query(sql, [uname, upwd, uname, upwd, uname, upwd], (err, result) => {
+        if(err) throw err;
+        //获取结果
+        if(result.length > 0){
+          req.session.uid = result[0].uid;
+          obj.result = {code:1,msg:result};
+        }else{
+          obj.result = {code:-1,msg:"没有找到该用户"}
+        }
+        open();
+      })
+    })
+    var sql = "SELECT count FROM xz_shoppingcart_item WHERE user_id = ";
+        sql += "(SELECT uid FROM xz_user WHERE uname = ? AND upwd = ?)"
+    await new Promise(function(open){
+      pool.query(sql,[uname,upwd],(err,result)=>{
+        if(err) throw err;
+        //获取结果
+        if(result.length > 0){
+          obj.count = result
+        }else{
+          obj.count = 0
+        }
+        open();
+      })
+    })
+    res.send(obj);
+  })();
+
+  /*pool.query(sql, [uname, upwd, uname, upwd, uname, upwd], (err, result) => {
     if (err) throw err;
     res.writeHead(200, {
       "Content-Type": "application/json;charset=utf-8"
@@ -38,7 +70,8 @@ router.post('/signin', (req, res) => { //路径名应修改为signin 请求方�
       }));
     }
     res.end();
-  })
+  })*/
+
 })
 //检查用户是否登录
 router.get('/islogin', (req, res) => {
@@ -104,9 +137,9 @@ router.get('/cartnews', (req, res) => {
     });
     return;
   }
-  var sql = "select product_id,is_checked,count,md,title,subtitle,price from xz_shoppingcart_item left join";
-      sql += " xz_laptop_pic on xz_shoppingcart_item.product_id = xz_laptop_pic.laptop_id left join";
-      sql += " xz_laptop on xz_shoppingcart_item.product_id = xz_laptop.lid where xz_shoppingcart_item.user_id = ?";
+  var sql = "select lid,is_checked,count,md,title,subtitle,price from xz_shoppingcart_item left join";
+  sql += " xz_laptop_pic on xz_shoppingcart_item.product_id = xz_laptop_pic.laptop_id left join";
+  sql += " xz_laptop on xz_shoppingcart_item.product_id = xz_laptop.lid where xz_shoppingcart_item.user_id = ?";
   pool.query(sql, [uid], (err, result) => {
     if (err) throw err;
     res.send({

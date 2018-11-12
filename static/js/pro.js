@@ -93,8 +93,9 @@ $(function () {
     $('div.my-first').hide();
     $('div.my-second').hide();
     $('em.msg').html(msg);
+    var baseUrl = sessionStorage.getItem('url');
     $.ajax({
-      url: `http://176.137.16.237:3001/pro/prolist?keywords=${msg}`,
+      url: `${baseUrl}pro/prolist?keywords=${msg}`,
       type: "GET",
       success: (res) => {
         addPro(res,msg);
