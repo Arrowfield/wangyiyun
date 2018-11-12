@@ -69,10 +69,31 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 8px 0;
+}
+
+.aside div > button {
+  padding: 5px 23px;
+  margin-left: 20px;
+  background: none;
+  border: 2px solid red;
 }
 
 .aside p {
   margin: 0;
+  white-space: nowrap;
+}
+
+.aside span {
+  color: red;
+}
+
+.aside img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 10px;
+  background: #ddd;
 }
 
 /*结束*/

@@ -46,11 +46,14 @@ $(function(){
         //当存在数据时，对window绑定鼠标滚动监听事件(附带解决抖动问题)
         methods:{
           handleScroll(){
-            
+            console.log(window.pageYOffset)
           },
         },
-        created(){
+        created(){//获取得到数据时的生命周期
           window.addEventListener('scroll',this.handleScroll)
+        },
+        destroyed(){//离开页面时，执行的操作
+          window.removeEventListener('scroll',this.handleScroll)
         }
       }
       Vue.component("all",{//全局组件
