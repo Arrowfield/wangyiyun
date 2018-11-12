@@ -7,7 +7,7 @@ $(function(){
       type: "GET",
       success: function (result) {
         $(result).replaceAll('header');
-        //$('<script src="./js/header2.js"></script>').appendTo('body');
+        $('<script src="./js/header1.js"></script>').appendTo('body');
       }
     })
     $.ajax({
@@ -16,5 +16,26 @@ $(function(){
       success: function (result) {
         $(result).replaceAll('footer');
       }
+    })
+    var MyMagn = {
+      template:"#mymagn",
+      data:function(){
+        return {}
+      }
+    }
+    Vue.component("all",{//全局组件
+      template:"#all",
+      data:function(){
+        return {
+
+        }
+      },
+      components:{
+        MyMagn:MyMagn
+      }
+    })
+    var vm = new Vue({
+      el:"#app",
+      data:{}//
     })
 })
