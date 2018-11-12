@@ -28,7 +28,10 @@
   </section>
 
   <template id="all">
-    <my-magn></my-magn>
+    <div>
+      <my-magn></my-magn>
+      <my-top></my-top>
+    </div>
   </template>
 
   <!--放大镜功能-->
@@ -72,8 +75,9 @@
       </div>
       <div class="my-right">
         <h4 class="font-weight-bold" v-text="proDetail.title" ></h4>
+        <h6>{{proDetail.subtitle}}</h6>
         <div>
-          <div class="my_bg1 pt-2 pb-2 mb-3 pl-2">
+          <div class="my_bg1 p-2 mb-3">
             <p><span class="font-weight-bold">现价：￥{{proDetail.price}}</span> <span><s>￥172.50</s></span></p>
             <p>
               <span class="text-danger">2人拼团：</span>
@@ -87,12 +91,12 @@
               <!--小方制作-->
               <span class="border border-danger p-1 text-danger ">
                 满99立减3元
-              </span><a href="#" class=" bg-danger btn  text-white rounded-0 p-0 my_small pt-1" style="width:55px;height:27px">
-                领取</a>
+              </span>
+              <a href="#" class="lingqu">领取</a>
               <span class="border border-danger p-1 text-danger ">
                 满199立减15元
-              </span><a href="#" class=" bg-danger btn  text-white rounded-0 p-0 my_small pt-1" style="width:55px;height:27px">
-                领取</a>
+              </span>
+              <a href="#" class="lingqu">领取</a>
             </p>
           </div>
           <p>客服： <button class="bg-white">联系客服</button></p>
@@ -116,7 +120,7 @@
             </button><input type="text" placeholder="1" class="my_input"><button class="my_btn">
               +
             </button>
-            <span>库存127件</span>
+            <span>库存{{proDetail.sold_count}}件</span>
           </p>
           <p class="mb-4">
             <a href="#" class="btn bg-danger text-white rounded-0">2人拼团购买</a>
@@ -124,7 +128,7 @@
             <a href="#" class="btn bg-danger text-white rounded-0">购物车</a>
           </p>
           <p>收藏 分享 举报</p>
-          <p>服务承诺：全国包邮 七天无理由退货 72小时发货 退货补运费</p>
+          <p>服务承诺：{{proDetail.promise}}</p>
           <p>支付方式：微信 支付宝 微博</p>
         </div>
       </div>
@@ -144,6 +148,22 @@
             <p class="mb-0">￥122.9</p>
           </li>
         </ul>
+      </div>
+    </div>
+  </template>
+  <!--上方隐藏的DIV-->
+  <template id="mytop">
+    <div v-if="isHide" class="main-aside">
+      <div class="aside">
+        <div>
+          <img src="">
+          <p>网易云音乐蓝牙自拍杆 移动充电三挡补光</p>
+          <span>￥300.00</span>
+        </div>
+        <div>
+          <button>立即购买</button>
+          <button>加入购物车</button>
+        </div>
       </div>
     </div>
   </template>

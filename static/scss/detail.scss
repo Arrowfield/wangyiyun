@@ -28,6 +28,36 @@
   width: 45px;
   margin-right: 0.8rem;
 }
+.lingqu{
+  display: inline-block;
+  text-decoration: none;
+  padding:4px 15px;
+  background: rgb(238, 88, 88);
+  color:white;
+  vertical-align: middle;
+  &:hover{
+    text-decoration: none;
+    color:white;
+  }
+}
+.main-aside{
+  background: white;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index: 1;
+}
+.aside{
+  width:1100px;
+  display: flex;
+  margin:0 auto;
+  justify-content: space-between;
+  align-items: center;
+  p{
+    margin:0;
+  }
+}
 /*结束*/
 .my_img {
   width: 40px;
@@ -115,7 +145,7 @@ table tr td {
 }
 
 .my_margin1 {
-  margin-left: 17rem;
+  margin-left: 12rem;
 }
 
 .my_bg1 p span {

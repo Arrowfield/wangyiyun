@@ -26,6 +26,7 @@ $(function(){
     $.ajax({url:url,type:"GET",success:function(result){
       //数据请求回来之后
       var proDetail = result.msg[0]
+      console.log(proDetail)
       //进行事件处理
       var MyMagn = {
         template:"#mymagn",
@@ -35,6 +36,23 @@ $(function(){
           }
         }
       }
+      var MyTop = {
+        template:"#mytop",
+        data:function(){
+          return{
+            isHide:false
+          }
+        },
+        //当存在数据时，对window绑定鼠标滚动监听事件(附带解决抖动问题)
+        methods:{
+          handleScroll(){
+            
+          },
+        },
+        created(){
+          window.addEventListener('scroll',this.handleScroll)
+        }
+      }
       Vue.component("all",{//全局组件
         template:"#all",
         data:function(){
@@ -42,7 +60,8 @@ $(function(){
           }
         },
         components:{
-          MyMagn:MyMagn
+          MyMagn,
+          MyTop
         }
       })
       var vm = new Vue({
