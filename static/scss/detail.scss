@@ -1,9 +1,14 @@
 /*从蘑菇街架过来之后的样式*/
 #app{
 }
+.my-hr{
+  width:1100px;
+  margin:90px auto 0;
+  background: black;
+}
 .mymagn{
   width:1100px;
-  margin:50px auto;
+  margin:22px auto;
   display: flex;
   justify-content: center;
 }
@@ -11,6 +16,7 @@
   font-size:14px;
   color:gray;
   padding:0 20px;
+  border-right:1px solid rgb(212, 209, 209);
 }
 .pro_size span {
   display: inline-block;
@@ -92,6 +98,31 @@
     float:left;
     margin-right:10px;
     background: #ddd;
+  }
+  
+}
+.my-remai{
+  color:gray;
+  text-align: center;
+  padding-left:5px;
+  img{
+    width:140px;
+    height:160px;
+  }
+  p{
+    margin:0;
+    color:red;
+  }
+  div.list-hide{
+    overflow: hidden;
+    height:552px;
+    ul{
+      
+      transition: all .3s linear;
+      li{
+        margin-top:5px;
+      }
+    }
   }
 }
 /*结束*/
@@ -181,7 +212,7 @@ table tr td {
 }
 
 .my_margin1 {
-  margin-left: 12rem;
+  margin-left: 9rem;
 }
 
 .my_bg1 p span {

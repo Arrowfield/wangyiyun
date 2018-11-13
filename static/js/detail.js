@@ -25,29 +25,69 @@ $(function(){
     var url = baseUrl + "pro/detail?pid="+pid;
     $.ajax({url:url,type:"GET",success:function(result){
       //数据请求回来之后
-      var proDetail = result.msg[0]
+      var proDetail = result.msg[0]//隔离this //指向this-->window
       console.log(proDetail)
       //进行事件处理
       var MyMagn = {
         template:"#mymagn",
         data:function(){
           return {
-            proDetail
+            proDetail,
+            myMargin:"",
+            hideHeight:0,
+            timer:null,
+            pic:[],
+            flag:true,
+            count:1
           }
+        },
+        //ul的总高度1885px
+        methods:{
+          handleHide(){
+            if(this.hideHeight < 1319 && this.flag){
+              this.myMargin = "margin-top:-"+(this.hideHeight += 10)+"px";
+            }else{
+              this.flag = false;
+              this.myMargin = "margin-top:-"+(this.hideHeight -= 10)+"px";
+              if(this.hideHeight == 0){this.flag = true}
+            }
+          },
+          sub(){
+            this.count --;
+          },
+          add(){
+            this.count ++;
+          }
+        },
+        //生命周期函数
+        created(){
+          //从数据库中随机获取10条商品数据 图片 单价
+          var url = baseUrl + "pro/pic";
+          var self = this;
+          $.ajax({url:url,type:"GET",success:function(result){
+            console.log(result)
+            self.pic = result.msg;
+          }})//里面的this不是指向外面是VUE实例
+          //console.log(baseUrl)//作用域链与原型链
+          this.timer = setInterval(this.handleHide,100)
+        },
+        destroyed(){
+          clearInterval(this.timer)
         }
       }
       var MyTop = {
         template:"#mytop",
         data:function(){
           return{
-            isHide:false
+            isHide:false,
+            
           }
         },
         //当存在数据时，对window绑定鼠标滚动监听事件(附带解决抖动问题)
         methods:{
           handleScroll(){
-            console.log(window.pageYOffset)
-            if(window.pageYOffset > 120){
+            //console.log(window.pageYOffset)//可能不能解决抖动问题吧
+            if(window.pageYOffset > 400){
               this.isHide = true;
             }else{
               this.isHide = false;
