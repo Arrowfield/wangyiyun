@@ -153,7 +153,7 @@
   </template>
   <!--上方隐藏的DIV-->
   <template id="mytop">
-    <div v-if="true" class="main-aside">
+    <div v-if="isHide" class="main-aside">
       <div class="aside">
         <div>
           <img src="./img/detail/carousel0.jpg">
@@ -161,8 +161,8 @@
           <span>￥300.00</span>
         </div>
         <div>
-          <button>立即购买</button>
-          <button>加入购物车</button>
+          <button @click="buy">立即购买</button>
+          <button @click="addCart"><i class="icon iconfont icon-shangcheng"></i><em>加入购物车</em></button>
         </div>
       </div>
     </div>

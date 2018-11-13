@@ -60,6 +60,17 @@
     margin-left:20px;
     background: none;
     border:2px solid red;
+    vertical-align: bottom;
+    cursor: pointer;
+  }
+  div>button:nth-child(1){
+    height:48px;
+  }
+  div>button:nth-child(2){
+    background: rgb(245, 79, 79);
+    color:white;
+    border:none;
+    height:48px;
   }
   p{
     margin:0;
@@ -67,6 +78,13 @@
   }
   span{
     color:red;
+  }
+  i{
+    font-size:23px;
+    margin-right:5px;
+  }
+  em{
+    vertical-align: 2.5px;
   }
   img{
     width:50px;

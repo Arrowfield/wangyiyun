@@ -77,6 +77,19 @@
   margin-left: 20px;
   background: none;
   border: 2px solid red;
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+.aside div > button:nth-child(1) {
+  height: 48px;
+}
+
+.aside div > button:nth-child(2) {
+  background: #f54f4f;
+  color: white;
+  border: none;
+  height: 48px;
 }
 
 .aside p {
@@ -86,6 +99,15 @@
 
 .aside span {
   color: red;
+}
+
+.aside i {
+  font-size: 23px;
+  margin-right: 5px;
+}
+
+.aside em {
+  vertical-align: 2.5px;
 }
 
 .aside img {

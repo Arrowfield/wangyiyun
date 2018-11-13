@@ -47,7 +47,18 @@ $(function(){
         methods:{
           handleScroll(){
             console.log(window.pageYOffset)
+            if(window.pageYOffset > 120){
+              this.isHide = true;
+            }else{
+              this.isHide = false;
+            }
           },
+          buy(){
+            alert('1')
+          },
+          addCart(){
+            alert('2')
+          }
         },
         created(){//获取得到数据时的生命周期
           window.addEventListener('scroll',this.handleScroll)
