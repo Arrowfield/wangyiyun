@@ -23,7 +23,9 @@
     （4）备注：前端静态资源运行的IP：http://127.0.0.1:3000；前端获取数据的IP：http://127.0.0.1:3000；因此属于非跨域， 即非前后端分离（在新浪云运行时服务器的端口号修改为5050）
     （5）可以将该项目称为服务端
 五、项目打包部署流程
-		（1）https://github.com/Arrowfield
+	（1）https://github.com/Arrowfield
+    （2）常用的GIT指令：git init;git add .;git commit -m "update";git push;git pull;git remote add 远程仓库地址;git remote remove 远程仓库地址;git status;git config user.name;git config user.email;git remote -v;
+
   
   
 	
