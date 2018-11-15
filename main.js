@@ -7,6 +7,7 @@ const pro = require('./router/pro');
 const user = require('./router/user');
 var app = express();
 app.listen(3001);
+//sesseion
 app.use(session({
   secret: "my_session",
   resave: false,
@@ -26,5 +27,3 @@ app.use(bodyParser.urlencoded({
 //挂载路由[使用路由器来管理路由]
 app.use('/pro', pro);
 app.use('/user', user);
-//C:\xampp\htdocs\framework\4_RN\myapp\android\app\build\outputs\apk
-// 176.137.16.237
