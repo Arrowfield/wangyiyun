@@ -9,7 +9,7 @@ var app = express();
 app.listen(3001);
 //sesseion
 app.use(session({
-  secret: "my_session",
+  secret: "mySession",
   resave: false,
   saveUninitialized: true
 }));
