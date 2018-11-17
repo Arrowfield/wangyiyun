@@ -29,6 +29,7 @@
 
   <template id="all">
     <div>
+      <hr class="my-hr">
       <my-magn></my-magn>
       <my-top></my-top>
     </div>
@@ -78,7 +79,7 @@
         <h6>{{proDetail.subtitle}}</h6>
         <div>
           <div class="my_bg1 p-2 mb-3">
-            <p><span class="font-weight-bold">现价：￥{{proDetail.price}}</span> <span><s>￥172.50</s></span></p>
+            <p><span class="font-weight-bold">现价：￥{{proDetail.price.toFixed(2)}}</span> <span><s>￥172.50</s></span></p>
             <p>
               <span class="text-danger">2人拼团：</span>
               <span class="text-danger h3">￥78.00</span>
@@ -115,9 +116,9 @@
             <span>2XL</span>
           </p>
           <p>数量：
-            <button class="my_btn">
+            <button @click="sub()" class="my_btn">
               -
-            </button><input type="text" placeholder="1" class="my_input"><button class="my_btn">
+            </button><input type="text" v-model="count" class="my_input"><button @click="add()" class="my_btn">
               +
             </button>
             <span>库存{{proDetail.sold_count}}件</span>
@@ -132,28 +133,22 @@
           <p>支付方式：微信 支付宝 微博</p>
         </div>
       </div>
-      <div>
-        <h5 class="text-center text-muted">热卖推荐</h5>
-        <ul class="list-unstyled">
-          <li>
-            <img src="" alt="" class="my_img3">
-            <p class="mb-0">￥124.9</p>
+      <div class="my-remai">
+        <h5>热卖推荐</h5>
+        <div class="list-hide">
+          <ul :style="myMargin" class="list-unstyled">
+          <li v-for="(tmp,index) in pic" :key="index">
+            <img :src="'http://127.0.0.1:3001/'+tmp.md">
+            <p>￥{{tmp.price.toFixed(2)}}</p>
           </li>
-          <li>
-            <img src="" alt="" class="my_img3">
-            <p class="mb-0">￥120.9</p>
-          </li>
-          <li>
-            <img src="" alt="" class="my_img3">
-            <p class="mb-0">￥122.9</p>
-          </li>
-        </ul>
+          </ul>
+        </div>
       </div>
     </div>
   </template>
   <!--上方隐藏的DIV-->
   <template id="mytop">
-    <div v-if="true" class="main-aside">
+    <div v-if="isHide" class="main-aside">
       <div class="aside">
         <div>
           <img src="./img/detail/carousel0.jpg">
@@ -161,8 +156,8 @@
           <span>￥300.00</span>
         </div>
         <div>
-          <button>立即购买</button>
-          <button>加入购物车</button>
+          <button @click="buy">立即购买</button>
+          <button @click="addCart"><i class="icon iconfont icon-shangcheng"></i><em>加入购物车</em></button>
         </div>
       </div>
     </div>

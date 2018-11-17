@@ -1,8 +1,14 @@
 @charset "UTF-8";
 /*从蘑菇街架过来之后的样式*/
+.my-hr {
+  width: 1100px;
+  margin: 90px auto 0;
+  background: black;
+}
+
 .mymagn {
   width: 1100px;
-  margin: 50px auto;
+  margin: 22px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,6 +21,7 @@
   font-size: 14px;
   color: gray;
   padding: 0 20px;
+  border-right: 1px solid #d4d1d1;
 }
 
 .pro_size span {
@@ -77,6 +84,19 @@
   margin-left: 20px;
   background: none;
   border: 2px solid red;
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+.aside div > button:nth-child(1) {
+  height: 48px;
+}
+
+.aside div > button:nth-child(2) {
+  background: #f54f4f;
+  color: white;
+  border: none;
+  height: 48px;
 }
 
 .aside p {
@@ -88,12 +108,51 @@
   color: red;
 }
 
+.aside i {
+  font-size: 23px;
+  margin-right: 5px;
+}
+
+.aside em {
+  vertical-align: 2.5px;
+}
+
 .aside img {
   width: 50px;
   height: 50px;
   float: left;
   margin-right: 10px;
   background: #ddd;
+}
+
+.my-remai {
+  color: gray;
+  text-align: center;
+  padding-left: 5px;
+}
+
+.my-remai img {
+  width: 140px;
+  height: 160px;
+}
+
+.my-remai p {
+  margin: 0;
+  color: red;
+}
+
+.my-remai div.list-hide {
+  overflow: hidden;
+  height: 552px;
+}
+
+.my-remai div.list-hide ul {
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.my-remai div.list-hide ul li {
+  margin-top: 5px;
 }
 
 /*结束*/
@@ -183,7 +242,7 @@ table tr td {
 }
 
 .my_margin1 {
-  margin-left: 12rem;
+  margin-left: 9rem;
 }
 
 .my_bg1 p span {

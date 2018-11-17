@@ -106,4 +106,17 @@ router.get('/detail',(req,res)=>{
     }
   })
 })
+//获取图片与单价的接口
+router.get('/pic',(req,res)=>{
+  var sql = "SELECT lid,price,md FROM xz_laptop INNER JOIN xz_laptop_pic ON xz_laptop.lid = laptop_id  ORDER BY  RAND() LIMIT 10"
+  pool.query(sql,[],(err,result)=>{
+    if(err) throw err;
+    res.send({code:1,msg:result})
+  })
+  /*这条sql语句有效率的问题以及兼容性问题：解决：
+    SELECT MIN(id), MAX(id) FROM tablename;
+    $id=rand($min,$max);
+    SELECT * FROM tablename WHERE id > '$id' LIMIT 10;
+  */
+})
 module.exports = router;
