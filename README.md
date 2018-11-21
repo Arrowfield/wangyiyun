@@ -29,7 +29,18 @@
 
 五、项目打包部署流程
 	（1）https://github.com/Arrowfield
-  （2）常用的GIT指令：git init;git add .;git commit -m "update";git push;git pull;git remote add 远程仓库地址;git remote remove 远程仓库地址;git status;git config user.name;git config user.email;git remote -v;git rm -r --cached node_modules/;git push -f origin master
+  （2）常用的GIT指令：
+        git init;
+        git add .;
+        git commit -m "update";
+        git push;
+        git pull;git remote add 远程仓库地址;
+        git remote remove 远程仓库地址;
+        git status;
+        git config user.name;
+        git config user.email;git remote -v;
+        git rm -r --cached node_modules/;
+        git push -f origin master
 
 六、项目打包部署流程（前端开发流程）
     （1）前端：静态页面（html）+样式文件（css）+业务逻辑处理（js）+静态资源（img）
