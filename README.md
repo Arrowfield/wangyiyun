@@ -96,6 +96,7 @@
          更新迭代使用框架时：推荐使用命令行工具自动生成目录结构；当然vue与react可以通过文件的方式直接引入
       -提示：
         （1）创建一个基于webpack的vue项目的命令：vue init webpack myapp
+十二、添加node项目的模板文件
 </pre>
 
   
