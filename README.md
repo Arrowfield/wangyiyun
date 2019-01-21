@@ -97,6 +97,8 @@
       -提示：
         （1）创建一个基于webpack的vue项目的命令：vue init webpack myapp
 十二、添加node项目的模板文件
+十三、添加php项目的模板文件
+十四、添加javaweb项目的模板文件
 </pre>
 
   
