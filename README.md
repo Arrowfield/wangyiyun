@@ -99,9 +99,12 @@
 十二、添加node项目的模板文件(版本：express4.0)
 十三、添加php项目的模板文件(版本：thinkphp5.1)
 十四、添加javaweb项目的模板文件(版本：未知)
+十五、 
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="情趣生活，洽洽有你" />
+      <meta name="Keywords" content="情趣,直播,快洽" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+      <title>快洽</title>
+      <link rel="stylesheet" href="./css/bootstrap.css">
 </pre>
-
-  
-	
-	
-	
