@@ -1,0 +1,60 @@
+extends layout
+block title
+    title 图片上传
+    style.
+        .my-class{
+            margin:1rem auto 0;
+            width:120px;
+            height:120px;
+            border:1px dotted gray;
+            text-align: center;
+            line-height: 120px;
+            transition: all 0.3s linear;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .my-class:hover{
+            border-color: #1d9aff;
+        }
+        .iconfont.icon-jiajian-{
+            font-size:50px;
+            color:gray;
+            font-weight: normal;
+        }
+block content
+    div.container-fluid.p-0
+        div.card.m-auto.w-75
+            div.card-header
+                span 图片上传
+            div.card-body
+                div.text-center
+                    input(type="file").d-none
+                div.my-class
+                    i.iconfont.icon-jiajian-
+            div.card-footer
+    script.
+        var $file = $("[type=file]");
+        $(".my-class").click(function(){
+          $file.click();
+        })
+        //（1）图片上传,加密,前台显示 （2）接口的回调
+        $file.change(function(e){
+          var file = e.target.files[0];
+          //分析上传本地 新建文件storage目录存储本地图片
+          $.ajax({
+            url: "/upload/handlePhoto",
+            type:"POST",
+            data:file,
+            contentType:undefined,
+            mimeType:"multipart/form-data",
+            processData:false,//默认将数据转化为对象
+            success:function(data){
+              console.log(data);
+            },
+            error:function(err){
+              layer.msg(`上传失败：${err.statusText}`,{time:5000});
+              //console.log(err.statusText);
+            }
+          })
+        })
+

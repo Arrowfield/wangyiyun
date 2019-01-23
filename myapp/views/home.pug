@@ -1,0 +1,15 @@
+extends layout
+block title
+    title 主页
+block content
+    //占位符，相当于<body></body>中的内容
+    div.container-fluid.p-0
+        div.d-flex.justify-content-around.align-items-center.bg-light.p-2
+            span 首页模板文件
+            div.input-group.w-50
+                div.input-group-prepend
+                    button(type="button").btn.btn-outline-secondary 搜索
+                input(type="text",placeholder="关键词").form-control
+            div
+                a(href="/login").pr-1 登录
+                a(href="/register") 注册
