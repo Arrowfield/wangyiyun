@@ -7,7 +7,6 @@ router.get('/',(req,res)=>{
   //[]代表占位符的参数
   pool.query(sql,[],(err,result)=>{
     if(err) throw  err;
-    //console.log(result);
     res.send(result);
   })
 });

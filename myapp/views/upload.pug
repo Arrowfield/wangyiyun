@@ -28,10 +28,13 @@ block content
                 span 图片上传
             div.card-body
                 div.text-center
-                    input(type="file").d-none
+                    form#uploadForm
+                        input(type="file").d-none
                 div.my-class
                     i.iconfont.icon-jiajian-
             div.card-footer
+                div.alert.alert-danger#error
+                    strong 失败！#{msg}
     script.
         var $file = $("[type=file]");
         $(".my-class").click(function(){
@@ -40,16 +43,19 @@ block content
         //（1）图片上传,加密,前台显示 （2）接口的回调
         $file.change(function(e){
           var file = e.target.files[0];
+          var formdata = new FormData($("#uploadForm")[0]);
+          formdata.append("files",file);
           //分析上传本地 新建文件storage目录存储本地图片
           $.ajax({
             url: "/upload/handlePhoto",
             type:"POST",
-            data:file,
-            contentType:undefined,
-            mimeType:"multipart/form-data",
+            data:formdata,
+            mimeType:"multipart/form-data",//多部件的
+            contentType:false,
             processData:false,//默认将数据转化为对象
+            //dataType:"JSON",//加上这里就自动解析json
             success:function(data){
-              console.log(data);
+              //layer.msg(`返回信息：${data.msg}`,{time:5000});
             },
             error:function(err){
               layer.msg(`上传失败：${err.statusText}`,{time:5000});
