@@ -9,12 +9,18 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
+//设置管理员权限
+
+Route::group("admin",function(){
+   Route::rule('/','admin/index/login'.'get'); 
+});
+
 Route::get('think', function () {
-    return 'hello,ThinkPHP5!';
+    return 'hello,world';
 });
 
 Route::get('hello/:name', 'index/hello');
 
-return [
+Route::rule('new/:id','index/News/read','POST');
 
-];
+return [];

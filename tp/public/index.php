@@ -19,3 +19,5 @@ require __DIR__ . '/../thinkphp/base.php';
 
 // 执行应用并响应
 Container::get('app')->run()->send();
+
+/*我现在想干嘛？完成用户的注册功能*/

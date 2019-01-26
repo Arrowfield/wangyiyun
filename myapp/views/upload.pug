@@ -2,11 +2,11 @@ extends layout
 block title
     title 图片上传
     style.
-        .my-class{
-            margin:1rem auto 0;
-            width:120px;
-            height:120px;
-            border:1px dotted gray;
+        .my-class {
+            margin: 1rem auto 0;
+            width: 120px;
+            height: 120px;
+            border: 1px dotted gray;
             text-align: center;
             line-height: 120px;
             transition: all 0.1s linear;
@@ -14,20 +14,23 @@ block title
             border-radius: 5px;
             position: relative;
         }
-        .my-class:hover{
+
+        .my-class:hover {
             border-color: #1d9aff;
         }
-        .iconfont.icon-jiajian-{
-            font-size:50px;
-            color:gray;
+
+        .iconfont.icon-jiajian- {
+            font-size: 50px;
+            color: gray;
             font-weight: normal;
         }
-        .my-img{
+
+        .my-img {
             position: absolute;
-            width:100%;
+            width: 100%;
             height: 100%;
-            top:0;
-            left:0;
+            top: 0;
+            left: 0;
             display: none;
             z-index: 1;
         }
@@ -48,32 +51,32 @@ block content
                 //div.alert.alert-danger#error
                 //    strong 提示！
     script.
-        var $file = $("[type=file]");
-        $(".my-class").click(function(){
-          $file.click();
+      var $file = $("[type=file]");
+      $(".my-class").click(function () {
+        $file.click();
+      })
+      //（1）图片上传,加密,前台显示 （2）接口的回调
+      $file.change(function (e) {
+        var file = e.target.files[0];
+        var formdata = new FormData($("#uploadForm")[0]);
+        formdata.append("files", file);
+        //分析上传本地 新建文件storage目录存储本地图片
+        $.ajax({
+          url: "/upload/handlePhoto",
+          type: "POST",
+          data: formdata,
+          mimeType: "multipart/form-data",//多部件的
+          contentType: false,
+          processData: false,//默认将数据转化为对象
+          //dataType:"JSON",//加上这里就自动解析json
+          success: function (data) {
+            data = JSON.parse(data);
+            $(".my-img").attr({src: data.msg.img}).show();
+            layer.msg(`返回信息：${data.msg.info}`, {time: 5000});
+          },
+          error: function (err) {
+            layer.msg(`上传失败：${err.statusText}`, {time: 5000});
+          }
         })
-        //（1）图片上传,加密,前台显示 （2）接口的回调
-        $file.change(function(e){
-          var file = e.target.files[0];
-          var formdata = new FormData($("#uploadForm")[0]);
-          formdata.append("files",file);
-          //分析上传本地 新建文件storage目录存储本地图片
-          $.ajax({
-            url: "/upload/handlePhoto",
-            type:"POST",
-            data:formdata,
-            mimeType:"multipart/form-data",//多部件的
-            contentType:false,
-            processData:false,//默认将数据转化为对象
-            //dataType:"JSON",//加上这里就自动解析json
-            success:function(data){
-              data = JSON.parse(data);
-              $(".my-img").attr({src:data.msg.img}).show();
-              layer.msg(`返回信息：${data.msg.info}`,{time:5000});
-            },
-            error:function(err){
-              layer.msg(`上传失败：${err.statusText}`,{time:5000});
-            }
-          })
-        })
+      })
 
