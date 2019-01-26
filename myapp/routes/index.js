@@ -4,7 +4,7 @@ var conn = require('../connection');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('home', { title: 'Express' });
 });
 /*模块》控制器》方法*/
 router.get('/home',(req,res)=>{
@@ -32,7 +32,7 @@ router.post('/checkLogin',(req,res)=>{
   var sql = "SELECT * FROM xz_user WHERE uname = ? AND upwd = ?";
   //将模型中发送数据
   conn.query(sql,[$uname,$upwd],(err,result)=>{
-    if(err) throw err;
+    if(err) {throw err ;return null;}
     if(result.length > 0){
       //用户登录成功将uid存入session
       req.session.uid = result[0].uid;

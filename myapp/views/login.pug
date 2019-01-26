@@ -5,7 +5,7 @@ block title
         .my-class{
             /*display: none;*/
         }
-link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
 block content
     //这下将body中的内容覆盖
     div.container-fluid.p-0
@@ -26,7 +26,7 @@ block content
                         button(type="reset").btn.btn-danger#reset.ml-1 重置
                         a(href="/home").btn.btn-info#back.ml-1 返回
                     div.alert.alert-danger.w-50.mt-3.my-class#error
-                        strong 失败！#{msg}
+                        strong 失败！#{title}
     script.
       //碰到的问题：(1)同一个页面请求接口，接口的作用：渲染页面，调用接口获取数据，两者冲突？
       //(2)本地不报错，但在其它运行错误？
