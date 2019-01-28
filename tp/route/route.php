@@ -10,17 +10,10 @@
 // +----------------------------------------------------------------------
 
 //设置管理员权限
-
-Route::group("admin",function(){
-   Route::rule('/','admin/index/login'.'get'); 
-});
-
-Route::get('think', function () {
-    return 'hello,world';
-});
-
+//Route::group("admin",function(){Route::rule('/','admin/index/login'.'get');});
+Route::get('think', function () {return 'hello,world';});
 Route::get('hello/:name', 'index/hello');
-
-Route::rule('new/:id','index/News/read','POST');
-
+Route::rule('new/:id','index/News/read','GET');
+Route::get('create','index/Login/create');
+Route::get('login','index/Login/login');
 return [];

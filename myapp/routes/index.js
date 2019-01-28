@@ -14,7 +14,7 @@ router.get('/home',(req,res)=>{
 
 router.get('/login',(req,res)=>{
   //res.send("this is a login page")
-  res.render('login',{title:"login"});
+  res.render('login',{title:""});
 });
 //操作登录的collector
 router.post('/checkLogin',(req,res)=>{
@@ -32,7 +32,7 @@ router.post('/checkLogin',(req,res)=>{
   var sql = "SELECT * FROM xz_user WHERE uname = ? AND upwd = ?";
   //将模型中发送数据
   conn.query(sql,[$uname,$upwd],(err,result)=>{
-    if(err) {throw err ;return null;}
+    if(err) throw err;
     if(result.length > 0){
       //用户登录成功将uid存入session
       req.session.uid = result[0].uid;
@@ -40,8 +40,7 @@ router.post('/checkLogin',(req,res)=>{
       res.send({code:200,msg:"登录成功"});
     }else{
       //向视图中发送数据
-      res.render('login',{code:204,msg:"用户名或密码错误"});
-      //res.send();
+      res.send({code:204,msg:"用户名或密码错误"});
     }
   });
 });
