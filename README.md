@@ -97,6 +97,7 @@
       -提示：
         （1）创建一个基于webpack的vue项目的命令：vue init webpack myapp
         （2）本项目中包含了tp5,基于express的MVC模型结构同时进行目录结构的构建
+        （3）快洽后台，代理后台/总后台，公会后台/总后台,推广APP链接（安卓）,推广APP链接（IOS），短视频系统，快洽官网
 </pre>
 
   
