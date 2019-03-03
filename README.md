@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <pre>
 一、项目的基本常识
     (1)全局目录的获取：npm config get prefix
@@ -106,10 +107,12 @@
 	
 	
 =======
+=======
+>>>>>>> 2747c95bd8b9ddf77d23c1c4f1ea1dfc1da803f9
 <pre>
 一、项目的基本常识
     (1)全局目录的获取：npm config get prefix
-    (2)服务器的类别：1、phonegap；2、php；3、node；4、nginx；5、local；
+    (2)服务器的类别：1、phonegap；2、php；3、node；4、ngoke；5、local；
     (3)功能实现：播放歌曲，生成进度条；三个事件：mousedown/mousemove/mouseup
     (4)文件目前的大小：58.1M
     (5)更新：2018/10/27 08:56:00
@@ -204,16 +207,11 @@
          更新迭代使用框架时：推荐使用命令行工具自动生成目录结构；当然vue与react可以通过文件的方式直接引入
       -提示：
         （1）创建一个基于webpack的vue项目的命令：vue init webpack myapp
-十二、添加node项目的模板文件(版本：express4.0)
-十三、添加php项目的模板文件(版本：thinkphp5.1)
-十四、添加javaweb项目的模板文件(版本：未知)
-十五、 
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="情趣生活，洽洽有你" />
-      <meta name="Keywords" content="情趣,直播,快洽" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
-      <title>快洽</title>
-      <link rel="stylesheet" href="./css/bootstrap.css">
+        （2）本项目中包含了tp5,基于express的MVC模型结构同时进行目录结构的构建
+        （3）快洽后台，代理后台/总后台，公会后台/总后台,推广APP链接（安卓）,推广APP链接（IOS），短视频系统，快洽官网
 </pre>
->>>>>>> 1687aa6862b0038631593cfa6181d8664a6d903c
+
+  
+	
+	
+	
