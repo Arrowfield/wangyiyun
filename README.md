@@ -39,12 +39,14 @@
         git remote remove 远程仓库地址;
         git status;
         git config user.name;
-        git config user.email;git remote -v;
+        git config user.email;
+        git remote -v;
         git rm -r --cached node_modules/;
         git push -f origin master;
         git log;
         git reset --hard <commit版本的hash值>
         git reset --hard HEAD~<次数>
+        git config credential.helper store
         备注：首先清空cach跟踪。gitignore生效
 
 六、项目打包部署流程（前端开发流程）
