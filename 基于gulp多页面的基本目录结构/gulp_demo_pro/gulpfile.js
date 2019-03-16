@@ -5,8 +5,9 @@ var concat = require('gulp-concat');//合并文件
 var uglify = require('gulp-uglify');//压缩文件
 var sass = require('gulp-sass');//编译sass
 var rename = require('gulp-rename');//重命名
+var htmlmin = require('gulp-htmlmin');
 var livereload = require('gulp-livereload');//监听
-var connect  = require('gulp-connect');//创建服务器、
+var connect  = require('gulp-connect');//创建服务器
 var open = require('open');
 
 //添加任务
@@ -20,7 +21,13 @@ gulp.task('sass',function(){
         .pipe(livereload())
         .pipe(connect.reload())
 });
-
+gulp.task('html',function(){
+    return gulp.src('src/*.html')
+    .pipe(htmlmin({collapseWhitespace:true,removeComments: true,}))
+    .pipe(gulp.dest("dist/"))
+    .pipe(livereload())
+    .pipe(connect.reload())
+});
 //注册监视任务
 gulp.task('watch',['default'],function(){
     livereload.listen();
@@ -39,4 +46,4 @@ gulp.task('server',['default'],function(){
 
 open("http://localhost:5000");
 
-gulp.task('default',['sass']);
+gulp.task('default',['sass','html']);
