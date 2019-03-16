@@ -6,7 +6,7 @@ const session = require('express-session');
 const pro = require('./router/pro');
 const user = require('./router/user');
 var app = express();
-
+var port = 3000;
 //sesseion
 app.use(session({
   secret: "mySession",
@@ -19,7 +19,7 @@ app.use(cors({
   credentials: true
 }));
 //托管静态资源
-app.use(express.static('./static'));
+app.use(express.static('public'));
 //设置body-parser参数
 app.use(bodyParser.urlencoded({
   extended: false
@@ -28,4 +28,6 @@ app.use(bodyParser.urlencoded({
 app.use('/pro', pro);
 app.use('/user', user);
 
-app.listen(3005);
+app.listen(port,function(){
+  console.log("server will start on port : "+port);
+});
