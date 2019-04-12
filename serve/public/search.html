@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>衣佳服装搜索</title>
+    <link rel='stylesheet' href='./css/mui.min.css'>
+    <link rel='stylesheet' href='./css/app.css'>
+    <script src='./js/flexible.js'></script>
+    <script src='./js/mui.js'></script>
+    <script src='./js/jquery-3.2.1.js'></script>
+</head>
+
+<body>
+<div id="app">
+    <header class="LoginHeader mui-bar mui-bar-nav mui-bar-transparent" data-top='0' data-offset='150'
+            data-duration='16'
+            data-scrollby=".mui-scroll-wrapper">
+        <h3 class='mui-title AllTitle D-flex-center SearchPage'>
+            <div class="HandleSearch D-flex-center">
+                <img src="./img/search.png" alt="">
+                <input type="text" autocomplete="off" placeholder="请输入您想查看的商户">
+            </div>
+        </h3>
+        <a class='BtnRight ripple SearchPage' href='./home.html'>取消</a>
+    </header>
+    <section class="SearchPage">
+        <h3><span class="mui-icon mui-icon-info"></span>目前没有搜索您想要的商家，给您推荐以下商家</h3>
+        <ul class="mui-table-view HomeSection">
+            <li class="mui-table-view-cell">
+                <a href="javascript:">
+                <div class='ShopAvatar'><img src='./img/all_pro.png' alt=''></div>
+                <div class='ShopDetail'>
+                    <p>左岸咖啡</p>
+                    <p class="HomeStar">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assess_03.png" alt="">
+                    </p>
+                    <div class='handleBtn'>
+                        <span>下午茶</span>
+                        <span>开啡</span>
+                    </div>
+                </div>
+                <span class="HomeDistends">11.3km</span>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="javascript:">
+                <div class='ShopAvatar'><img src='./img/all_pro.png' alt=''></div>
+                <div class='ShopDetail'>
+                    <p>左岸咖啡</p>
+                    <p class="HomeStar">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assess_03.png" alt="">
+                    </p>
+                    <div class='handleBtn'>
+                        <span>下午茶</span>
+                        <span>开啡</span>
+                    </div>
+                </div>
+                <span class="HomeDistends">11.3km</span>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="javascript:">
+                <div class='ShopAvatar'><img src='./img/all_pro.png' alt=''></div>
+                <div class='ShopDetail'>
+                    <p>左岸咖啡</p>
+                    <p class="HomeStar">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assess_03.png" alt="">
+                    </p>
+                    <div class='handleBtn'>
+                        <span>下午茶</span>
+                        <span>开啡</span>
+                    </div>
+                </div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="javascript:">
+                <div class='ShopAvatar'><img src='./img/all_pro.png' alt=''></div>
+                <div class='ShopDetail'>
+                    <p>左岸咖啡</p>
+                    <p class="HomeStar">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assase_06.png" alt="">
+                        <img src="./img/assess_03.png" alt="">
+                    </p>
+                    <div class='handleBtn'>
+                        <span>下午茶</span>
+                        <span>开啡</span>
+                    </div>
+                </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+</div>
+<script>
+    mui('body').on('click', 'a', function () {
+        document.location.href = this.href;
+    });
+    var $inputs = $('.LoginSection input');
+    $('.LoginSection').on('input','input',function(){
+        if ($(this).val()) {
+            $(this).attr('data-flag', 1)
+        } else {
+            $(this).attr('data-flag', 0)
+        }
+        for(var i = 0;i<$inputs.length;i++){
+            if($($inputs[i]).attr('data-flag') == 0){
+                $('#LoginBtn').removeClass('CanLogin').attr('disabled',true);
+                return null;
+            }else{
+                $('#LoginBtn').addClass('CanLogin').attr('disabled',false);
+            }
+        }
+    });
+    $('#LoginBtn').click(()=>{
+        mui.toast('衣佳：登录失败',{ duration:'long', type:'div' });
+    })
+</script>
+</body>
+
+</html>

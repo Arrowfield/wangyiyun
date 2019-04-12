@@ -1,0 +1,497 @@
+@charset "utf-8";
+/*通用样式*/
+*{box-sizing: border-box;}body, html {margin: 0;padding: 0;}::-webkit-scrollbar {width: 0;height: 0;}
+a:focus {text-decoration: none;color: black;}
+a:hover {text-decoration: none;}
+img{width:100%;height:100%;}
+
+#app {
+    position:absolute;
+    top:0;
+    bottom: 0;
+    overflow: hidden;
+    font-size: 0.32rem;
+    line-height: normal;
+    width: 7.5rem;
+    left:50%;
+    margin-left:-3.75rem;
+}
+
+/*头部*/
+header.mui-bar {
+    height: 0.88rem;
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    line-height: 0.88rem;
+}
+
+header.mui-bar .mui-title {
+    line-height: 0.88rem;
+    left: 1rem;
+    right: 1rem;
+    height: 0.88rem;
+}
+
+header .AllTitle{font-size: 0.36rem;color: #131313;}
+
+header .BtnRight{
+    float: right;
+    padding-right: 0.3rem;
+    font-size: 0;
+    text-align: right;
+}
+
+header .BtnRight img {
+    vertical-align: middle;
+    width: 0.32rem;
+    height: 0.32rem;
+}
+
+header .BtnLeft {
+    padding-left: 0.3rem;
+    float: left;
+}
+
+header .BtnLeft:hover {
+    text-decoration: none;
+}
+
+header .BtnLeft,header .BtnRight {
+    width: 1rem;
+    text-decoration: none;
+    color: black;
+    height: 0.88rem;
+    line-height: 0.88rem;
+}
+
+/*底部导航*/
+nav.mui-bar{
+    overflow: hidden;
+    z-index: 3;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.98rem;
+    width: 100%;
+    box-shadow: none;
+}
+
+nav .mui-tab-item img {
+    width: 0.42rem;
+    height: 0.42rem;
+}
+
+nav a:hover{text-decoration: none;}
+
+
+/*mui部分样式修改*/
+.mui-scroll-wrapper {
+    padding: 0.88rem 0 0.98rem;
+    background-color: white;
+}
+
+.mui-tab-label {
+    display: block;
+    font-size: 0.2rem;
+    line-height: normal;
+}
+
+.mui-active {color: #FF7300 !important;}
+
+.mui-table-view:before {
+    background-color: white;
+}
+
+.mui-pull-caption {
+    font-size: 0.30rem;
+    line-height: normal;
+}
+.mui-pull-top-pocket {
+    top: 0.88rem;
+}
+
+.mui-pull .mui-pull-caption.mui-pull-caption-down {
+    font-size: 0.32rem;
+}
+.mui-toast-message{padding:0.3rem;font-size: 0.32rem;}
+/*首页样式*/
+
+.IndexPage .MainTitle {
+    font-size: 0.36rem;
+    color: #131313;
+    text-align: center;
+}
+
+.IndexPage .LeftTitle {
+    color: #333333;
+    font-size: 0.32rem;
+    padding-left: 0.3rem;
+}
+
+.IndexPage .HandleSearsh {
+    display: flex;
+    align-items: center;
+    padding-right: 0.1rem;
+    width: 0.56rem;
+    cursor: pointer;
+    height: 0.88rem;
+    float: right;
+}
+
+.IndexPage .HandleSearsh img {
+    width: 0.46rem;
+    height: 0.46rem;
+}
+
+.IndexPage .Cur {
+    text-align: center;
+    padding:10px 0;
+}
+
+
+
+.IndexPage .Cur img {
+    width: 6.9rem !important;
+    height: 3.3rem;
+    vertical-align: middle;
+    background-color: black;
+}
+
+.IndexPage .HomeSection {
+    text-align: left;
+}
+
+.IndexPage .HomeSection .MainSubTitle {
+    font-size: 0.4rem;
+    display: flex;
+    align-items: center;
+    line-height: 0.5rem;
+}
+
+.IndexPage .MainSubTitle::before {
+    margin-right: 0.3rem;
+    content: "";
+    display: inline-block;
+    width: 0.12rem;
+    height: 0.38rem;
+    background-color: #FF7300;
+    font-size: 0;
+}
+
+.IndexPage .HomeSection .mui-table-view-cell {
+    clear: both;
+    padding: 0;
+}
+.IndexPage .HomeSection .mui-table-view-cell a{padding: 0.36rem 0.3rem;margin: 0;}
+
+.IndexPage .ShopAvatar {
+    float: left;;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.IndexPage .ShopDetail {
+    margin-left: 0.24rem;
+    height: 1.4rem;
+    float: left;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.IndexPage .ShopDetail p:nth-child(1) {
+    font-size: 0.32rem;
+    line-height: 0.42rem;
+}
+
+.IndexPage .handleBtn span {
+    color: #30BA98;
+    border: 0.01rem solid #30BA98;
+    display: inline-block;
+    font-size: 0.22rem;
+    width: 1rem;
+    line-height: 0.4rem;
+    text-align: center;
+}
+
+.IndexPage .HomeStar img{width: 0.22rem;height: 0.22rem;}
+.IndexPage .HomeDistends{float: right;font-size: 0.24rem;color:#919191;line-height: 0.42rem;}
+.IndexPage .HomeTitle{margin-top:0.4rem;}
+
+/*附近样式*/
+
+/*订单*/
+.OrderPage .mui-control-item {
+    font-size: 0.28rem;
+    color: #666;
+    padding: 0;
+    line-height: 0.7rem;
+    text-decoration: none;
+}
+
+.OrderPage .mui-slider-indicator {
+    height: 0.7rem;
+    line-height: 0.7rem;
+    background-color: white;
+}
+
+.OrderPage .mui-control-item.mui-active {
+    color: #FF7300;
+    border: none;
+}
+
+.OrderPage #sliderProgressBar {
+    background-color: white;
+    height: 0;
+    min-height: 0;
+}
+
+.OrderPage #sliderProgressBar div {
+    margin: 0 auto;
+    background-color: #FF7300;
+    width: 0.32rem;
+    height: 0.06rem;
+    border-radius: .03rem;
+}
+
+.OrderPage .mui-slider-group {
+    background-color: white;
+}
+
+
+.OrderPage .mui-content .mui-slider{
+    background-color: white;
+    overflow: hidden;
+    position:absolute;
+    top:0;
+    bottom:0;
+    padding-top:0.88rem;
+}
+
+.OrderPage .mui-content .mui-slider-group{
+    height: calc(100% - 0.98rem - 0.7rem);
+    border-top:none !important;
+}
+
+.OrderPage .mui-slider-item {
+    border: none !important;
+}
+
+.OrderPage .OrderCommit li {
+    line-height: normal !important;
+    font-size: 0.36rem;
+    padding: 0.36rem 0.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.OrderPage .D-FLEX-BETWEEN {
+    display: flex;
+    justify-content: space-between;
+}
+
+.OrderPage .AlignCenter {
+    align-items: center;
+}
+
+.OrderBtn {
+    font-size: 0.22rem;
+    color: #30BA98;
+    border-radius: .06rem;
+    height: 0.4rem;
+    width: 0.8rem;
+    text-align: center;
+    line-height: 0.4rem;
+    border: 1px solid #30BA98;
+}
+
+.OrderPage .SpanMargin {
+    margin: .2rem 0 0.28rem;
+    font-size: 0.24rem;
+    color: #999;
+}
+
+
+.OrderPage .mui-scroll-wrapper {
+    padding:0;
+}
+.OrderPage .mui-active .mui-table-view-cell {
+    color: black !important;
+}
+
+/*登录*/
+
+.LoginReturn .ReturnArr {
+    width: 0.22rem;
+    height: 0.36rem;
+}
+
+.LoginPage .RegisterBg {
+    width: 100%;
+    height: 3.8rem;
+}
+
+.LoginPage {
+    padding-top: 0;
+}
+
+.LoginTitle {
+    color: white !important;
+}
+
+.LoginHeader {
+    box-shadow: none;
+}
+
+.LoginPage .LoginSection {
+    width: 6.7rem;
+    height: 6.24rem;
+    background: white;
+    box-shadow: 0 0 0.52rem 0 rgba(0, 0, 0, 0.13);
+    border-radius: 0.1rem;
+    margin: 2.42rem auto 0;
+    padding: 0.5rem 0.32rem;
+}
+
+.LoginPage {
+    background: url("../img/registered_bg.png") no-repeat;
+    background-size: 100% 3.8rem;
+    height:100%;
+}
+
+.LoginPage::before{content: "";display: table;}
+
+.LoginReturn {
+    font-size: 0;
+}
+
+.LoginReturn img {
+    vertical-align: middle;
+}
+
+.LoginPage .LoginSection h3 {
+    font-size: 0.48rem;
+    margin-bottom: 0.5rem;
+}
+
+.LoginPage .LoginSection div {
+    width: 100%;
+    padding: 0.36rem 0;
+    border-bottom: 2px solid #F3F3F3;
+}
+
+.LoginPage .LoginSection div input {
+    margin-bottom: 0;
+    border: 0;
+    color: #A7A7A7;
+    padding: 0;
+    height: 0.42rem;
+    line-height: 0.42rem;
+}
+
+.LoginPage .LoginSection button {
+    margin-top: 0.6rem;
+    border-radius: 0.12rem;
+    font-size: 0.32rem;
+    background: #D5D5D5;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    color: white;
+}
+
+.LoginPage .CanLogin {
+    background: linear-gradient(228deg, rgba(255, 156, 30, 1) 0%, rgba(255, 115, 0, 1) 100%) !important;
+}
+.LoginPage .LoginBottom{margin-top:2rem;padding:0 0.8rem;clear: both;}
+.LoginPage .LoginBottom>a{float: left; color: #777;}
+.LoginPage .LoginBottom>span{float: right;color:#777;}
+.LoginPage .LoginBottom>span>a{color: #FFA300;}
+
+/*注册*/
+.RegisterPage .ForCode{line-height: 0.7rem;}
+.RegisterPage .ForCode button{margin:0;width:1.8rem;height: 0.7rem;line-height: 0.7rem;float: right;}
+.RegisterPage .ForCode input{width:3.8rem;}
+.RegisterPage .LoginSection{height: auto;}
+.RegisterPage .LoginBottom{margin:0;}
+.RegisterPage .LoginBottom{margin-top: 0.2rem;text-align: center;}
+.RegisterPage .LoginBottom span{font-size: 0.26rem;float: none;}
+
+/*找回密码*/
+.ForgetPwdPage .LoginSection{margin:50px auto 0;box-shadow: none;}
+.ForgetPwdPage.LoginPage{background: none;}
+/*搜索*/
+.SearchPage.BtnRight{font-size: 0.32rem;color:#B2B2B2;}
+.SearchPage.BtnRight:hover{text-decoration: none;}
+.SearchPage.AllTitle img{width: 0.32rem;height: 0.32rem;}
+.SearchPage .HandleSearch{text-align: left;width: 100%;padding:0 0.1rem;line-height: 0.71rem;overflow: hidden;height: 0.71rem;background:rgba(142,142,147,0.12);border-radius: 0.32rem;}
+.SearchPage input{color:#B2B2B2;;width:80%;padding:0;margin:0 0.1rem 0;border:0;background:transparent;}
+.AllTitle.D-flex-center.SearchPage{display: flex;align-items: center;left: 0.3rem !important;}
+.D-flex-center{display: flex;align-items: center;}
+.SearchPage h3{text-align: center;margin:0.47rem 0;color:#555555;font-size: 0.24rem;}
+/*商家详情*/
+.ShopDetailPage .BtnLeft img{width: 0.26rem;height: 0.4rem;vertical-align: middle;}
+.ShopDetailPage .BtnLeft{font-size: 0;}
+.ShopDetailImg{text-align: center;margin:0.16rem 0 0.3rem;}
+.ShopDetailImg img{width: 6.9rem;height: 4rem;}
+.ShopDetailLocation{padding:0.3rem 0.2rem;width: 6.9rem;height: 1.4rem;margin: 0 auto;background-color: #EFEFEF;border-radius: 0.14rem;}
+.ShopDetailLocation p{font-size: 0.28rem;color:black;}
+.ShopDetailLocation p span{font-size: 0.26rem;}
+.ShopDetailLocation>span{font-size: 0.24rem;color:#777;padding-left:0.26rem;}
+.ShopDetailPage h3{margin-top: 0.6rem;}
+.ShopDetailPage .ShopDetail{margin-left: 0.12rem;}
+.ShopDetailPage .handleBtn{font-size: 0.26rem;color:#333;}
+.BMap_cpyCtrl.BMap_noprint.anchorBL{display: none;}
+/*地图详情*/
+.LocationPage{overflow: hidden;padding-bottom: 0;}
+.LocationPage .mui-scroll{padding-top:0.88rem;bottom:0;height: 100%;}
+.LocationPage .Map{height: 100%;}
+/*向商家付款*/
+#app.PayMoneyPage .BtnLeft span,#app.PayMoneyPage .BtnRight span{font-size: 0.72rem;padding-left:0;padding-bottom:0;padding-top:0;margin-left:0;line-height: 0.88rem;text-align: left;}
+#app.PayMoneyPage .BtnRight span{padding-right: 0;margin-right:0;}
+.PayCenter{height: 4.9rem;background: url("../img/shop.png") no-repeat left;background-size: cover;border-bottom-right-radius:0.6rem;border-bottom-left-radius:0.6rem;}
+.PayCenter::before{display: table;content:"";}
+.PayMain{width:6.9rem;height:5.8rem;margin:0.3rem auto 0;border:1px solid gray;}
+.PayLogo{padding:0.38rem 0;margin-top:1.2rem;text-align: center;}
+.PayTableKey{width: 100%;line-height: normal;height: calc(100% - 8.8rem);position: absolute;bottom:0;}
+.PayTableKey td{font-size: 0.6rem;width:25%;text-align: center;height: 1.3rem;background-color: #E0E0E0;}
+.PayTableKey td p{font-size: 0.6rem;color:white;}
+.PayDel img{ width: 0.87rem;height: 0.7rem;vertical-align: middle;}
+.PayTableKey td.PayDel{background-color: white;font-size: 0;}
+.MainColor{background-color: #FCAA03 !important;}
+.HandleBtn{color:white;}
+.HandleBtn:focus{text-decoration: none;color:white;}
+.PayMoneyPage .mui-scroll{height: 100%;bottom:0;padding-top: 0.88rem;}
+.PayMoneyPage .mui-scroll-wrapper{padding:0;}
+/*点击的时候背景*/
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* pointer-events: none; */
+    background-image: radial-gradient(circle, #666 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .4s, opacity .3s;
+}
+
+.ripple:active:after {
+    transform: scale(0, 0);
+    opacity: .3;
+    transition: 0s;
+}
+

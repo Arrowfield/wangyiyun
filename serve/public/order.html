@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>衣佳服装订单</title>
+    <link rel='stylesheet' href='./css/mui.min.css'>
+    <link rel='stylesheet' href='./css/app.css'>
+    <script src='./js/flexible.js'></script>
+    <script src='./js/mui.js'></script>
+    <script src='./js/jquery-3.2.1.js'></script>
+</head>
+
+<body>
+<div id="app">
+    <header class="mui-bar mui-bar-nav mui-bar-transparent" data-top='0' data-offset='150' data-duration='16'
+            data-scrollby=".mui-scroll-wrapper">
+        <h3 class='mui-title AllTitle'>订单</h3>
+    </header>
+    <section class='OrderPage'>
+        <div class="mui-content">
+            <div id="slider" class="mui-slider">
+                <div id="sliderSegmentedControl"
+                     class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                    <a class="mui-control-item mui-active" href="#item1mobile">
+                        全部
+                    </a>
+                    <a class="mui-control-item" href="#item2mobile">
+                        代付款
+                    </a>
+                    <a class="mui-control-item" href="#item3mobile">
+                        已付款
+                    </a>
+                    <a class="mui-control-item" href="#item4mobile">
+                        待评价
+                    </a>
+                </div>
+                <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3">
+                    <div></div>
+                </div>
+                <div class="mui-slider-group">
+                    <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+                        <div id="scroll1" class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="OrderCommit mui-table-view">
+                                    <li class="mui-table-view-cell">
+                                        <div class="D-FLEX-BETWEEN">
+                                            <span>肯德基KFC</span>
+                                            <span>付款</span>
+                                        </div>
+                                        <span class='SpanMargin'>时间: 2019-09-12 23:45</span>
+                                        <div class="D-FLEX-BETWEEN AlignCenter">
+                                            <span>￥16.90</span>
+                                            <button class="OrderBtn">付款</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item2mobile" class="mui-slider-item mui-control-content">
+                        <div id="scroll2" class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <div class="mui-loading">
+                                    <div class="mui-spinner">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item3mobile" class="mui-slider-item mui-control-content">
+                        <div id="scroll3" class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <div class="mui-loading">
+                                    <div class="mui-spinner">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item4mobile" class="mui-slider-item mui-control-content">
+                        <div id="scroll4" class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <!--<div class="mui-loading">-->
+                                <!--<div class="mui-spinner"></div>-->
+                                <!--</div>-->
+                                <ul class="OrderCommit mui-table-view">
+                                    <li class="mui-table-view-cell">
+                                        <div class="D-FLEX-BETWEEN">
+                                            <span>肯德基KFC</span>
+                                            <span>待评价</span>
+                                        </div>
+                                        <span class='SpanMargin'>时间: 2019-09-12 23:45</span>
+                                        <div class="D-FLEX-BETWEEN AlignCenter">
+                                            <span>￥16.90</span>
+                                            <button class="OrderBtn">付款</button>
+                                        </div>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <div class="D-FLEX-BETWEEN">
+                                            <span>肯德基KFC</span>
+                                            <span>待评价</span>
+                                        </div>
+                                        <span class='SpanMargin'>时间: 2019-09-12 23:45</span>
+                                        <div class="D-FLEX-BETWEEN AlignCenter">
+                                            <span>￥16.90</span>
+                                            <button class="OrderBtn">付款</button>
+                                        </div>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <div class="D-FLEX-BETWEEN">
+                                            <span>肯德基KFC</span>
+                                            <span>待评价</span>
+                                        </div>
+                                        <span class='SpanMargin'>时间: 2019-09-12 23:45</span>
+                                        <div class="D-FLEX-BETWEEN AlignCenter">
+                                            <span>￥16.90</span>
+                                            <button class="OrderBtn">付款</button>
+                                        </div>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <div class="D-FLEX-BETWEEN">
+                                            <span>肯德基KFC</span>
+                                            <span>待评价</span>
+                                        </div>
+                                        <span class='SpanMargin'>时间: 2019-09-12 23:45</span>
+                                        <div class="D-FLEX-BETWEEN AlignCenter">
+                                            <span>￥16.90</span>
+                                            <button class="OrderBtn">付款</button>
+                                        </div>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <div class="D-FLEX-BETWEEN">
+                                            <span>肯德基KFC</span>
+                                            <span>待评价</span>
+                                        </div>
+                                        <span class='SpanMargin'>时间: 2019-09-12 23:45</span>
+                                        <div class="D-FLEX-BETWEEN AlignCenter">
+                                            <span>￥16.90</span>
+                                            <button class="OrderBtn">付款</button>
+                                        </div>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <div class="D-FLEX-BETWEEN">
+                                            <span>肯德基KFC</span>
+                                            <span>待评价</span>
+                                        </div>
+                                        <span class='SpanMargin'>时间: 2019-09-12 23:45</span>
+                                        <div class="D-FLEX-BETWEEN AlignCenter">
+                                            <span>￥16.90</span>
+                                            <button class="OrderBtn">付款</button>
+                                        </div>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <div class="D-FLEX-BETWEEN">
+                                            <span>肯德基KFC</span>
+                                            <span>待评价</span>
+                                        </div>
+                                        <span class='SpanMargin'>时间: 2019-09-12 23:45</span>
+                                        <div class="D-FLEX-BETWEEN AlignCenter">
+                                            <span>￥16.90</span>
+                                            <button class="OrderBtn">付款</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+</div>
+<script>
+    $.ajax({
+        url:'./common/footer.html',
+        type:"GET",
+        success:function(res){
+            $(res).replaceAll('footer');
+            var $dom = $('nav .mui-tab-item:nth-child(3)');
+            $dom.addClass('mui-active').children('img').attr('src','./img/order_choose.png');
+        }
+    });
+    !function(){
+        var token = sessionStorage.getItem("token");
+        if(!token){
+            mui.alert('您尚未登录','提示',function(){
+                window.location.href = './login.html';
+            });
+        }
+    }();
+    mui('body').on('click', 'a', function () {
+        document.location.href = this.href;
+    });
+    mui.init({swipeBack: false});
+    (function ($) {
+        $('.mui-scroll-wrapper').scroll({indicators: true}); //是否显示滚动条
+        var item2 = document.getElementById('item2mobile');
+        var item3 = document.getElementById('item3mobile');
+        var item4 = document.getElementById('item4mobile');
+        var html2 =
+            `<ul class="OrderCommit mui-table-view">
+                <li class="mui-table-view-cell">
+                    <div class="D-FLEX-BETWEEN">
+                        <span>肯德基KFC</span>
+                        <span>已付款</span>
+                    </div>
+                    <span class='SpanMargin'>时间: 2019-09-12 23:45</span>
+                    <div class="D-FLEX-BETWEEN AlignCenter">
+                        <span>￥16.90</span>
+                        <button class="OrderBtn">付款</button>
+                    </div>
+                </li>
+            </ul>`;
+        var html3 =
+            `<ul class="OrderCommit mui-table-view">
+                <li class="mui-table-view-cell">
+                    <div class="D-FLEX-BETWEEN">
+                        <span>肯德基KFC</span>
+                        <span>待评价</span>
+                    </div>
+                    <span class='SpanMargin'>时间: 2019-09-12 23:45</span>
+                    <div class="D-FLEX-BETWEEN AlignCenter">
+                        <span>￥16.90</span>
+                        <button class="OrderBtn">付款</button>
+                    </div>
+                </li>
+            </ul>`;
+        document.getElementById('slider').addEventListener('slide', function (e) {
+            if (e.detail.slideNumber === 1) {
+                if (item2.querySelector('.mui-loading')) {
+                    setTimeout(function () {
+                        item2.querySelector('.mui-scroll').innerHTML = html2;
+                    }, 500);
+                }
+            } else if (e.detail.slideNumber === 2) {
+                if (item3.querySelector('.mui-loading')) {
+                    setTimeout(function () {
+                        item3.querySelector('.mui-scroll').innerHTML = html3;
+                    }, 500);
+                }
+            }
+            else if (e.detail.slideNumber === 3) {
+                if (item4.querySelector('.mui-loading')) {
+                    setTimeout(function () {
+                        //item4.querySelector('.mui-scroll').innerHTML = "";
+                    }, 500);
+                }
+            }
+        });
+    })(mui);
+</script>
+</body>
+
+</html>
