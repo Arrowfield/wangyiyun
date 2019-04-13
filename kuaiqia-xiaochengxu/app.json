@@ -1,13 +1,15 @@
 {
   "pages": [
-    "pages/login/login",
+    
+    
     "pages/home/home",
     "pages/channel/channel",
     "pages/find/find",
     "pages/user/user",
     "pages/index/index",
-    "pages/logs/logs"
-    
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/demo/demo"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -19,7 +21,6 @@
   "tabBar": {
     "color": "#a9b7b7",
     "selectedColor": "#F6CF79",
-    "borderStyle": "white",
     "backgroundColor": "#20272F",
     "list": [
       {

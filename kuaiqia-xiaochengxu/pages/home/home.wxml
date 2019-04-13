@@ -3,7 +3,7 @@
 	<view class='HomeHeader D-Flex'>
 		<view class='D-Flex'>
 			 <image alt='' src='../../assets/images/search.png'></image>
-			 <input type='text'></input>
+			 <input type='text' placeholder='输入关键字查找片源'></input>
 		</view>
 		<navigator>
 			<image alt='' src='../../assets/images/code.png'></image>
@@ -22,12 +22,12 @@
 		duration="200"
 		class='HomeSwiperTop'
 	>
-		<!--block wx:for="{{imgUrls}}" wx:key="{{index}}">
+		<block wx:for="{{ImgSlide}}" wx:key="{{index}}">
 			<swiper-item>
-				<image src="{{item}}" class="SlideItem"/>
+				<image mode="aspectFit" alt="" lazy-load src="{{item}}" class="SlideItem"></image>
 			</swiper-item>
-		</block-->
-		<block>
+		</block>
+		<!--block>
 			<swiper-item>
 				<image mode="aspectFit" lazy-load class='SlideItem' src='../../assets/images/banner01.png'></image>
 			</swiper-item>
@@ -36,63 +36,23 @@
 			<swiper-item>
 				<image mode="aspectFit" lazy-load class='SlideItem' src='../../assets/images/banner02.png'></image>
 			</swiper-item>
-		</block>
+		</block-->
 	</swiper>
 	<view class='HomeItems'>
-		<view>
-			<image src='../../assets/images/icon01.png'></image>
-			<view><text>无码</text></view>
-		</view>
-		<view>
-			<image lazy-load src='../../assets/images/icon02.png'></image>
-			<view><text>各行各业</text></view>
-		</view>
-		<view>
-			<image src='../../assets/images/icon03.png'></image>
-			<view><text>辣妈辣妹</text></view>
-		</view>
-		<view>
-			<image src='../../assets/images/icon04.png'></image>
-			<view><text>角色扮演</text></view>
-		</view>
-		<view>
-			<image src='../../assets/images/icon05.png'></image>
-			<view><text>制服诱惑</text></view>
-		</view>
-		<view>
-			<image src='../../assets/images/icon06.png'></image>
-			<view><text>人气美女</text></view>
-		</view>
-		<view>
-			<image src='../../assets/images/icon07.png'></image>
-			<view><text>美少女</text></view>
-		</view>
-		<view>
-			<image src='../../assets/images/icon08.png'></image>
-			<view><text>全部</text></view>
+		<view wx:for="{{HomeItems}}" wx:key="{{index}}">
+			<image src="{{item.src}}" alt=""></image>
+			<view><text>{{item.title}}</text></view>
 		</view>
 	</view>
 	<view class='HomeTitle D-Flex'>
 		<text>最新片源</text>
-		<image src='../../assets/images/arrow_right.png' alt=''></image>
+		<image lazy-load src='../../assets/images/arrow_right.png' alt=''></image>
 	</view>
 	<view class="HomeLookVideo D-Flex">
-		<view class="HomeLookItem">
-			<image src='../../assets/images/img.png' alt='' lazy-load></image>
+		<view wx:for="{{HomeLookItem}}" wx:key="{{index}}" class="HomeLookItem">
+			<image src='{{item.src}}' alt='' lazy-load></image>
 			<view>
-				<text>人不彪悍枉少年</text>
-			</view>
-		</view>
-		<view class="HomeLookItem">
-			<image src='../../assets/images/img.png' alt='' lazy-load></image>
-			<view>
-				<text>人不彪悍枉少年</text>
-			</view>
-		</view>
-		<view class="HomeLookItem">
-			<image src='../../assets/images/img.png' alt='' lazy-load></image>
-			<view>
-				<text>人不彪悍枉少年</text>
+				<text>{{item.title}}</text>
 			</view>
 		</view>
 	</view>

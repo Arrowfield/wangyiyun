@@ -1,0 +1,4 @@
+/* pages/demo/demo.wxss */
+
+.page__bd{box-sizing:border-box;position:absolute;height:100%;width:100%;}
+.DemoPage .weui-navbar{border-bottom:none;}

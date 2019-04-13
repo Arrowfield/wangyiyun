@@ -13,7 +13,7 @@
 
 .HomeHeader>view{padding:0 10rpx;border-radius:34rpx;background:#33353E;height:68rpx;width:430rpx;}
 .HomeHeader>view>image{width:40rpx;height:40rpx;}
-.HomeHeader>view>input{padding-left:20rpx;}
+.HomeHeader>view>input{padding-left:20rpx;font-size:26rpx;}
 .HomeHeader>navigator{font-size:0;}
 .HomeHeader>navigator>image{width:42rpx;height:42rpx;margin-left:50rpx;}
 

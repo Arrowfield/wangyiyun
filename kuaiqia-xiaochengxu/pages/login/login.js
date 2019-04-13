@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    type:'login',
+    user:"",
+    upwd:"",
+    code:"",
   },
 
   /**
@@ -14,7 +17,32 @@ Page({
   onLoad: function (options) {
 
   },
-
+  handleClick(e){
+    this.setData({
+      user:"",
+      upwd:"",
+      type:e.currentTarget.dataset.type
+    });
+  },
+  handleBack(){
+    wx.switchTab({url:"/pages/home/home"});
+  },
+  getUser(e){
+    this.setData({user:e.detail.value});
+  },
+  getUpwd(e){
+    this.setData({upwd:e.detail.value});
+  },
+  getCode(e){
+    this.setData({code:e.detail.value});
+  },
+  handleLogin(){
+    console.log(this.data);
+    wx.showLoading({title: '登录中'});
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 2000);
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

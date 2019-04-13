@@ -1,6 +1,6 @@
 // pages/home/home.js
 
-import urlList from '../../utils/http';
+import {ImgSlide,HomeItems,HomeLookItem} from '../../utils/data';
 Page({
   /**
    * 页面的初始数据
@@ -10,12 +10,11 @@ Page({
     spinShow: true,
     switch: false,
     toast: {show: false,message:""},
-    imageUrls:[
-      "../../assets/banan01.png",
-      "../../assets/banan02.png"
-    ],
     autoplay:true,
     interval:false,
+    HomeLookItem,
+    HomeItems,
+    ImgSlide
   },
 
   /**
@@ -30,14 +29,7 @@ Page({
   },
   onLoad: function (options) {
     //打印
-    console.log(JSON.parse(JSON.stringify(this.data.imageUrls)));
-    wx.request({
-      url: urlList.homeInfo,
-      method: "GET",
-      success: ({data}) => {
-        //this.setData({homeInfo: data})
-      }
-    });
+    console.log(JSON.parse(JSON.stringify(this.data.HomeItems)));
   },
 
   /**
