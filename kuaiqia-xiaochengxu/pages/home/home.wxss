@@ -1,0 +1,41 @@
+/* pages/home/home.wxss */
+.h-top{
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    flex-direction: column;
+}
+
+.h-top-search{
+    margin:54rpx 24rpx 32rpx 20rpx;
+}
+.h-top-search image{
+    width:32rpx;
+    height:32rpx;
+}
+.icon-load{
+    width:20rpx;
+    height: 20rpx;
+}
+
+.weui-loadmore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 32rpx;
+}
+
+.search-wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 90rpx;
+    color: #fff;
+    background: #8484b7;
+}
+.search {
+    flex-grow: 1;
+    margin: 15rpx 24rpx;
+}
+

@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/channel/channel",
+    "pages/find/find",
+    "pages/user/user",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",  
+    "selectedColor": "#F6CF79",
+    "borderStyle":"white",
+    "backgroundColor": "#20272F",
+    "list": [
+      {
+        "selectedIconPath": "./assets/images/tabbar/home_active.png",
+        "iconPath": "./assets/images/tabbar/home.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "./assets/images/tabbar/video_active.png",
+        "iconPath": "./assets/images/tabbar/video.png",
+        "pagePath": "pages/channel/channel",
+        "text": "频道"
+      },
+      {
+        "selectedIconPath": "./assets/images/tabbar/find_active.png",
+        "iconPath": "./assets/images/tabbar/find.png",
+        "pagePath": "pages/find/find",
+        "text": "发现"
+      },
+      {
+        "selectedIconPath": "./assets/images/tabbar/user_active.png",
+        "iconPath": "./assets/images/tabbar/user.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  }
+}

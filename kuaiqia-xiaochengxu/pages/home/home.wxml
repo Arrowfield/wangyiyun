@@ -1,0 +1,14 @@
+<!--pages/home/home.wxml-->
+<scroll-view class="my-container ">
+	<view class="h-top-search user-flex">
+		<image src=""></image>
+		<input/>
+	</view>
+	<view class="h-top">
+		<text>pages/home/home.wxml</text>
+		<text wx:for="{{homeInfo}}" wx:key="{{index}}">{{item.name}}</text>
+	</view>
+	<!--使用loading组件-->
+</scroll-view>
+
+
