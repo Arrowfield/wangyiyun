@@ -31,6 +31,7 @@
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title">lazyload（延迟加载） </h1>
 		</header>
+
 		<div class="mui-content">
 			<div class="mui-content-padded">
 				<p>延迟加载的理念：页面初始化时，暂不加载处于屏幕可见区域之外的图片。该方案会有如下几大好处：</p>
@@ -63,7 +64,7 @@
 		};
 		(function($) {
 			var list = document.getElementById("list");
-			list.appendChild(createFragment(50));
+			list.appendChild(createFragment(1));
 			$(document).imageLazyload({
 				placeholder: '../images/60x60.gif'
 			});
