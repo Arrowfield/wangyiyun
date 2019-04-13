@@ -1,21 +1,12 @@
 /**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
+.Page{
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color:#20272F;
+    color:#9B9895;
+    overflow:scroll;
 }
-.my-container{
-  width:100%;
-  min-height: 100vh;
-  background-color: #20272F;
-  color:#9B9895;
-}
-.user-flex{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+.D-Flex{display:flex;align-items:center;}

@@ -1,0 +1,23 @@
+/* pages/login/login.wxss */
+.LoginPage{
+    position:absolute;
+    top:0;
+    bottom:0;
+    background-color:#20272F;
+    color:#9B9895;
+    overflow:scroll;
+    right:0;
+    left:0;
+    padding:140rpx 30rpx 0;
+}
+
+.LoginHeader image{width:30rpx;height:30rpx;}
+.LoginHeader {padding-bottom:160rpx;justify-content:space-between;font-size:52rpx;}
+.LoginHeader .IsActive{color:#B2B9CA;}
+.LoginTitle{padding-bottom:60rpx;color:#B2B9CA;}
+.LoginInput{margin-bottom:40rpx;height:88rpx;line-height:88rpx;border-bottom:1px solid #2F3741;}
+
+.LoginBtn{height:108rpx;border-radius:54rpx;line-height:108rpx;}
+
+.LoginBottom{margin-top:62rpx;justify-content:space-between;font-size:24rpx;}
+.LoginBottom navigator{color:#F6CF79;}

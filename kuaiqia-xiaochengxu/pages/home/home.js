@@ -1,6 +1,5 @@
 // pages/home/home.js
 
-//const urlList = require("../../utils/http");
 import urlList from '../../utils/http';
 Page({
   /**
@@ -10,11 +9,14 @@ Page({
     homeInfo: [],
     spinShow: true,
     switch: false,
-    $toast: {
-      show: false,
-      message:""
-    }
-  },//组件不能重用,所以就不需要return一个对象
+    toast: {show: false,message:""},
+    imageUrls:[
+      "../../assets/banan01.png",
+      "../../assets/banan02.png"
+    ],
+    autoplay:true,
+    interval:false,
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -27,12 +29,13 @@ Page({
     })
   },
   onLoad: function (options) {
+    //打印
+    console.log(JSON.parse(JSON.stringify(this.data.imageUrls)));
     wx.request({
       url: urlList.homeInfo,
       method: "GET",
       success: ({data}) => {
-        console.log(data);
-        this.setData({homeInfo: data})
+        //this.setData({homeInfo: data})
       }
     });
   },
@@ -41,7 +44,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
@@ -68,8 +71,8 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
+  onPullDownRefresh() {
+    wx.stopPullDownRefresh()
   },
 
   /**
@@ -88,14 +91,14 @@ Page({
   //自定义方法
   showToast() {
     this.setData({
-      $toast: {
+      toast: {
         show: true,
         message:"这里是提示信息"
       }
     });
     setTimeout(() => {
       this.setData({
-        $toast: {
+        toast: {
 					show: false
         }
       })

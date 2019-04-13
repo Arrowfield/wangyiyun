@@ -1,0 +1,25 @@
+<!--pages/login/login.wxml-->
+<view class="LoginPage">
+    <view class='LoginHeader D-Flex'>
+        <view>
+            <text class="IsActive">密码登录</text>
+            <text>丨</text>
+            <text>验证码登录</text>
+        </view>
+        <image alt="" src="../../assets/images/arrow_right.png"></image>
+    </view>
+
+    <view class="LoginTitle">用户名</view>
+    <view class="LoginInput">
+        <input placeholder="请输入您的用户名"></input>
+    </view>
+    <view class="LoginTitle">密码</view>
+    <view class="LoginInput">
+        <input type="password" placeholder="请输入您的六位数验证码"></input>
+    </view>
+    <button disabled class="LoginBtn">登录</button>
+    <view class="LoginBottom D-Flex">
+        <navigator>忘记密码？</navigator>
+        <view class="D-Flex">还没有账号？<navigator>立即注册</navigator></view>
+    </view>
+</view>

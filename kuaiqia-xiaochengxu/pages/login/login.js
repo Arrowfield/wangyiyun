@@ -1,4 +1,4 @@
-// pages/user/user.js
+// pages/login/login.js
 Page({
 
   /**
@@ -12,30 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    try {
-      wx.getStorage({
-        key: "token",
-        success(res) {
-          console.log(res.data);
-        },
-        fail(err){
-          //console.log(err);
-          if(err.errMsg){
-            //console.log('您暂未登录');
-            wx.showToast({
-              title: '您暂未登录,跳往登录',
-              icon: 'none',
-              duration: 2000,
-              success(){
-                wx.redirectTo({url:'/pages/login/login'});
-              }
-            })
-          }
-        }
-      })
-    }catch(e){
-      console.log(e);
-    }
+
   },
 
   /**
