@@ -36,7 +36,7 @@
             <div>
                 <input data-flag="0" type="password" autocomplete="off" placeholder="请再次输入您密码"/>
             </div>
-            <button id="LoginBtn" disabled>注册</button>
+            <button id="LoginBtn" disabled>找回密码</button>
         </div>
     </section>
 </div>
@@ -61,7 +61,7 @@
         }
     });
     $('#LoginBtn').click(()=>{
-        mui.toast('衣佳：登录失败',{ duration:'long', type:'div' });
+        mui.toast('衣佳：找回失败，请重试！',{ duration:'long', type:'div' });
     })
 </script>
 </body>
