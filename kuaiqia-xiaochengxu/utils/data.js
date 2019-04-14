@@ -15,8 +15,16 @@ var HomeLookItem = [
 ];
 
 var ImgSlide = [
-    "../../assets/images/banner01.png",
+    "../../assets/images/banner02.png",
     "../../assets/images/banner02.png"
 ]
+const HomeData = {
+    msg:"数据获取成功",
+    code:200,
+    HomeLookItem,
+    ImgSlide,
+    HomeItems
+}
+//export {HomeItems,HomeLookItem}
 
-export {HomeItems,HomeLookItem}
+export default HomeData;

@@ -7,9 +7,10 @@
     background-color:#20272F;
     color:#9B9895;
     overflow:scroll;
+    padding-top:88rpx;
 }
 .HomePage .D-Flex{display:flex;align-items:center;}
-.HomePage .HomeHeader{height:88rpx;padding:0 30rpx;}
+.HomePage .HomeHeader{background:#20272F;box-sizing:border-box;top:0;height:88rpx;padding:0 30rpx;position:fixed;width:100%;}
 
 .HomeHeader>view{padding:0 10rpx;border-radius:34rpx;background:#33353E;height:68rpx;width:430rpx;}
 .HomeHeader>view>image{width:40rpx;height:40rpx;}

@@ -1,6 +1,6 @@
 // pages/home/home.js
 
-import {ImgSlide,HomeItems,HomeLookItem} from '../../utils/data';
+import HomeData from '../../utils/data';
 Page({
   /**
    * 页面的初始数据
@@ -12,9 +12,9 @@ Page({
     toast: {show: false,message:""},
     autoplay:true,
     interval:false,
-    HomeLookItem,
-    HomeItems,
-    ImgSlide
+    HomeLookItem:HomeData.HomeLookItem,
+    HomeItems:HomeData.HomeItems,
+    ImgSlide:HomeData.ImgSlide
   },
 
   /**
