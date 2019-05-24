@@ -15,4 +15,5 @@
 
 * 该项目直接使用express构建工具创建，现在这个就是服务端，以前哪个有问题就丢弃啦，现在就是真正的服务端了。
 * nginx进行反向代理通常是一个IP服务器（例如：我访问的是<http://field.arrowfield.top>,我可以将其配置代理服务器<http://arrowfield.top>上，代理服务器的安全性高以及功能强大）
+* git版本回退到上一个版本执行```git reset --hard HEAD^```代码
 
