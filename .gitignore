@@ -1,6 +1,7 @@
 node_modules/
 pic/
 img/
+doc/
 /public/img/cart
 /public/img/detail
 /public/img/header01
@@ -12,3 +13,4 @@ img/
 
 *.jpg
 *.png
+/doc
