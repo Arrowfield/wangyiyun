@@ -1,212 +1,180 @@
-#### 项目介绍（1）
+![](https://box.kancloud.cn/5a0aaa69a5ff42657b5c4715f3d49221) 
 
-    一、项目的基本常识
-        (1)全局目录的获取：npm config get prefix
-        (2)服务器的类别：1、phonegap；2、php；3、node；4、ngoke；5、local；
-        (3)功能实现：播放歌曲，生成进度条；三个事件：mousedown/mousemove/mouseup
-        (4)文件目前的大小：58.1M
-        (5)更新：2018/10/27 08:56:00
-        
-    二、项目的基本流程
-        (1)完成首页的静态页面
-        (2)完成用户的注册登录功能
+ThinkPHP 5.1（LTS版本） —— 12载初心，你值得信赖的PHP框架
+===============
 
-    三、项目目录结构介绍
-        3.1 .vscode-->vscode软件的配置文件：基本配置有Scss的存储路径和tab的缩进这两项
-        3.2 node_modules-->第三的模块依赖，必须导入依赖程序才可以运行
-        3.3 pic-->项目的模板图片，可以看上面的图片进行开发
-        3.4 router-->路由器文件夹，存储相应的路由模块（user，pro）
-        3.5 static-->静态资源文件夹，有了该文件就不属于前后端分离，该文件夹需要托管到服务器的主程序中进行访问
-        3.6 main.js-->主程序的入口文件
-        3.7 pool.js-->数据库的连接池模块，其中包含数据库的基本配置
-        3.8 wyy.sql-->数据库的脚本文件
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/top-think/framework/badges/quality-score.png?b=5.1)](https://scrutinizer-ci.com/g/top-think/framework/?branch=5.1)
+[![Build Status](https://travis-ci.org/top-think/framework.svg?branch=master)](https://travis-ci.org/top-think/framework)
+[![Total Downloads](https://poser.pugx.org/topthink/framework/downloads)](https://packagist.org/packages/topthink/framework)
+[![Latest Stable Version](https://poser.pugx.org/topthink/framework/v/stable)](https://packagist.org/packages/topthink/framework)
+[![PHP Version](https://img.shields.io/badge/php-%3E%3D5.6-8892BF.svg)](http://www.php.net/)
+[![License](https://poser.pugx.org/topthink/framework/license)](https://packagist.org/packages/topthink/framework)
 
-    四、项目当前运行流程
-        （1）前端静态页面的展示：static/index.html
-        （2）后台数据获取的接口：router/pro.
-        （3）项目启动：cmd->node main->http:127.0.0.1:3000
-        （4）备注：前端静态资源运行的IP：http://127.0.0.1:3000；前端获取数据的IP：http://127.0.0.1:3000；因此属于非跨域， 即非前后端分离（在新浪云运行时服务器的端口号修改为5050）
-        （5）可以将该项目称为服务端
+ThinkPHP5.1对底层架构做了进一步的改进，减少依赖，其主要特性包括：
 
-    五、项目打包部署流程
-        （1）https://github.com/Arrowfield
-    （2）常用的GIT指令：
-            git init;
-            git add .;
-            git commit -m "update";
-            git push;
-            git pull;git remote add 远程仓库地址;
-            git remote remove 远程仓库地址;
-            git status;
-            git config user.name;
-            git config user.email;
-            git remote -v;
-            git rm -r --cached node_modules/;
-            git push -f origin master;
-            git log;
-            git reset --hard <commit版本的hash值>
-            git reset --hard HEAD~<次数>
-            git config credential.helper store
-            备注：首先清空cach跟踪。gitignore生效
-
-    六、项目打包部署流程（前端开发流程）
-        （1）前端：静态页面（html）+样式文件（css）+业务逻辑处理（js）+静态资源（img）
-        （2）后台：接口编写（node）+数据库文件（sql）
-        （3）打包：资源打包（webpack）
-        （4）上线：线上域名（ase）+线上代码管理（github）+线上数据库（mysql）+线上存储（storage）
-        （5）运维：网站维护（web2.0）+网站优化（cdn）
-        （6）前端+后端：分离
-    七、前端：
-        （1）静态资源文件 
-            -html:index.html/login.html
-            -css:base.css/index.css/login.css/
-            -js:jquery.js/index.js
-            -font:font0.ttf
-            -plugin:carousel
-            -media:t.mp3
-            -request:ajax
-            -img:index/detail
-            -sass:index.scss/login.scss
-        （2）动态资源文件
-            -pool.js
-            -wyy.sql
-            -router
-            -pro.js
-            -user.js
-            -main.js
-    八、设计原则
-        （1）单一责任原则
-        （2）开闭原则
-        （3）高内聚低耦合
-    九、界面布局
-        （1）静态布局
-        （2）流式布局
-        （3）自适应布局
-        （4）响应式布局
-        （5）弹性布局
-        布局风格
-        （1）T字型
-        （2）口字型
-        （3）中件固定 两边自适应
-        （4）两边固定 中间自适应
-    十、怎样合并两个仓库
-    十一、项目的有关总结技巧（比较简单）：
-        前提不使用前端应用开发框架：首先定义目录结构：通常包括这几个部分，静态资源文件；第三方模块；如果使用node开发本地服务器并且是基于express框架；则只需编写本地服务器与路由器，路由器中保存的都是前端发送请求的接口。注意：实际开发的过程中，动静资源文件分离。本地服务器只提供测试的功能
-        -提示：
-            （1）了解W3C标准：首先它不是单独的一个标准，而是一系列的标准；分为三个方面：结构层，表现层，逻辑层（行为层）
-            （2）开始做一个项目的基本准备工作；准备静态资源文件，构建目录结构，选择何种方式布局，项目应用平台，采用何种
-            布局风 格，编写静态界面，完成样式编写，处理业务逻辑，获取后台数据，渲染前端视图，性能优化，部署运维，项目
-            更新迭代使用框架时：推荐使用命令行工具自动生成目录结构；当然vue与react可以通过文件的方式直接引入
-        -提示：
-            （1）创建一个基于webpack的vue项目的命令：vue init webpack myapp
+ + 采用容器统一管理对象
+ + 支持Facade
+ + 注解路由支持
+ + 路由跨域请求支持
+ + 配置和路由目录独立
+ + 取消系统常量
+ + 助手函数增强
+ + 类库别名机制
+ + 增加条件查询
+ + 改进查询机制
+ + 配置采用二级
+ + 依赖注入完善
+ + 支持`PSR-3`日志规范
+ + 中间件支持（V5.1.6+）
+ + Swoole/Workerman支持（V5.1.18+）
 
 
+> ThinkPHP5的运行环境要求PHP5.6以上。
+
+## 安装
+
+使用composer安装
+
+~~~
+composer create-project topthink/think tp
+~~~
+
+启动服务
+
+~~~
+cd tp
+php think run
+~~~
+
+然后就可以在浏览器中访问
+
+~~~
+http://localhost:8000
+~~~
+
+更新框架
+~~~
+composer update topthink/framework
+~~~
 
 
-#### 项目介绍（2）
+## 在线手册
 
-    一、项目的基本常识
-        (1)全局目录的获取：npm config get prefix
-        (2)服务器的类别：1、phonegap；2、php；3、node；4、ngoke；5、local；
-        (3)功能实现：播放歌曲，生成进度条；三个事件：mousedown/mousemove/mouseup
-        (4)文件目前的大小：58.1M
-        (5)更新：2018/10/27 08:56:00
-        
-    二、项目的基本流程
-        (1)完成首页的静态页面
-        (2)完成用户的注册登录功能
++ [完全开发手册](https://www.kancloud.cn/manual/thinkphp5_1/content)
++ [升级指导](https://www.kancloud.cn/manual/thinkphp5_1/354155) 
 
-    三、项目目录结构介绍
-        3.1 .vscode-->vscode软件的配置文件：基本配置有Scss的存储路径和tab的缩进这两项
-        3.2 node_modules-->第三的模块依赖，必须导入依赖程序才可以运行
-        3.3 pic-->项目的模板图片，可以看上面的图片进行开发
-        3.4 router-->路由器文件夹，存储相应的路由模块（user，pro）
-        3.5 static-->静态资源文件夹，有了该文件就不属于前后端分离，该文件夹需要托管到服务器的主程序中进行访问
-        3.6 main.js-->主程序的入口文件
-        3.7 pool.js-->数据库的连接池模块，其中包含数据库的基本配置
-        3.8 wyy.sql-->数据库的脚本文件
+## 目录结构
 
-    四、项目当前运行流程
-        （1）前端静态页面的展示：static/index.html
-        （2）后台数据获取的接口：router/pro.
-        （3）项目启动：cmd->node main->http:127.0.0.1:3000
-        （4）备注：前端静态资源运行的IP：http://127.0.0.1:3000；前端获取数据的IP：http://127.0.0.1:3000；因此属于非跨域， 即非前后端分离（在新浪云运行时服务器的端口号修改为5050）
-        （5）可以将该项目称为服务端
+初始的目录结构如下：
 
-    五、项目打包部署流程
-        （1）https://github.com/Arrowfield
-    （2）常用的GIT指令：
-            git init;
-            git add .;
-            git commit -m "update";
-            git push;
-            git pull;git remote add 远程仓库地址;
-            git remote remove 远程仓库地址;
-            git status;
-            git config user.name;
-            git config user.email;git remote -v;
-            git rm -r --cached node_modules/;
-            git push -f origin master;
-            git log;
-            git reset --hard <commit版本的hash值>
-            git reset --hard HEAD~<次数>
-            备注：首先清空cach跟踪。gitignore生效
+~~~
+www  WEB部署目录（或者子目录）
+├─application           应用目录
+│  ├─common             公共模块目录（可以更改）
+│  ├─module_name        模块目录
+│  │  ├─common.php      模块函数文件
+│  │  ├─controller      控制器目录
+│  │  ├─model           模型目录
+│  │  ├─view            视图目录
+│  │  └─ ...            更多类库目录
+│  │
+│  ├─command.php        命令行定义文件
+│  ├─common.php         公共函数文件
+│  └─tags.php           应用行为扩展定义文件
+│
+├─config                应用配置目录
+│  ├─module_name        模块配置目录
+│  │  ├─database.php    数据库配置
+│  │  ├─cache           缓存配置
+│  │  └─ ...            
+│  │
+│  ├─app.php            应用配置
+│  ├─cache.php          缓存配置
+│  ├─cookie.php         Cookie配置
+│  ├─database.php       数据库配置
+│  ├─log.php            日志配置
+│  ├─session.php        Session配置
+│  ├─template.php       模板引擎配置
+│  └─trace.php          Trace配置
+│
+├─route                 路由定义目录
+│  ├─route.php          路由定义
+│  └─...                更多
+│
+├─public                WEB目录（对外访问目录）
+│  ├─index.php          入口文件
+│  ├─router.php         快速测试文件
+│  └─.htaccess          用于apache的重写
+│
+├─thinkphp              框架系统目录
+│  ├─lang               语言文件目录
+│  ├─library            框架类库目录
+│  │  ├─think           Think类库包目录
+│  │  └─traits          系统Trait目录
+│  │
+│  ├─tpl                系统模板目录
+│  ├─base.php           基础定义文件
+│  ├─console.php        控制台入口文件
+│  ├─convention.php     框架惯例配置文件
+│  ├─helper.php         助手函数文件
+│  ├─phpunit.xml        phpunit配置文件
+│  └─start.php          框架入口文件
+│
+├─extend                扩展类库目录
+├─runtime               应用的运行时目录（可写，可定制）
+├─vendor                第三方类库目录（Composer依赖库）
+├─build.php             自动生成定义文件（参考）
+├─composer.json         composer 定义文件
+├─LICENSE.txt           授权说明文件
+├─README.md             README 文件
+├─think                 命令行入口文件
+~~~
 
-    六、项目打包部署流程（前端开发流程）
-        （1）前端：静态页面（html）+样式文件（css）+业务逻辑处理（js）+静态资源（img）
-        （2）后台：接口编写（node）+数据库文件（sql）
-        （3）打包：资源打包（webpack）
-        （4）上线：线上域名（ase）+线上代码管理（github）+线上数据库（mysql）+线上存储（storage）
-        （5）运维：网站维护（web2.0）+网站优化（cdn）
-        （6）前端+后端：分离
-    七、前端：
-        （1）静态资源文件 
-            -html:index.html/login.html
-            -css:base.css/index.css/login.css/
-            -js:jquery.js/index.js
-            -font:font0.ttf
-            -plugin:carousel
-            -media:t.mp3
-            -request:ajax
-            -img:index/detail
-            -sass:index.scss/login.scss
-        （2）动态资源文件
-            -pool.js
-            -wyy.sql
-            -router
-            -pro.js
-            -user.js
-            -main.js
-    八、设计原则
-        （1）单一责任原则
-        （2）开闭原则
-        （3）高内聚低耦合
-    九、界面布局
-        （1）静态布局
-        （2）流式布局
-        （3）自适应布局
-        （4）响应式布局
-        （5）弹性布局
-        布局风格
-        （1）T字型
-        （2）口字型
-        （3）中件固定 两边自适应
-        （4）两边固定 中间自适应
-    十、怎样合并两个仓库
-    十一、项目的有关总结技巧（比较简单）：
-        前提不使用前端应用开发框架：首先定义目录结构：通常包括这几个部分，静态资源文件；第三方模块；如果使用node开发本地服务器并且是基于express框架；则只需编写本地服务器与路由器，路由器中保存的都是前端发送请求的接口。注意：实际开发的过程中，动静资源文件分离。本地服务器只提供测试的功能
-        -提示：
-            （1）了解W3C标准：首先它不是单独的一个标准，而是一系列的标准；分为三个方面：结构层，表现层，逻辑层（行为层）
-            （2）开始做一个项目的基本准备工作；准备静态资源文件，构建目录结构，选择何种方式布局，项目应用平台，采用何种
-            布局风 格，编写静态界面，完成样式编写，处理业务逻辑，获取后台数据，渲染前端视图，性能优化，部署运维，项目
-            更新迭代使用框架时：推荐使用命令行工具自动生成目录结构；当然vue与react可以通过文件的方式直接引入
-        -提示：
-            （1）创建一个基于webpack的vue项目的命令：vue init webpack myapp
-            （2）本项目中包含了tp5,基于express的MVC模型结构同时进行目录结构的构建
-            （3）快洽后台，代理后台/总后台，公会后台/总后台,推广APP链接（安卓）,推广APP链接（IOS），短视频系统，快洽官网
+> 可以使用php自带webserver快速测试
+> 切换到根目录后，启动命令：php think run
 
+## 命名规范
 
-  
-	
-	
-	
+`ThinkPHP5`遵循PSR-2命名规范和PSR-4自动加载规范，并且注意如下规范：
+
+### 目录和文件
+
+*   目录不强制规范，驼峰和小写+下划线模式均支持；
+*   类库、函数文件统一以`.php`为后缀；
+*   类的文件名均以命名空间定义，并且命名空间的路径和类库文件所在路径一致；
+*   类名和类文件名保持一致，统一采用驼峰法命名（首字母大写）；
+
+### 函数和类、属性命名
+
+*   类的命名采用驼峰法，并且首字母大写，例如 `User`、`UserType`，默认不需要添加后缀，例如`UserController`应该直接命名为`User`；
+*   函数的命名使用小写字母和下划线（小写字母开头）的方式，例如 `get_client_ip`；
+*   方法的命名使用驼峰法，并且首字母小写，例如 `getUserName`；
+*   属性的命名使用驼峰法，并且首字母小写，例如 `tableName`、`instance`；
+*   以双下划线“__”打头的函数或方法作为魔法方法，例如 `__call` 和 `__autoload`；
+
+### 常量和配置
+
+*   常量以大写字母和下划线命名，例如 `APP_PATH`和 `THINK_PATH`；
+*   配置参数以小写字母和下划线命名，例如 `url_route_on` 和`url_convert`；
+
+### 数据表和字段
+
+*   数据表和字段采用小写加下划线方式命名，并注意字段名不要以下划线开头，例如 `think_user` 表和 `user_name`字段，不建议使用驼峰和中文作为数据表字段命名。
+
+## 参与开发
+
+请参阅 [ThinkPHP5 核心框架包](https://github.com/top-think/framework)。
+
+## 版权信息
+
+ThinkPHP遵循Apache2开源协议发布，并提供免费使用。
+
+本项目包含的第三方源码和二进制文件之版权信息另行标注。
+
+版权所有Copyright © 2006-2018 by ThinkPHP (http://thinkphp.cn)
+
+All rights reserved。
+
+ThinkPHP® 商标和著作权所有者为上海顶想信息科技有限公司。
+
+更多细节参阅 [LICENSE.txt](LICENSE.txt)
