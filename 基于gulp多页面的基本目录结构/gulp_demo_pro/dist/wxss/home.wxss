@@ -1,9 +1,0 @@
-.my-sass-demo {
-  width: 100px;
-  height: 100px;
-  background-color: "red";
-  border: 4rpx solid gray;
-  line-height: 10px; }
-
-.my-home {
-  font-size: 10px; }
