@@ -8,25 +8,16 @@ class Index extends Controller
     public function index(){
       //return 'hello thinkphp5';
       //return $this->fetch('/index');
-      echo 132;
       $this->assign('name','ThinkPHP');
       $this->assign('email','thinkphp@qq.com');
-
-      return $this->fetch('/index');
-
-      
+      return $this->fetch('/index/index');
     }
-    public function hhh(){
-      //return 'hello thinkphp5';
-      //return $this->fetch('/index');
-      echo 123;
+    public function home(){
+
       $this->assign('name','ThinkPHP');
       $this->assign('email','thinkphp@qq.com');
       
-      return $this->fetch('/home');
-
-      
+      return $this->fetch('/index/home');
     }
-
-    
 }
+//模块->控制器->操作
