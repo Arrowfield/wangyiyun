@@ -1,7 +1,4 @@
-/.idea
-/.vscode
-/vendor
+.idea
+composer.lock
 *.log
 thinkphp
-.env
-.DS_Store
