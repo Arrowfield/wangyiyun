@@ -52,4 +52,13 @@ return [
     'datetime_format' => 'Y-m-d H:i:s',
     // 是否需要进行SQL性能分析
     'sql_explain'     => false,
+    "wyy" => [
+        'type'        => 'mysql',
+        'hostname'    => '127.0.0.1',
+        'database'    => 'wyy',
+        'username'    => 'root',
+        'password'    => 'root',
+        'charset'     => 'utf8',
+        'prefix'      => 'wy_',
+    ]
 ];

@@ -1,8 +1,9 @@
 <?php
 namespace app\index\controller;
 
-use think\Controller;
 use app\index\model\MusicLists;
+use think\Controller;
+
 //use think\Db;
 class Index  extends Controller
 {
@@ -19,9 +20,9 @@ class Index  extends Controller
       /** 
        * 操作数据库
       */
-      //$data = Db::connect()->table('wy_music_lists').find()
-      $music = MusicLists::find(1);
-      echo $music;
+      //$data = Db::connect()->table('wy_music_l ists').find()
+      //$music = MusicLists::get(1);
+      //echo $music;
       //$music = $db::get(1);
       //echo $music;
 
