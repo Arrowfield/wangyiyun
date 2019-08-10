@@ -7,7 +7,7 @@
 
 header > div.my-container {
   background: #242424;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 header > div.my-container .my-hidden.my-before-login {
@@ -168,18 +168,21 @@ header .my-padding > div:nth-child(5) > div:first-child {
 }
 
 
-header .my-padding > div:nth-child(5):hover div.my-hidden {
-  display: block;
-}
+
 
 header .my-padding div.my-login {
-  overflow: visible !important;
+  position: relative;
+  margin-top: 10px;
+}
+
+header .my-padding div.my-login:hover .my-hidden{
+  display: block !important;
 }
 
 header .my-padding div.my-login a {
   display: inline-block;
   color: gray;
-  font-size: 0.6rem;
+
 
 }
 
@@ -195,9 +198,10 @@ header .my-padding div.my-login a:focus {
 div.my-hidden {
   display: none;
   position: absolute;
-  z-index: 2;
-  left: -55px;
-  top: 57px;
+  z-index: 1000;
+  left: 50%;
+  margin-left:-79px;
+  top: calc(100%);
 }
 
 div.my-hidden ul {
@@ -211,13 +215,17 @@ div.my-hidden ul li a {
   width: 158px;
   color: gray;
   font-size: 0.8rem;
-  background: #332828;
-  padding: 0.5rem 0.7rem;
+  background: #353535;
+  
+  height: 45px;
+  line-height: 45px;
+  padding:0 10px;
+  
 }
 
 div.my-hidden ul li a:hover {
   text-decoration: none;
-  background: lightgray;
+ 
 }
 
 div.my-hidden ul li:first-child {
@@ -229,9 +237,8 @@ div.my-hidden ul li:last-child {
 }
 
 div.my-hidden i {
-  display: inline-block;
-  height: 20px;
-  font-size: 0.9rem;
+
+  padding-right: 5px;
 }
 
 header .my-img0 {
