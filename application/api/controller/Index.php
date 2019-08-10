@@ -1,11 +1,11 @@
 <?php 
-namespace app\api\controller\web;
+namespace app\api\controller;
 
 use think\Controller;
 
 class Index extends Controller{
 
-    publuc function index(){
+    public function index(){
         return "456456";
     }
 }
