@@ -50,7 +50,7 @@ header .my-padding > a {
 header .my-padding > ul {
   list-style: none;
   margin: 0;
-  padding-left: 1.5rem;
+
 }
 
 header .my-padding > ul li {
@@ -576,3 +576,907 @@ header div.my-change::after {
   vertical-align: -2px;
 }
 /*结束*/
+
+
+/*首页的样式*/
+
+/*只要有三个以上的项目水平居中显示的方式*/
+
+
+section.index div.my-container > div:nth-child(1) {
+  background: #C20C0C;
+  overflow: hidden;
+  padding: 0 0 0.3rem;
+  position: relative;
+}
+
+section.index div.my-container > div:nth-child(1) ul {
+
+  list-style: none;
+  margin: 0 auto;
+}
+
+section.index div.my-container > div:nth-child(1) ul li {
+  float: left;
+  margin-left: 2rem;
+  padding-bottom: 0.2rem;
+}
+
+section.index div.my-container > div:nth-child(1) ul li a {
+  color: white;
+  font-size: 0.6rem;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 0.2rem 0.7rem;
+}
+
+section.index div.my-container > div:nth-child(1) ul li a:hover {
+  background: #db3333;
+}
+
+section.index div.my-container > div:nth-child(1) ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+section.index div.my-container > div:nth-child(2) {
+  position: relative;
+}
+
+section.index div.my-container > div:nth-child(2) div.my-bg-hover {
+  -webkit-transition: all 0.6s linear;
+  transition: all 0.6s linear;
+}
+
+section.index div.my-container > div:nth-child(2) div.my-car {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.index div.my-container > div:nth-child(2) div.my-car div:first-child {
+  position: relative;
+  width: 730px;
+  height: 336px;
+}
+
+section.index div.my-container > div:nth-child(2) div.my-car div:first-child ul.my-intro {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  z-index: 1;
+  top: 88%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+section.index div.my-container > div:nth-child(2) div.my-car div:first-child ul.my-intro li {
+  float: left;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ddd;
+  margin: 0 10px;
+  opacity: 0.5;
+}
+
+section.index div.my-container > div:nth-child(2) div.my-car div:first-child > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+section.index div.my-container > div:nth-child(2) div.my-car div:first-child > img:first-child {
+  opacity: 1;
+}
+
+section.index div.my-container > div:nth-child(2) div.my-car div.my-down {
+  position: relative;
+}
+
+section.index div.my-container > div:nth-child(2) div.my-car div.my-down span {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  left: 7.7%;
+  top: 63.7%;
+  width: 13.4rem;
+  height: 3.55rem;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+section.index div.my-container > div:nth-child(2) div.my-car div.my-down span:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+section.index div.my-container > div:nth-child(2) div.my-car div.my-down span::after {
+  content: "PC 安卓 iPhone WP iPad Mac 客户端";
+  position: absolute;
+  display: block;
+  top: 105%;
+  left: 5.1%;
+  z-index: 1;
+  font-size: 0.6rem;
+  color: gray;
+}
+
+section.index div.my-container > div:nth-child(2) > a {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  top: 50%;
+  left: 6%;
+  margin-top: -33.5px;
+  color: gray;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-transition: all .6s linear;
+  transition: all .6s linear;
+}
+
+section.index div.my-container > div:nth-child(2) > a i {
+  font-size: 2.8rem;
+  opacity: 0.8;
+}
+
+section.index div.my-container > div:nth-child(2) > a.next {
+  left: 94%;
+  margin-left: -44.8px;
+}
+
+section.index div.my-container > div:nth-child(3) {
+  max-width: 984px;
+  border: 1px solid #c5c4c4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 72.9%;
+  margin: 0 auto;
+  background: white;
+  border-bottom: 0;
+  border-top: 0;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left {
+  padding: 0 1.75rem 2rem;
+  width: 729.22px;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-header0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid red;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-header0 ul {
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: -10rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-header0 ul li {
+  float: left;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-header0 ul li a {
+  color: gray;
+  font-size: 0.8rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-header0 ul li b {
+  padding: 0 1rem;
+  font-weight: normal;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-header0 i {
+  font-size: 17px;
+  color: red;
+  padding-left: 1.2rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-header0 span a {
+  font-size: 0.6rem;
+  color: gray;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-header0 span > i {
+  color: red;
+  font-size: 0.6rem;
+  padding-right: 1.2rem;
+  padding-left: 0.2rem;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-header0 span.my-span {
+  float: right;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-content0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1.2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-content0 a {
+  color: gray;
+  font-size: 0.8rem;
+  width: 140px;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-content0 a p {
+  padding-top: 0.2rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-car1 {
+  position: relative;
+  margin-top: 2rem;
+  padding: 2rem 2rem;
+  background: #e3e3e3;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-car1 > div {
+  overflow: hidden;
+  width: 608.31px;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-car1 > div div.my-inner {
+  width: 1216.62px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all .8s linear;
+  transition: all .8s linear;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-car1 > div ul {
+  width: 608.31px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10px;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-car1 > div ul li {
+  float: left;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-car1 > div ul li a {
+  display: block;
+  width: 100px;
+  font-size: 0.8rem;
+  color: gray;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-car1 > a {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 35%;
+  left: 0.3%;
+  height: 4rem;
+  width: 1.6rem;
+  background: rgba(119, 110, 110, 0.6);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-car1 > a:hover {
+  background: #948484;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-car1 > a i {
+  color: gray;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  padding-right: 1.2rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-car1 > a.my-next {
+  left: 95.9%;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-tuijian {
+  margin-top: 1.2rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-tuijian ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-tuijian ul li {
+  width: 140px;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-tuijian ul li > a {
+  color: black;
+  font-size: 0.8rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-tuijian ul li > p {
+  color: gray;
+  font-size: 0.6rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-tuijian ul li > p em {
+  font-style: normal;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-tuijian ul li:nth-child(2) img {
+  border: 1px solid gray;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-date {
+  background: white url("../img/index/date.png") no-repeat;
+  background-position: -1% -1%;
+  text-align: center;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-date p {
+  margin: 0;
+  width: 140px;
+  color: white;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-date p:last-child {
+  font-size: 5rem;
+  font-weight: bold;
+  color: black;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-date p:first-child {
+  padding-top: 0.3rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-sort {
+  margin-top: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-sort ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid gray;
+  width: 224px;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-sort ul li:not(:first-child) {
+  padding: 0.3rem 0 0.3rem 1.2rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-sort ul li:not(:first-child) span {
+  display: inline-block;
+  width: 22px;
+  color: gray;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-sort ul li:not(:first-child) a {
+  display: inline-block;
+  color: gray;
+  font-size: 0.9rem;
+  width: 120px;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-sort ul li:first-child {
+  padding: 1.6rem 0.5rem 1rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-sort ul li:first-child div h5 a {
+  color: black;
+  font-size: 0.8rem;
+  font-family: my-font1;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-sort ul li:first-child div i {
+  font-size: 1.8rem;
+  color: gray;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-sort ul li:first-child div i:hover {
+  color: black;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-sort ul li:last-child {
+  text-align: right;
+  padding-right: 1.2rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-sort ul li:nth-child(2n) {
+  background: #E8E8E8;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-sort ul li:nth-child(2n+1) {
+  background: #F4F4F4;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-sort ul div {
+  margin-left: 0.8rem;
+  margin-top: 0.6rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-sort ul:first-child {
+  border-right: none;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-left div.my-sort ul:last-child {
+  border-left: none;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right {
+  border-left: 1px solid gray;
+  text-align: center;
+  width: 252.19px;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right .my-right-hidden {
+  text-align: left;
+  padding: 1rem 1.8rem;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e3e3e3), to(#FBFBFB));
+  background-image: linear-gradient(bottom, #e3e3e3, #FBFBFB);
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right .my-right-hidden .hidden-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right .my-right-hidden .hidden-top img {
+  padding: 3px;
+  border: 1px solid #cccaca;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right .my-right-hidden .ting {
+  padding-left: 20px;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right .my-right-hidden .ting > p {
+  margin-bottom: 6px;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right .my-right-hidden .ting p:first-child {
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right .my-right-hidden .ting p:nth-child(2) {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 0.2px 1px;
+  text-align: center;
+  width: 42px;
+  font-size: 12px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right .my-right-hidden .ting button {
+  padding: 3px 21px;
+  background: #5786ec;
+  text-align: center;
+  color: white;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right .my-right-hidden .hidden-buttom ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: gray;
+  margin-top: 20px;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right .my-right-hidden .hidden-buttom ul li {
+  text-align: center;
+  border-right: 1px solid #d6d1d1;
+  width: 53px;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right .my-right-hidden .hidden-buttom ul li p {
+  margin: 0;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div:first-child:not(.hidden-top) {
+  padding: 1rem 1.8rem;
+  font-size: 0.6rem;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e3e3e3), to(#FBFBFB));
+  background-image: linear-gradient(bottom, #e3e3e3, #FBFBFB);
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div:first-child:not(.hidden-top) p {
+  width: 12.1rem;
+  color: gray;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside {
+  padding: 1.2rem 1.2rem 0;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside h5 {
+  font-size: 0.8rem;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside h5 span {
+  font-weight: bold;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside h5 span a {
+  color: gray;
+  font-size: 0.6rem;
+  float: right;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside hr {
+  margin-top: 0.5rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside ul.my-ul1 li {
+  margin-bottom: 1.2rem;
+  background: #f5f2f2;
+  text-align: left;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside ul.my-ul1 li a {
+  display: block;
+  width: 9rem;
+  float: right;
+  color: black;
+  text-decoration: none;
+  text-align: left;
+  padding-left: 0.5rem;
+  padding-top: 0.4rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside ul.my-ul1 li a p:first-child {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside ul.my-ul1 li a p:last-child {
+  font-size: 0.6rem;
+  color: gray;
+  margin-bottom: 0.2rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside button.my-btn {
+  width: 100%;
+  margin-top: 0.8rem;
+  padding: 0.2rem 0;
+  text-align: center;
+  color: gray;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside h5.my-h5 {
+  margin-top: 4rem;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside ul.my-ul2 li {
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside ul.my-ul2 div {
+  width: 10rem;
+  float: right;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside ul.my-ul2 div a {
+  color: black;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside ul.my-ul2 div a span {
+  padding-left: 0.2rem;
+  color: red;
+  font-family: mt-font0;
+  font-weight: bold;
+}
+
+section.index div.my-container > div:nth-child(3) div.my-right div.my-aside ul.my-ul2 div p {
+  color: gray;
+  margin-bottom: 0.2rem;
+}
+
+section.index .my-bg1 {
+  background: #1b1a1a;
+}
+
+section.index .my-bg2 {
+  background: #962F32;
+}
+
+section.index .my-bg3 {
+  background: #314254;
+}
+
+section.index .my-bg4 {
+  background: #B1BEF3;
+}
+
+section.index .my-img {
+  vertical-align: top;
+  height: 336px;
+  width: 253.27px;
+}
+
+section.index .my-img1 {
+  width: 80px;
+  height: 80px;
+}
+
+section.index .active {
+  background: #db3333;
+}
+
+section.index .active1 {
+  background: #f00606 !important;
+}
+
+section.index .disabled {
+  background: #c4bcbc !important;
+}
+
+section.index ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+aside.aside-bottom {
+  width: 100%;
+  position: fixed;
+  top: 100%;
+  left: 0;
+  background: #776e6e url(../img/index/playbar.png) repeat;
+  background-position: left -3px;
+  height: 51px;
+  margin-top: -51px;
+  z-index: 1;
+  opacity: 0;
+  outline: 1px solid rgba(0, 0, 0, 0.4);
+  /*伪元素表示在当前的元素之前或者之后进行值的插入*/
+}
+
+aside.aside-bottom i {
+  cursor: pointer;
+}
+
+aside.aside-bottom:hover {
+  opacity: 1;
+}
+
+aside.aside-bottom > div.aside-play {
+  margin: 0 auto;
+  width: 980px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+aside.aside-bottom > div.aside-play div.my-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 40px;
+}
+
+aside.aside-bottom > div.aside-play div.my-control a {
+  color: white;
+  text-decoration: none;
+  padding-top: 1px;
+}
+
+aside.aside-bottom > div.aside-play div.my-control a i {
+  font-size: 25px;
+  /*36 28*/
+  color: gray;
+}
+
+aside.aside-bottom > div.aside-play div.my-control a:nth-child(2) {
+  margin: 0 10px;
+  padding-bottom: 2px;
+}
+
+aside.aside-bottom > div.aside-play div.my-control a:nth-child(2) i {
+  font-size: 34px;
+  color: white;
+}
+
+aside.aside-bottom > div.aside-play div.center-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 35px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 51px;
+}
+
+aside.aside-bottom > div.aside-play div.center-item div.img-item {
+  margin-right: 20px;
+}
+
+aside.aside-bottom > div.aside-play div.center-item div.img-item img {
+  border-radius: 3px;
+  border: 1px solid black;
+}
+
+aside.aside-bottom > div.aside-play div.center-item > div:nth-child(2) {
+  padding-top: 3px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+aside.aside-bottom > div.aside-play div.center-item em {
+  font-size: 0.6rem;
+  margin-right: 10px;
+}
+
+aside.aside-bottom > div.aside-play div.center-item > div > em:nth-child(1) {
+  color: white;
+}
+
+aside.aside-bottom > div.aside-play div.center-item > div > em:nth-child(2) {
+  color: gray;
+}
+
+aside.aside-bottom > div.aside-play div.center-item div.my-progress {
+  width: 493px;
+  height: 10px;
+  background: #000;
+  opacity: 0.8;
+  border-radius: 30px;
+  margin-top: 4px;
+  position: relative;
+}
+
+aside.aside-bottom > div.aside-play div.center-item div.my-progress > div {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  margin-top: -3px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+aside.aside-bottom > div.aside-play div.center-item div.my-progress > div:hover {
+  -webkit-box-shadow: gray 0 0 10px;
+          box-shadow: gray 0 0 10px;
+}
+
+aside.aside-bottom > div.aside-play div.center-item div.my-progress > div > i {
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  z-index: 2;
+  background: red;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  margin-left: -3.5px;
+  margin-top: -3.5px;
+}
+
+aside.aside-bottom > div.aside-play div.center-item span {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 6px;
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+aside.aside-bottom > div.aside-play div.center-item span i {
+  color: gray;
+}
+
+aside.aside-bottom > div.aside-play div.right-item i {
+  color: gray;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+aside.aside-bottom > div.aside-play div.my-volume {
+  margin-left: 27px;
+}
+
+aside.aside-bottom > div.aside-play div.my-volume i {
+  font-size: 18px;
+  color: gray;
+  margin-right: 2px;
+}
+
+aside.aside-bottom div.btn-hide {
+  width: 65px;
+  height: 70px;
+  background: #000;
+  top: -27%;
+  left: 92%;
+  background: url(../img/index/playbar.png) no-repeat;
+  background-position: 0 -383px;
+  position: absolute;
+}
+
+aside.aside-bottom div.btn-hide span {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 17px;
+  color: gray;
+  cursor: pointer;
+}
+
+.my-opacity {
+  opacity: 1 !important;
+}
+/*# sourceMappingURL=index.css.map */
