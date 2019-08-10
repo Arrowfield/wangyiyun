@@ -144,6 +144,7 @@ return [
         'layout_on'     =>  true,
         'layout_name'   =>  'layout/layout',
         'layout_item'   =>  '{__CONTENT__}',
+        "_CDN_" => "../application/index/view"
     ],
 
     // 视图输出字符串内容替换

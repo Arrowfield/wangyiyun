@@ -273,20 +273,28 @@ header div.my-change::after {
   width: 500px;
   height: 330px;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   margin-top: -165px;
   margin-left: -250px;
+  z-index: 1000;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 13px 13px 11px -8px grey;
+  display: none;
 }
 
 .modal-header {
   background: #2D2D2D;
-  padding: 0.2rem 0.8rem;
+  padding: 0 0.8rem;
+  height:50px;
+  line-height: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   color: white;
+  cursor: move;
 }
 
 .modal-header > span:nth-child(2) {
@@ -367,29 +375,25 @@ header div.my-change::after {
 }
 
 .modal-body ul li:nth-child(1) div {
-  background: url("../img/header01/logo.png") no-repeat;
+  background: url("/index/img/logo.png") no-repeat;
   background-position: -150px -670px;
 }
 
 .modal-body ul li:nth-child(2) div {
-  background: url("../img/header01/logo.png") no-repeat;
+  background: url("/index/img/logo.png") no-repeat;
   background-position: -190px -670px;
 }
 
 .modal-body ul li:nth-child(3) div {
-  background: url("../img/header01/logo.png") no-repeat;
+  background: url("/index/img/logo.png") no-repeat;
   background-position: -231px -670px;
 }
 
 .modal-body ul li:nth-child(4) div {
-  background: url("../img/header01/logo.png") no-repeat;
+  background: url("/index/img/logo.png") no-repeat;
   background-position: -271px -670px;
 }
 
-.modal {
-  font-size: 14px;
-  color: gray;
-}
 
 .modal .register {
   width: 100%;
@@ -473,6 +477,7 @@ header div.my-change::after {
 
 .modal .my-times {
   font-size: 25px;
+  float: right;
 }
 
 .modal .inputs {
@@ -1483,7 +1488,7 @@ aside.aside-bottom div.btn-hide span {
 /* 底部 */
 
 footer div.my-container {
-  min-width: 1349px;
+  
   background: #f2f2f2;
   border-top: 1px solid gray;
   padding-bottom: 3.2rem;
@@ -1562,3 +1567,5 @@ footer div.my-container > div:first-child div:nth-child(2) ul::after {
   display: block;
   clear: both;
 }
+
+/*底部结束*/

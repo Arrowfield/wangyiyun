@@ -6,3 +6,5 @@
 + 账号：field 密码：admin123456
 + 宝塔web<http://127.0.0.1:888/index.php>
 + 学习网站<https://www.bilibili.com/video/av53077315?from=search&seid=18127446034801833750>
++ php think 命令行工具<https://blog.csdn.net/qq_39125684/article/details/80674276>
++ php 安装环境

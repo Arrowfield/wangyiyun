@@ -21,8 +21,9 @@ $(function () {
   //登录事件
   $('.goto-login').click(function(){
     $('#demo').show().css('background','rgba(0,0,0,.5)');
-    mychange('.login')
+    //mychange('.login')
   })
+
   $('[data-change=change]').click(function(){
     if(timer){time=60;clearInterval(timer)}
     $('#demo').hide();
@@ -168,6 +169,7 @@ $(function () {
   $('.inputs>input')[0].removeAttribute('readonly');
   //时间2018/11/10开始做新的功能
   //模态框头部拖拽
+
   $('.modal-header').on({
     mousedown:function(e){
       var el = $('.modal-content')
@@ -180,4 +182,5 @@ $(function () {
       })
     }
   })
+
 })
