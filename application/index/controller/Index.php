@@ -3,6 +3,8 @@ namespace app\index\controller;
 
 use app\index\model\MusicLists;
 use think\Controller;
+use think\Request;
+use think\Db;
 
 //use think\Db;
 class Index  extends Controller
@@ -26,11 +28,22 @@ class Index  extends Controller
       //$music = $db::get(1);
       //echo $music;
 
-      $this->assign('name','ThinkPHP');
-      $this->assign('email','thinkphp@qq.com');
+      //$this->assign('name','ThinkPHP');
+      //$this->assign('email','thinkphp@qq.com');
 
-
-      return $this->fetch('/index/index');
+      $request =  Request::instance();
+      //dump($request);
+      //echo $request->method().'<br />';
+      //echo $request->param('name');
+      //return $this->fetch('/index/index');
+      dump(input(''));
+    }
+    public function db(){
+      //插入数据
+      $result = Db::execute(' insert into wy_music_lists (music_title,music_weight) values ("ceshi",10) ');
+      
+      dump($result);
+      //return "123";
     }
     public function home(){
 

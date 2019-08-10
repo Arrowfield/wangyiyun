@@ -29,6 +29,7 @@ $(function () {
     $('#demo').hide();
     mychange('.login')
   })
+  
   //退出登录事件
   $('[data-exit=exit]').click(function () {
     //var url = "http://127.0.0.1:3000/user/signout"
