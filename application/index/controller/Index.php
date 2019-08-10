@@ -19,5 +19,9 @@ class Index extends Controller
       
       return $this->fetch('/index/home');
     }
+    public function course(){
+      //echo \think\facade\App::version();
+      //return "hello world"
+    }
 }
 //模块->控制器->操作
