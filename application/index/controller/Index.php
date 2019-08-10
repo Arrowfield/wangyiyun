@@ -2,14 +2,33 @@
 namespace app\index\controller;
 
 use think\Controller;
-
-class Index extends Controller
+use app\index\model\MusicLists;
+//use think\Db;
+class Index  extends Controller
 {
     public function index(){
-      //return 'hello thinkphp5';
-      //return $this->fetch('/index');
+      /** 
+       * 首页的数据：
+       * 热门推荐
+       * 个性化推荐
+       * 入驻歌手
+       * 新碟上架
+       * 榜单
+       * 热门主播
+      */
+      /** 
+       * 操作数据库
+      */
+      //$data = Db::connect()->table('wy_music_lists').find()
+      $music = MusicLists::find(1);
+      echo $music;
+      //$music = $db::get(1);
+      //echo $music;
+
       $this->assign('name','ThinkPHP');
       $this->assign('email','thinkphp@qq.com');
+
+
       return $this->fetch('/index/index');
     }
     public function home(){
