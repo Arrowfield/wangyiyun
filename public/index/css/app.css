@@ -1,365 +1,571 @@
-.header-top{
-  background: #f3f3f3;
-}
-.header-top ul{
-  width: 1000px;
-  margin:0 auto;
-}
-.header-top ul li{
-  float:right;
-  height: 35px;
-  line-height: 35px;
-  font-size: 13px;
-  padding-left:30px;
-  
-}
-header .img{
-  height: 170px;
-  background: url('/index/img/field_top_min.jpg') no-repeat top left;
-  background-size:cover; 
-}
-.header-bottom{
-  background: #BFAB86;
-  height: 55px;
-  position: relative;
-}
-.nav-horizontal{
-  width: 1000px;
-  margin: 0 auto;
-}
-.nav-horizontal li{float: left;color: #fffbf0;margin-right:2px;}
-.nav-horizontal li a{padding:0 20px;line-height: 55px;font-size: 18px;display: block;color:white;}
-.nav-horizontal li a:hover,.index-active{
-  background: #fffbf0;
-  color: #000 !important;
-  border-top:4px solid #f77825;
-  line-height: 51px !important; 
+@charset "UTF-8";
+.my-fontsize {
+  font-size: 0.8rem;
 }
 
-.header-search{
-  position: absolute;
-  right:20px;
-  top:50%;
-  height: 40px;
-  border:1px solid white;
-  /* width:100px; */
-  border-radius: 40px;
-  line-height: 38px;
-  margin-top:-20px;
-  transition: width .2s linear,background .6s linear;
-  background: transparent;
+/*头部*/
+
+header > div.my-container {
+  background: #242424;
   overflow: hidden;
- 
-}
-.header-search input{
-  background: transparent;
-  padding-left:10px;
-  outline: none;
-  border:0;
-  width:60px;
-  float: left;
-  /* vertical-align: middle; */
-  height: 38px;
-  transition: width .6s linear;
-}
-.header-search i{
-  font-size: 29px;
-  float: right;
-  cursor: pointer;
-  padding-right:10px;
-}
-.header-search:hover{
-  /* width: 150px; */
-  background: white;
-  border:1px solid blueviolet;
-}
-.header-search:hover input{
-  width:120px;
 }
 
-/*首页的主体部分*/
-.container{
-  width:1000px;
-  margin:20px auto 0;
-}
-
-.index-left{
-  width:670px;
-  float: left;
-}
-.index-right{
-  width: 300px;
-  float: right;
-}
-.carousel{
-  overflow: hidden;
-  width: 500px;
-  height: 280px;
-}
-.carousel li{
-  width: 500px;
-  height: 280px;
-  float: left;
-}
-.carousel li img{
-  width: 500px;
-  height:280px;
-}
-
-.title{
-  margin-top:20px;
-  padding-bottom: 15px;
-  border-bottom:4px solid #db6d4c;
-}
-.title .right-span{font-size:12px;color:gray;}
-footer{padding: 10px 0;background: #fffbf0}
-footer p{text-align: center;font-size: 12px;line-height:20px;font-family: 'Arizonia', cursive;color:#737373;}
-.article>li{
-  padding:30px 0;
-}
-.my-intro{width:170px;}
-.my-intro .about-me{height: 138px;margin-bottom:4px;padding:20px 10px 5px;background: #FFFFF7;border:1px solid #FFCC00;}
-.about-me .name-title{font-weight: bold;font-size:18px;margin-bottom: 10px;}
-.about-me .detail{font-size:12px;color:#B3BACA;letter-spacing: 2px;}
-.my-intro .about-me:nth-child(2){
-  background: #FAFCFD;
-  border:1px solid #CCEFF5;
-  margin: 0;
-}
-.for-bg{background: #fffbf0;}
-.for-bg::before{display: table;content: ""}
-.article li{border-bottom:1px solid #BFAB86;}
-.article li figure{width: 25%;overflow: hidden;}
-.article li:hover{background: white;}
-.article li figure img{width: 100%;height: 137px;transition: all .3s linear;}
-.article li figure img:hover{
-  transform: scale(1.1)
-}
-.article li ul{width: 72%;}
-.article li ul h3{margin-top:0;}
-.article li ul p{font-size:12px;}
-.article-action{font-size: 13px;}
-.article-action span{padding-right:5px;}
-.article-action span i{font-size: 13px;padding-right:2px;}
-.article-action span:nth-child(1) i{color: tomato}
-.article-action span:nth-child(1) a{color:#759b08;}
-.article-action span:nth-child(2) i{color:#B3BACA;}
-.article-action span:last-child:hover i{color:#B3BACA;}
-
-.index-right .right-title{
-  font-size:20px;
-  padding:10px 0;
-  border-bottom:1px solid #E6E6E6;
-}
-.concat{font-size:12px;margin-left:-20px;}
-.concat li{float: left;padding:30px 0;margin-left:20px;}
-.concat li i{font-size: 54px;}
-.concat li:hover i{color:gray !important;}
-.new-article{margin-top:15px;;font-size: 12px;list-style: square inside;}
-.new-article a{line-height: 25px;}
-.links{font-size: 12px;margin-top:20px;border: 1px solid #B3BACA;padding:10px;background: white;}
-.links li{float: left;padding:0 10px;line-height: 24px;}
-
-/*心情随笔页面*/
-.mood-note li{
-  padding:20px;
-  margin-bottom: 10px;
-  background: #fafafa;
-  border:1px solid #e0e0e0;
-  border-radius: 3px;
-  font-size:12px;
-}
-
-.mood-note li:hover{
-  background: #f4f2f2;
-}
-.mood-note li p{line-height: 22px;}
-.mood-list{margin-top:10px;}
-.mood-list li{margin-left:2px;margin-bottom:4px;width: 90px;height: 74px;float: left;text-align: center;line-height: 74px;}
-.mood-list li a{display: block;font-size:12px;}
-
-.indicator{position: absolute;left:60px;bottom:20px;}
-.indicator li{float: left;margin-right: 15px;width: 12px; height: 12px;background: white;}
-.indicator li.is-active{background: #db6d4c;}
-
-/*个人归档页面*/
-.archices-left{
-  margin-top:30px;
-}
-.archices-left li{
-  padding:10px;
-  font-size:18px;
-  color:#828282;
-  background: white;
-  margin-bottom:2px;
-  cursor: pointer;
-}
-.archices-left li:last-child{
-  border-bottom:2px solid #828282;
-}
-.archices-left li.is-active{
-  background: #db6d4c;
-  color:white;
-}
-
-.archices-right{
-  background: url('/public/img/dian3.png') repeat-y 180px 10px;/*x,y*/
-}
-
-.archices-right li span{
-  line-height: 50px;
-  font-size: 14px;
-  margin-left:125px;
-}
-/* .archices-right li span:after{
-
-} */
-.archices-right li h3{
-  margin-left:164px;
-  padding-left:40px;
-  color:#db6d4c;
-  font-style: italic;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 24px;
-  background:url('/public/img/jian.png') no-repeat 9px -49px;
-}
-.archices-right li{
-  margin-bottom: 15px;
-}
-
-.archices-right li p{
-  line-height: 50px;
-  padding:0 20px;
-  background: #fff;
-  margin-left:50px;
-  box-shadow:10px 7px 8px -5px #5E5E5E;
-  width: 650px;
-  position: relative;
-  /* background:#fff url('/public/img/jian.png') no-repeat -20px -11px; */
-}
-.archices-right li p::before{
-  content: "";
-  position: absolute;
-  top:50%;
-  left:-10px;
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
-  background:url('/public/img/jian.png') no-repeat -20px -11px;
-}
-/*博客留言页面*/
-.msg-login{
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  margin-left: 5px;
-  border:1px solid #e74851;
-  text-align: center;
-  margin-top:30px;
-  border-radius: 50%;
-  color: #e74851;
-  cursor: pointer;
-}
-
-.msg-input .border-l{
-  height: 97px;
-  background: url('/public/img/border-l.png') no-repeat ;
-  float: left;
-  width: 10px;
-  margin-top:-9px;
-}
-.msg-input .border-r{
-  height: 97px;
-  background: url('/public/img/border-r.png') no-repeat ;
-  float: right;
-  width: 10px;
-  margin-top:-9px;
-}
-.msg-input .border-t{
-  background: url('/public/img/border-t.png') no-repeat 8px;
-  height: 10px;
-  margin-right:10px;
-  /* background-size:contain; */
-}
-.msg-area{
-  border-bottom:1px solid #e74851;
-  height: 88px;
-  margin:0 8px;
-  padding-top:10px;
-  padding-bottom:10px;
-}
-.msg-area textarea{
-  resize: none;
-  width: 99%;
-  border: none;
-  height: 100%;
-  background: transparent;
-}
-.msg-area textarea:focus{
-  outline: none;
-}
-.chat-btn {
-  width: 103px;;
-  height:30px;
-  margin-top:20px;
-  float: right;
-  border: none;
-  cursor: pointer;
-  background: url('/public/img/post-btn-hover.png') no-repeat ;
-}
-.chat-btn:hover{
-  /* background: rgba(0,0,0,.1); */
-  opacity: .9;
-}
-.show-msg{
-  color:#e74851;
-  padding-right:30px;
-  font-size: 12px;
-}
-.mask-login{
-  position: fixed;
-  top:0;
-  bottom:0;
-  width: 100%;
-  background: rgba(0,0,0,.5);
+header > div.my-container .my-hidden.my-before-login {
   display: none;
 }
-.boke-login{
-  position: absolute;
-  top:50%;
-  left:50%;
-  height:474px;
-  width: 384px;
-  background: white;
-  padding:20px 15px;
-  border-radius: 10px;
-  transform: translate(-50%,-50%);
-  text-align: center;
-}
-.boke-login i{
-  cursor: pointer;
-}
-.boke-login i:hover{color:blue;}
 
-.login-title{
-  border-top:1px solid #e5e5e5;
+header .my-padding {
+  width: 1100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  margin:0 auto;
+  display: flex;
+  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+header .my-padding .bg-white {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .my-padding > a {
+  font-family: "my-font0";
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 70px;
+  height:70px;
+}
+
+header .my-padding > ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+header .my-padding > ul li {
+  float: left;
+}
+
+header .my-padding > ul li a {
+  display: inline-block;
+  padding: 0 1rem;
+  color: lightgray;
+  text-decoration: none;
+  font-size: 0.9rem;
+  -webkit-transition: all .6s linear;
+  transition: all .6s linear;
+  line-height: 70px;
+  height:70px;
+}
+
+header .my-padding > ul li a:hover {
+  background: #000;
+}
+
+header .my-padding > ul li:nth-child(3), header .my-padding > ul li:nth-child(6) {
   position: relative;
 }
-.login-title span{
+
+header .my-padding > ul li:nth-child(3)::after {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  background: red;
   position: absolute;
-  top:-12px;
-  left:50%;
-  transform: translateX(-50%);
-  background:white;
-  padding:0 10px;
-  color: #bababa;
+  z-index: 1;
+  top: 20px;
+  left: 50px;
+  border-radius: 50%;
 }
 
-.login-logos i{
-  font-size: 45px;
+header .my-padding > ul li:nth-child(6)::after {
+  content: "HOT";
+  font-size: 12px;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  color: white;
+  display: block;
+  padding:2px 3px;
+  height: 13px;
+  line-height: 13px;
+  background: red;
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  left: 85px;
+  border-radius: 10px;
 }
-.login-logos i:hover{
-  opacity: .8;
+
+header .my-padding div.my-exit {
+  display: none;
 }
-/*通篇不使用弹性布局*/
+
+header .my-padding > div:nth-child(3) {
+  border-radius: 30px;
+  overflow: hidden;
+  padding-left: 0.3rem;
+  height:30px;
+  line-height: 30px;
+}
+
+header .my-padding > div:nth-child(3) input {
+  border: 0;
+  font-size: 0.6rem;
+  line-height: 30px;
+  height:30px;
+  width:120px;
+  padding:0;
+  vertical-align: top;
+}
+
+header .my-padding > div:nth-child(3) input:focus {
+  outline: none;
+}
+
+header .my-padding > div:nth-child(3) i {
+
+  font-size:20px;
+}
+
+header .my-padding > div:nth-child(4) {
+  border-radius: 30px;
+  color: gray;
+  font-size: 0.8rem;
+  border: 1px solid lightgray;
+  padding:0 10px;
+  -webkit-transition: all .6s linear;
+  transition: all .6s linear;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: top;
+}
+
+header .my-padding > div:nth-child(4):hover {
+  border: 1px solid white;
+}
+
+header .my-padding > div:nth-child(5) {
+  position: relative;
+}
+
+header .my-padding > div:nth-child(5) > div:first-child {
+  margin-top: 1.2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 0.2rem;
+}
+
+
+header .my-padding > div:nth-child(5):hover div.my-hidden {
+  display: block;
+}
+
+header .my-padding div.my-login {
+  overflow: visible !important;
+}
+
+header .my-padding div.my-login a {
+  display: inline-block;
+  color: gray;
+  font-size: 0.6rem;
+
+}
+
+header .my-padding div.my-login a:hover {
+  color: lightgray;
+}
+
+header .my-padding div.my-login a:focus {
+  outline: none;
+  border: none;
+}
+
+div.my-hidden {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  left: -55px;
+  top: 57px;
+}
+
+div.my-hidden ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.my-hidden ul li a {
+  display: inline-block;
+  width: 158px;
+  color: gray;
+  font-size: 0.8rem;
+  background: #332828;
+  padding: 0.5rem 0.7rem;
+}
+
+div.my-hidden ul li a:hover {
+  text-decoration: none;
+  background: lightgray;
+}
+
+div.my-hidden ul li:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+div.my-hidden ul li:last-child {
+  border-radius: 5px 5px 0 0;
+}
+
+div.my-hidden i {
+  display: inline-block;
+  height: 20px;
+  font-size: 0.9rem;
+}
+
+header .my-img0 {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  float: left;
+  margin-top:17px;
+  margin-right:10px;
+}
+
+header div.my-change {
+  position: relative;
+  background: #C20C0C;
+}
+
+header div.my-change::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 27.3%;
+  border-width: 0 5px 5px;
+  border-style: solid;
+  border-color: transparent transparent #C20C0C;
+}
+
+
+
+/*有关模态框的样式的编写*/
+.modal-content {
+  width: 500px;
+  height: 330px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -165px;
+  margin-left: -250px;
+}
+
+.modal-header {
+  background: #2D2D2D;
+  padding: 0.2rem 0.8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.modal-header > span:nth-child(2) {
+  color: gainsboro;
+  cursor: pointer;
+}
+
+.modal-header > span:nth-child(2):hover {
+  color: gray;
+}
+
+.modal-body {
+  padding: 22px 10px 22px 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-body > div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-right: 1px solid #e2dede;
+  padding-right: 25px;
+}
+
+.modal-body > div:nth-child(1) button {
+  width: 247px;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+  padding: 0.3rem 0;
+}
+
+.modal-body > div:nth-child(1) button:nth-child(2) {
+  background: #3282CE;
+  margin: 1.5rem 0 1rem;
+  color: white;
+}
+
+.modal-body ul {
+  margin-left: 25px;
+  width: 250px;
+}
+
+.modal-body ul li {
+  margin-bottom: 12px;
+}
+
+.modal-body ul li div {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #bebdbd;
+  font-size: 0.9rem;
+  float: left;
+  margin-right: 9px;
+}
+
+.modal-body ul li em {
+  line-height: 38px;
+  font-size: 12px;
+}
+
+.modal-body ul li:nth-child(1) div {
+  background: url("../img/header01/logo.png") no-repeat;
+  background-position: -150px -670px;
+}
+
+.modal-body ul li:nth-child(2) div {
+  background: url("../img/header01/logo.png") no-repeat;
+  background-position: -190px -670px;
+}
+
+.modal-body ul li:nth-child(3) div {
+  background: url("../img/header01/logo.png") no-repeat;
+  background-position: -231px -670px;
+}
+
+.modal-body ul li:nth-child(4) div {
+  background: url("../img/header01/logo.png") no-repeat;
+  background-position: -271px -670px;
+}
+
+.modal {
+  font-size: 14px;
+  color: gray;
+}
+
+.modal .register {
+  width: 100%;
+  height: 100%;
+}
+
+.modal .register-body {
+  padding: 22px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60.1%;
+  overflow: hidden;
+}
+
+.modal .register-body label {
+  margin-top: 0.5rem;
+}
+
+.modal .register-body button {
+  margin-top: 20px;
+  background: #3282CE;
+  border: 0;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.modal .register-body input {
+  font-size: 13px;
+  padding: 4px 6px;
+}
+
+.modal .check .register-body {
+  padding-top: 43px;
+}
+
+.modal .modal-footer {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 13px;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  margin-top: -52px;
+}
+
+.modal .select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.modal .select select {
+  border-right: none;
+}
+
+.modal input:focus {
+  outline: none;
+}
+
+.modal select:focus {
+  outline: none;
+}
+
+.modal .select option {
+  width: 50px;
+}
+
+.modal .check {
+  display: none;
+}
+
+.modal .my-times {
+  font-size: 25px;
+}
+
+.modal .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .inputs input {
+  border: 0;
+  border-bottom: 2px solid #dad7d7;
+  width: 20%;
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 0;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.modal .my-p {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+.modal .my-p em {
+  vertical-align: bottom;
+  color: black;
+  font-weight: bold;
+}
+
+.modal .my-safe {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.modal .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .time span {
+  opacity: 0;
+  color: red;
+}
+
+.modal .time a {
+  display: none;
+}
+
+.modal .time i {
+  vertical-align: -1px;
+}
+
+.modal .login-next {
+  display: none;
+}
+
+.modal .login-next .select {
+  margin: 40px 0 10px;
+}
+
+.modal .login-next .modal-footer.my-a {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal .login-next .modal-footer.my-a a {
+  font-size: 13px;
+  color: gray;
+}
+
+.modal .my-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+.modal .my-check input {
+  vertical-align: -2px;
+}
+/*结束*/

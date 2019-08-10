@@ -1,198 +1,62 @@
-<!-- {% set path = window %} -->
-
-<style>
-  .test-header{
-    /* margin-bottom: 20px; */
-    font-size:14px;
-    width: 100%;
-    box-shadow: 1px 1px 1px #ddd;
-  }
-  .test-header .top{
-    background: #e7e7e7;
-    border-bottom:1px solid #dedede;
-  }
-  .test-header .content{
-    width: 1000px;
-    margin:0 auto;
-    line-height: 35px;
-  }
-  .test-header .bottom{
-    margin: 0 auto;
-    width: 1000px;
-    line-height: 100px;
-  }
-  .test-header .bottom img{
-    width: 220px;
-    height: 50px;
-    vertical-align: middle;
-  }
-  .test-header .bottom li{
-    float: left;
-    height: 100px;
-    padding:8px;
-    line-height: 100px;
-    transition: all .6s linear;
-  }
-  .test-header .bottom li a{
-    display: block;
-    line-height: 84px;
-    color: inherit;
-  }
-  .test-header a i{padding:0 3px;}
-  .test-header .bottom li:not(:last-child):hover {
-    background: #1e73be;
-    color:white !important;
-  }
-  
-
-</style>
-
-<!--<div class="test-header clearfix">
-
-  <div class="top clearfix">
-    <div class="content">
-      <div class="float-left">
-        <a href="#">欢迎光临！</a>
-        <a href="#"><i class="iconfont icon-tubiao215"></i>登录</i>
-      </div>
-      <div class="float-right">
-        <a href="#" style="padding:0 5px;"><i class="iconfont icon-shouji"></i>用户中心</a>
-        <a href="#"><i class="iconfont icon-fankuiguanli"></i>给我投稿</i>
-      </div>
-    </div>
-  </div>
-
-  <div class="bottom">
-    <img src="/public/img/logo.png" alt="">
-    <ul  class='float-right'>
-      <li><a href="#"><i class="iconfont icon-ganxingqu"></i>首页</a></li>
-      <li><a href="#"><i class="iconfont "></i>生活笔记</a></li>
-      <li><a href="#"><i class="iconfont "></i>技术杂谈</a></li>
-      <li><a href="#"><i class="iconfont "></i>机器学习</a></li>
-      <li><a href="#"><i class="iconfont "></i>网络安全</a></li>
-      <li><a href="#"><i class="iconfont "></i>系统运维</a></li>
-      <li><a href="#"><i class="iconfont "></i>软件工具</a></li>
-      <li><a href="#"><i class="iconfont "></i>留言板</a></li>
-      <li><a href="#"><i class="iconfont "></i>更多<i class="iconfont icon-jiantou1"></i></a></li>
-      <li><a href="#"><i class="iconfont icon-sousuo"></i></a></li>
-    </ul>
-
-  </div>
-</div>-->
-
-
+<!--首页的头部文件-->
 <header>
+  <div class="my-container">
+    <div class="m-auto my-padding">
+      <a href="#">
+        <img src="/index/img/wangyi.jpg" alt="" class="my-img0">
+        <span>网易云音乐</span>
+      </a>
+      <ul>
+        <li><a href="/#" class="active2">发现音乐</a></li>
+        <li><a href="/#">我的音乐</a></li>
+        <li><a href="/#">朋友</a></li>
+        <!--新窗口打开可打开多个并且禁止后退-->
+        <li><a href="../store.html" target="_blank">商城</a></li>
+        <li><a href="../musicpeo.html">音乐人</a></li>
+        <li><a href="/#">下载客户端</a></li>
+      </ul>
 
-  <div class="header-top">
-    <ul class="clearfix">
-      <li><a href="#">关于field</a></li>
-      <li><a href="#">Home</a></li>
-    </ul>
-  </div>
+      <div class="" style="background:white;">
+        <i class="iconfont icon-sousuo"></i>
+        <input type="text" placeholder="音乐/视频/电台/客户">
+      </div>
 
-  <div class="img"></div>
-  <div class="header-bottom">
-    <ul class="nav-horizontal">
-      <li><a title="首页" href="/">首页</a></li>
-      <li><a title="心情随笔" href="/mood/index">心情随笔</a></li>
-      <li><a title="韶华追忆" href="/memory/index?tag=3">韶华追忆</a></li>
-      <li><a title="技术分享" href="/memory/index?tag=12">技术分享</a></li>
-      <li><a title="个人归档" href="/archives/index">个人归档</a></li>
-      <li><a title="书屋" href="#">书屋</a></li>
-      <li><a title="Bolg留言" href="/message/index">Bolg留言</a></li>
-      <li><a title="关于我field" href="#">关于我field</a></li>
-    </ul>
-    <div class="header-search">
-      <input type="text" name="keywords" placeholder="搜索....">
-      <i class="iconfont icon-sousuo"></i>
+      <div>视频投稿</div>
+      <div>
+        <div class="my-exit">
+          <img src="../img/header01/people.jpg" alt="HTML5">
+        </div>
+        <!--隐藏的部分1-->
+        <div class="my-hidden my-before-login" style="display:none">
+          <ul>
+            <li><a href="/#"><i class="pr-2 icon iconfont icon-yonghu"></i>我的主页</a></li>
+            <li><a href="/#"><i class="pr-2 icon iconfont icon-xiaoxi"></i>我的信息</a></li>
+            <li><a href="/#"><i class="pr-2 icon iconfont icon-zijinguanli"></i>我的等级</a></li>
+            <li><a href="/#"><i class="pr-2 icon iconfont icon-shangcheng"></i>VIP会员</a></li>
+            <li><a href="/#"><i class="pr-2 icon iconfont icon-shezhi"></i>个人设置</a></li>
+            <li><a href="javascript:" data-exit="exit"><i class="pr-2 icon iconfont icon-tuichu"></i>退出</a></li>
+          </ul>
+        </div>
+        <!--隐藏的部分2-->
+        <div class="my-login">
+          <b><a href="javascript:"class="goto-login">登录</a></b>
+        </div>
+        <div class="my-hidden my-after-login">
+          <ul>
+            <li><a href="/#"><i class="pr-2 icon iconfont icon-tel"></i>手机号登录</a></li>
+            <li><a href="/#"><i class="pr-2 icon iconfont icon-weixin"></i>微信登录</a></li>
+            <li><a href="/#"><i class="pr-2 icon iconfont icon-qq"></i>QQ登录</a></li>
+            <li><a href="/#"><i class="pr-2 icon iconfont icon-weibo"></i>新浪微博登录</a></li>
+            <li><a href="/#"><i class="pr-2 icon iconfont icon-youxiang"></i>网易邮箱账号登录</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
+
+
+    <!--模态框的使用-->
+
+
   </div>
 </header>
-
-<script>
-  (function(){
-    function handleActive(n){
-      $(`.nav-horizontal li:nth-child(${n}) a`).addClass('index-active').siblings().children('a').removeClass('index-active')
-    }
-    var path = location.pathname
-    var tag = location.search && location.search.split('?')[1].split('=')[1].split('&')[0]
-    
-    if(tag == 12){
-      handleActive(4)
-      return
-    }
-
-    //console.log('{{tag}}')
-    var type = "{{tag}}"
-    if(type && type == 2){
-      handleActive(3)
-      return
-    }else if(type && type == 3){
-      handleActive(4)
-      return
-    }
-    // console.log(document.referrer)
-    // var tag = document.referrer.indexOf('?') > -1 && document.referrer.split('?')[1].split("=")[1]
-    
-    
-    // if(path.indexOf('detail') > -1 && tag == 3){
-    //   handleActive(3)
-    //   return
-    // }else if( path.indexOf('detail') > -1 && tag == 12){
-    //   handleActive(4)
-    //   return
-    // }
-
-    switch(path){
-      case "/":handleActive(1);break;
-      case "/mood/index":handleActive(2);break;
-      case "/memory/index":handleActive(3);break;
-      case "/archives/index":handleActive(5);break;
-      case "/message/index":handleActive(7);break;
-      
-      default:return false
-    }
-
-    function debounce(fn){
-      var timer = null
-      var args = arguments
-      return function(){
-        timer && clearInterval(timer)
-        timer = setTimeout(()=>{
-          fn.apply(this,args)
-        },500)
-      }
-    }
-
-    //监听用户的滚动事件
-    // $(window).scroll(debounce(function(){
-     
-    //   $('.test-header').slideUp('slow')
-    // }))
-
-    $(window).scroll(function(e){
-     
-    })
-
-    $(document).on('mousewheel DOMMouseScroll',function(e){
-      var delta = (e.originalEvent.wheelDelta && (e.originalEvent.wheelDelta > 0 ? 1 : -1)) 
-      //(e.originalEvent.detail && (e.originalEvent.detail > 0 ? -1 : 1))   
-      var top = $(this).scrollTop()
-      
-      if(top > 10 && delta > 0){
-        //console.log('向上滚动')
-
-        $('.test-header').css({'background':"rgba(255,255,255,.95)","position":'fixed'}).slideDown()
-      }
-      if(delta < 0){
-        //console.log('向下滚动')
-        $('.test-header').slideUp()
-      }
-      if(top < 50){
-        $('.test-header').css({"position":'relative','background':"rgba(255,255,255,1)"})
-      }
-    })
-
-  })()
-</script>
-
+<!--有关跳转的思想：做成类似栈类型的数据结构-->
