@@ -6,6 +6,8 @@ use think\Controller;
 use think\Request;
 use think\Db;
 
+define('_CDN_','../application/index/');
+
 //use think\Db;
 class Index  extends Controller
 {
@@ -31,12 +33,12 @@ class Index  extends Controller
       //$this->assign('name','ThinkPHP');
       //$this->assign('email','thinkphp@qq.com');
 
-      $request =  Request::instance();
+      //$request =  Request::instance();
       //dump($request);
       //echo $request->method().'<br />';
       //echo $request->param('name');
-      //return $this->fetch('/index/index');
-      dump(input(''));
+      return $this->fetch('/index/index');
+      //dump(input(''));
     }
     public function db(){
       //插入数据

@@ -11,7 +11,7 @@
 
 
 use think\Route;
-Route::get('/',function(){return "helloworld";});
+Route::get('/','index/Index/index');
 Route::rule('new/:id','index/Index/list');
 
 return [
