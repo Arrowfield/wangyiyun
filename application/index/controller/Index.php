@@ -40,9 +40,10 @@ class Index  extends Controller
     }
     public function db(){
       //插入数据
-      $result = Db::execute(' insert into wy_music_lists (music_title,music_weight) values ("ceshi",10) ');
+      //$result = Db::execute(' insert into wy_music_lists (music_title,music_weight) values ("ceshi",10) ');
       
-      dump($result);
+      //dump($result);
+      $res = Db::table('wy_music_lists')->insert(['music_title'=>'夜曲','music_weight'=>8]);
       //return "123";
     }
     public function home(){
