@@ -1569,3 +1569,470 @@ footer div.my-container > div:first-child div:nth-child(2) ul::after {
 }
 
 /*底部结束*/
+
+/*商场的样式*/
+section.store div.my-container {
+  min-width: 1349px;
+}
+
+section.store div.my-container div:first-child {
+  text-align: center;
+}
+
+section.store div.my-container div:nth-child(2) ul {
+  padding: 1.2rem 0.8rem;
+  margin: 0 auto;
+  width: 965px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.store div.my-container div:nth-child(2) ul li {
+  border-right: 1px solid gray;
+  padding-right: 4.5rem;
+  margin-right: 4.5rem;
+}
+
+section.store div.my-container div:nth-child(2) ul li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 0.8rem;
+  line-height: 48px;
+}
+
+section.store div.my-container div:nth-child(2) ul li:last-child {
+  border-right: 0;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+section.store div.my-container div.my-top {
+  width: 1100px;
+  margin: 4rem auto 0;
+}
+
+section.store div.my-container div.my-top a:nth-child(2) {
+  float: right;
+}
+
+section.store div.my-container div.my-top img {
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+section.store div.my-container div.my-top img:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+section.store div.my-container div.my-bianji, section.store div.my-container div.my-remen {
+  width: 1100px;
+  margin: 5rem auto;
+}
+
+section.store div.my-container div.my-bianji h4, section.store div.my-container div.my-remen h4 {
+  font-weight: bold;
+}
+
+section.store div.my-container div.my-bianji ul.my-ul, section.store div.my-container div.my-remen ul.my-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+section.store div.my-container div.my-bianji ul.my-ul li, section.store div.my-container div.my-remen ul.my-ul li {
+  width: 263px;
+}
+
+section.store div.my-container div.my-bianji ul.my-ul li p > a, section.store div.my-container div.my-remen ul.my-ul li p > a {
+  display: block;
+  margin-top: 0.4rem;
+  height: 41px;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+section.store div.my-container div.my-bianji ul.my-ul li p, section.store div.my-container div.my-remen ul.my-ul li p {
+  margin: 0;
+}
+
+section.store div.my-container div.my-bianji ul.my-ul li p span, section.store div.my-container div.my-remen ul.my-ul li p span {
+  color: red;
+}
+
+section.store div.my-container div.my-bianji ul.my-ul li img, section.store div.my-container div.my-remen ul.my-ul li img {
+  background: #f5f8f8;
+  width: 263px;
+  height: 263px;
+}
+
+section.store div.my-container div.my-bianji ul:nth-child(2), section.store div.my-container div.my-remen ul:nth-child(2) {
+  margin-top: 1rem;
+}
+
+section.store div.my-container div.my-guodu {
+  width: 1100px;
+  margin: 1rem auto;
+  padding: 1rem 4rem;
+  background: #F9F9F9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.store div.my-container div.my-guodu div {
+  text-align: left;
+}
+
+section.store div.my-container div.my-guodu h4 {
+  font-weight: bold;
+  font-size: 1.9rem;
+  font-family: my-font1;
+}
+
+section.store div.my-container div.my-guodu h4 i {
+  font-size: 35px;
+}
+
+section.store div.my-container div.my-guodu h6 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+section.store div.my-container div.my-guodu p {
+  color: gray;
+}
+
+section.store div.my-container div.my-guodu div.img-list {
+  position: relative;
+}
+
+section.store div.my-container div.my-guodu div.img-list img {
+  position: absolute;
+  left: -133px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+section.store div.my-container div.my-guodu div.img-list img:first-child {
+  left: -199px;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+section.store div.my-container div.my-guodu div.img-list img:first-child:hover {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+section.store div.my-container div.my-guodu div.img-list img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+section.store div.my-container div.my-guodu div.img-list i.circle {
+  position: absolute;
+  left: -13px;
+  top: -75px;
+  background: url("../img/store/pointlist.png") no-repeat;
+  background-position: 0 37%;
+  width: 200px;
+  height: 200px;
+}
+
+section.store div.my-container div.my-remen {
+  width: 1100px;
+  margin: 3rem auto;
+}
+
+section.store div.my-container div.my-remen h4 {
+  font-weight: bold;
+}
+
+section.store ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section.store .my-bg1 {
+  background-color: #BEFEFE;
+}
+
+aside.store {
+  position: fixed;
+  top: 25%;
+  left: 93%;
+  z-index: 1;
+  display: none;
+}
+
+aside.store ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+aside.store ul li {
+  width: 60px;
+  text-align: center;
+  height: 60px;
+  padding: 1.1rem 0.6rem;
+  color: gray;
+  font-size: 0.7rem;
+  background: wheat;
+  cursor: pointer;
+}
+
+aside.store ul li:first-child {
+  cursor: auto;
+}
+
+aside.store ul li:nth-child(2) {
+  padding: 1.1rem 0.3rem;
+  cursor: auto;
+}
+
+aside.store ul li:nth-child(3) i {
+  position: relative;
+}
+
+aside.store ul li:nth-child(3) i span {
+  position: absolute;
+  top: -6px;
+  left: 11px;
+  z-index: 1;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-size: 12px;
+  background: red;
+  color: white;
+  text-align: center;
+}
+
+header.store div.my-container {
+ 
+  background: white;
+}
+
+header.store div.my-container > div {
+  width: 1100px;
+  margin: 0 auto;
+  
+  display: -webkit-box;
+  display: -ms-flexbox;
+  align-items: center;
+  height:70px;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header.store div.my-container > div div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header.store div.my-container > div div:first-child span:first-child {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+}
+
+header.store div.my-container > div div:first-child h5 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: my-font1;
+  padding-left: 0.8rem;
+  
+}
+
+header.store div.my-container > div div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  
+  padding-top: 0.1rem;
+}
+
+header.store div.my-container > div div:nth-child(2) div:first-child {
+  border-radius: 38px;
+  overflow: hidden;
+  border: 1px solid gray;
+  background: white;
+  margin-right: 1.8rem;
+  height: 38px;
+  line-height: 38px;
+  padding-left:5px;
+}
+
+header.store div.my-container > div div:nth-child(2) div:first-child input {
+  border: none;
+  vertical-align: 4px;
+  width: 100%;
+  font-size: 0.5rem;
+  height: 38px;;
+}
+
+header.store div.my-container > div div:nth-child(2) div:first-child input:focus {
+  outline: none;
+}
+
+header.store div.my-container > div div:nth-child(2) div:first-child i {
+  font-size: 21px;
+  font-weight: bold;
+
+}
+
+header.store div.my-container > div div:nth-child(2) > span {
+  height: 36px;
+}
+
+header.store div.my-container > div div:nth-child(2) > span i {
+  font-size: 56px;
+  line-height: 36px;
+  position: relative;
+  cursor: pointer;
+}
+
+header.store div.my-container > div div:nth-child(2) > span i > span {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: red;
+  top: 10%;
+  left: 78%;
+  font-size: 0.6rem;
+  line-height: 20px;
+  text-align: center;
+  color: wheat;
+}
+
+header.store div.my-container > div div:nth-child(2) > div:last-child {
+  position: relative;
+}
+
+header.store div.my-container > div div:nth-child(2) > div:last-child > div.my-hover {
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 2rem;
+}
+
+header.store div.my-container > div div:nth-child(2) > div:last-child > div.my-hover.my-login {
+  border-radius: 0;
+}
+
+header.store div.my-container > div div:nth-child(2) > div:last-child > div.my-hover.my-login b {
+  padding-top: 0.3rem;
+}
+
+header.store div.my-container > div div:nth-child(2) > div:last-child > div.my-hover.my-login a {
+  color: gray;
+}
+
+header.store div.my-container > div div:nth-child(2) > div:last-child > span {
+  position: absolute;
+  display: block;
+  border-width: 8px 8px 0;
+  border-style: solid;
+  border-color: gray transparent transparent;
+  z-index: 1;
+  top: 34%;
+  left: 79%;
+}
+
+header.store div.my-container > div div:nth-child(2) > div:last-child ul.my-response {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 46px;
+  left: -30px;
+  z-index: 2;
+  list-style: none;
+  background: #ddd;
+}
+
+header.store div.my-container > div div:nth-child(2) > div:last-child ul.my-response li a {
+  display: inline-block;
+  color: #948989;
+  font-size: 0.8rem;
+  text-decoration: none;
+  width: 10.3rem;
+  padding: 0 1.1rem;
+  line-height: 40px;
+}
+
+header.store div.my-container > div div:nth-child(2) > div:last-child ul.my-response li a:hover {
+  background: #f2f2f2;
+}
+
+header.store div.my-container > div div:nth-child(2) > div:last-child ul.my-response li a i {
+  padding-right: 0.5rem;
+  line-height: 40px;
+  vertical-align: -1px;
+}
+
+header.store div.my-container > div div:nth-child(2) > div:last-child ul.my-response::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-width: 0 9px 9px;
+  border-style: solid;
+  border-color: transparent transparent #ddd;
+  top: -4%;
+  left: 45%;
+  z-index: 1;
+}
+
+header.store div.my-icon .login-after {
+  display: none !important;
+}
+
+header.store div.my-icon:hover ul.my-response {
+  display: block;
+}
+
+header.store .my-img {
+  width: 40px;
+  height: 40px;
+  vertical-align: bottom;
+}
+
+header.store .my-img1 {
+  width: 37px;
+  height: 37px;
+}
+
+header.store ul.login-before {
+  display: none;
+}
+
+header.store .my-ul {
+  display: none;
+}
+
+header.store .my-span {
+  left: 105% !important;
+}
+/*商场样式*/

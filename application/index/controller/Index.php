@@ -62,5 +62,9 @@ class Index  extends Controller
     public function list(){
       return "这是我自己定义的路由规则";
     }
+    public function store(){
+      return $this->fetch('index/store');
+      
+    }
 }
 //模块->控制器->操作

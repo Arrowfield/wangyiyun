@@ -13,6 +13,7 @@
 use think\Route;
 Route::get('api/','api/Index/index');
 Route::rule('new/:id','index/Index/list');
+Route::rule('store/product','index/Index/store');
 
 return [
     '__pattern__' => [
