@@ -9,8 +9,7 @@ use think\Db;
 define('_CDN_','../application/index/');
 
 //use think\Db;
-class Index  extends Controller
-{
+class Index  extends Controller{
     public function index(){
       /** 
        * 首页的数据：
@@ -67,6 +66,9 @@ class Index  extends Controller
     }
     public function musician(){
       return $this->fetch('index/musician');
+    }
+    public function detail(){
+      return $this->fetch('index/detail');
     }
 }
 //模块->控制器->操作

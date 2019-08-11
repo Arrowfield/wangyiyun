@@ -5,12 +5,12 @@ $(function () {
         //mychange('.login')
     })
 
-    $('[data-change=change]').click(function(){
+    $('[data-change=change]').click(function () {
         //if(timer){time=60;clearInterval(timer)}
         $('#demo').hide()
         //mychange('.login')
-      })
-      
+    })
+
 
     $('.modal-header').on({
         mousedown: function (e) {

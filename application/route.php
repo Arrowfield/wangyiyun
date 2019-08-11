@@ -15,6 +15,8 @@ Route::get('api/','api/Index/index');
 Route::rule('new/:id','index/Index/list');
 Route::rule('store/product','index/Index/store');
 Route::rule('nmusician/web/index','index/Index/musician');
+Route::rule('store/product/detail','index/Index/detail');
+//store/product/detail?id=17994022
 
 return [
     '__pattern__' => [

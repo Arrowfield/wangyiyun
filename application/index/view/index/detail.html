@@ -1,0 +1,241 @@
+  <section id="app">
+      <!--全部使用模块化的方式作业-->
+      <all></all>
+  </section>
+
+  <template id="all">
+      <div>
+          <hr class="detail my-hr">
+          <my-magn></my-magn>
+          <my-top></my-top>
+      </div>
+  </template>
+
+  <template id="mymagn">
+      <div class="detail mymagn">
+          <div>
+              <!--此处实现放大镜效果-->
+              <div class="detail my_hidden" style="height:500px">
+                  <img src="" alt="" class="detail my_img1">
+                  <div id="mask" class="detail position-absolute d-none"></div>
+                  <!--小正方形-->
+                  <div id="super-mask" class="detail position-absolute"></div>
+                  <!--大的正方形-->
+                  <div id='div-lg' class="detail position-absolute d-none"></div>
+                  <!--用来存放大图片的div-->
+              </div>
+              <div class="detail mt-2 my_margin my_card" style="width:400px">
+                  <!--放置两个按钮-->
+                  <img src="" alt="" class="detail disabled btn pt-4 pb-4 float-left btn-light border-0">
+                  <div>
+                      <ul id="my_magn">
+                          <li>
+                              <img src="" alt="" class="detail my_img2" data-md='' data-lg=''>
+                          </li>
+                          <li><img src="" alt="" class="detail my_img2" data-md='' data-lg=''></li>
+                          <li><img src="" alt="" class="detail my_img2" data-md='' data-lg=''></li>
+                          <li><img src="" alt="" class="detail my_img2" data-md='' data-lg=''></li>
+                          <li><img src="" alt="" class="detail my_img2" data-md='' data-lg=''></li>
+                          <li><img src="" alt="" class="detail my_img2" data-md='' data-lg=''></li>
+                          <li><img src="" alt="" class="detail my_img2" data-md='' data-lg=''></li>
+                      </ul>
+                  </div>
+                  <img src="" alt="" class="detail btn pt-4 pb-4 btn-light float-right border-0">
+              </div>
+          </div>
+          <div class="detail my-right">
+              <h4 class="detail font-weight-bold" v-text="proDetail.title"></h4>
+              <h6>{{proDetail.subtitle}}</h6>
+              <div>
+                  <div class="detail my_bg1 p-2 mb-3">
+                      <p><span class="detail font-weight-bold">现价：￥{{proDetail.price}}</span>
+                          <span><s>￥172.50</s></span></p>
+                      <p>
+                          <span class="detail text-danger">2人拼团：</span>
+                          <span class="detail text-danger h3">￥78.00</span>
+                          <span class="detail my_margin1">
+                              评价： 1 累积销量： 29
+                          </span>
+                      </p>
+                      <p>魔豆折扣：该商品可使用魔豆低扣3% 价格</p>
+                      <p> 店铺优惠：
+                          <!--小方制作-->
+                          <span class="detail border border-danger p-1 text-danger ">
+                              满99立减3元
+                          </span>
+                          <a href="#" class="detail lingqu">领取</a>
+                          <span class="detail border border-danger p-1 text-danger ">
+                              满199立减15元
+                          </span>
+                          <a href="#" class="detail lingqu">领取</a>
+                      </p>
+                  </div>
+                  <p>客服： <button class="detail bg-white">联系客服</button></p>
+                  <p class="detail pro_color">颜色：
+                      <img src="" alt="">
+                      <img src="" alt="">
+                      <img src="" alt="">
+                      <img src="" alt="">
+                      <img src="" alt="">
+                  </p>
+                  <p class="detail pro_size">尺码：
+                      <span>S</span>
+                      <span>M</span>
+                      <span>L</span>
+                      <span>XL</span>
+                      <span>2XL</span>
+                  </p>
+                  <p>数量：
+                      <button @click="sub()" class="detail my_btn">
+                          -
+                      </button><input type="text" v-model="count" class="detail my_input"><button @click="add()"
+                          class="detail my_btn">
+                          +
+                      </button>
+                      <span>库存{{proDetail.sold_count}}件</span>
+                  </p>
+                  <p class="detail mb-4">
+                      <a href="#" class="detail btn bg-danger text-white rounded-0">2人拼团购买</a>
+                      <a href="#" class="detail btn bg-secondary text-white mr-2 ml-2 rounded-0">现价单独购买</a>
+                      <a href="#" class="detail btn bg-danger text-white rounded-0">购物车</a>
+                  </p>
+                  <p>收藏 分享 举报</p>
+                  <p>服务承诺：{{proDetail.promise}}</p>
+                  <p>支付方式：微信 支付宝 微博</p>
+              </div>
+          </div>
+          <div class="detail my-remai">
+              <h5>热卖推荐</h5>
+              <div class="detail list-hide">
+                  <ul :style="myMargin" class="detail list-unstyled">
+                      <li v-for="(tmp,index) in pic" :key="index">
+                          <img :src="'http://127.0.0.1:3001/'+tmp.md">
+                          <p>￥{{tmp.price}}</p>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </template>
+
+  <template id="mytop">
+      <div v-if="isHide" class="detail main-aside">
+          <div class="detail aside">
+              <div>
+                  <img src="./img/detail/carousel0.jpg">
+                  <p>网易云音乐蓝牙自拍杆 移动充电三挡补光</p>
+                  <span>￥300.00</span>
+              </div>
+              <div>
+                  <button @click="buy">立即购买</button>
+                  <button @click="addCart"><i class="detail icon iconfont icon-shangcheng"></i><em>加入购物车</em></button>
+              </div>
+          </div>
+      </div>
+  </template>
+
+  <script>
+      //详情页
+      (function () {
+          var baseUrl = ""
+          var MyMagn = {
+              template: "#mymagn",
+              data: function () {
+                  return {
+                      proDetail:{},
+                      myMargin: "",
+                      hideHeight: 0,
+                      timer: null,
+                      pic: [],
+                      flag: true,
+                      count: 1
+                  }
+              },
+              //ul的总高度1885px
+              methods: {
+                  handleHide() {
+                      if (this.hideHeight < 1319 && this.flag) {
+                          this.myMargin = "margin-top:-" + (this.hideHeight += 10) + "px";
+                      } else {
+                          this.flag = false;
+                          this.myMargin = "margin-top:-" + (this.hideHeight -= 10) + "px";
+                          if (this.hideHeight == 0) {
+                              this.flag = true
+                          }
+                      }
+                  },
+                  sub() {
+                      this.count--;
+                  },
+                  add() {
+                      this.count++;
+                  }
+              },
+              //生命周期函数
+              created() {
+                  //从数据库中随机获取10条商品数据 图片 单价
+                  var url = baseUrl + "pro/pic";
+                  var self = this;
+                  $.ajax({
+                      url: url,
+                      type: "GET",
+                      success: function (result) {
+                       
+                          self.pic = result.msg;
+                      }
+                  }) //里面的this不是指向外面是VUE实例
+                  //console.log(baseUrl)//作用域链与原型链
+                  this.timer = setInterval(this.handleHide, 100)
+              },
+              destroyed() {
+                  clearInterval(this.timer)
+              }
+          }
+          var MyTop = {
+              template: "#mytop",
+              data: function () {
+                  return {
+                      isHide: false,
+
+                  }
+              },
+              //当存在数据时，对window绑定鼠标滚动监听事件(附带解决抖动问题)
+              methods: {
+                  handleScroll() {
+                      //console.log(window.pageYOffset)//可能不能解决抖动问题吧
+                      if (window.pageYOffset > 400) {
+                          this.isHide = true;
+                      } else {
+                          this.isHide = false;
+                      }
+                  },
+                  buy() {
+                      alert('1')
+                  },
+                  addCart() {
+                      alert('2')
+                  }
+              },
+              created() { //获取得到数据时的生命周期
+                  window.addEventListener('scroll', this.handleScroll)
+              },
+              destroyed() { //离开页面时，执行的操作
+                  window.removeEventListener('scroll', this.handleScroll)
+              }
+          }
+          Vue.component("all", { //全局组件
+              template: "#all",
+              data: function () {
+                  return {}
+              },
+              components: {
+                  MyMagn,
+                  MyTop
+              }
+          })
+          new Vue({
+              el: "#app",
+              data: {}
+          })
+      })()
+  </script>
