@@ -16,6 +16,7 @@ Route::rule('new/:id','index/Index/list');
 Route::rule('store/product','index/Index/store');
 Route::rule('nmusician/web/index','index/Index/musician');
 Route::rule('store/product/detail','index/Index/detail');
+Route::rule('store/cart','index/Index/cart');
 //store/product/detail?id=17994022
 
 return [
