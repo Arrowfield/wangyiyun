@@ -71,7 +71,7 @@ class Index  extends Controller{
       return $this->fetch('index/detail');
     }
     public function cart(){
-      return "123";
+      return $this->fetch('index/cart');
     }
 }
 //模块->控制器->操作
