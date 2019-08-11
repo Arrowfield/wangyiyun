@@ -1595,6 +1595,8 @@ section.store div.my-container div:nth-child(2) ul li {
   border-right: 1px solid gray;
   padding-right: 4.5rem;
   margin-right: 4.5rem;
+  padding-top:10px;
+  padding-bottom:10px;
 }
 
 section.store div.my-container div:nth-child(2) ul li a {
