@@ -14,6 +14,7 @@ use think\Route;
 Route::get('api/','api/Index/index');
 Route::rule('new/:id','index/Index/list');
 Route::rule('store/product','index/Index/store');
+Route::rule('nmusician/web/index','index/Index/musician');
 
 return [
     '__pattern__' => [

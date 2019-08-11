@@ -64,7 +64,9 @@ class Index  extends Controller
     }
     public function store(){
       return $this->fetch('index/store');
-      
+    }
+    public function musician(){
+      return $this->fetch('index/musician');
     }
 }
 //模块->控制器->操作

@@ -2,41 +2,41 @@ html, body {
   width: 100%;
 }
 
-.main-box {
+.main-box.musician {
   width: 100%;
   height: 100%;
   color: gray;
 }
 
-.main-box > div {
+.main-box.musician > div {
   width: 100%;
 }
 
 .my-bg1 {
-  background: url("../img/yinyueren/bg1.jpg") no-repeat;
+  background: url("/index/img/bg1.jpg") no-repeat;
 }
 
 .my-bg2 {
-  background: red url("../img/yinyueren/bg2.jpg") no-repeat;
+  background: red url("/index/img/bg2.jpg") no-repeat;
 }
 
 .my-bg3 {
-  background: red url("../img/yinyueren/bg3.jpg") no-repeat;
+  background: red url("/index/img/bg3.jpg") no-repeat;
 }
 
 .my-bg4 {
-  background: url("../img/yinyueren/bg1.jpg") no-repeat;
+  background: url("/index/img/bg1.jpg") no-repeat;
 }
 
 .my-bg5 {
-  background: red url("../img/yinyueren/bg2.jpg") no-repeat;
+  background: red url("/index/img/bg2.jpg") no-repeat;
 }
 
 .my-bg6 {
-  background: red url("../img/yinyueren/bg3.jpg") no-repeat;
+  background: red url("/index/img/bg3.jpg") no-repeat;
 }
 
-header {
+header.musician {
   background: #242424;
   position: fixed;
   z-index: 1;
@@ -45,7 +45,7 @@ header {
   width: 100%;
 }
 
-header div.my-top {
+header.musician div.my-top {
   width: 1200px;
   margin: 0 auto;
   display: -webkit-box;
@@ -53,7 +53,7 @@ header div.my-top {
   display: flex;
 }
 
-header div.my-top ul {
+header.musician div.my-top ul {
   margin-left: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,7 +63,7 @@ header div.my-top ul {
           justify-content: space-between;
 }
 
-header div.my-top ul li {
+header.musician div.my-top ul li {
   color: white;
   cursor: pointer;
   line-height: 53px;
@@ -71,17 +71,17 @@ header div.my-top ul li {
   padding: 0 30px;
 }
 
-header div.my-top ul li:nth-child(1) {
+header.musician div.my-top ul li:nth-child(1) {
   border-bottom: 2px solid red;
 }
 
-header .my-img0 {
+header.musician .my-img0 {
   width: 35px;
   height: 35px;
   border-radius: 50%;
 }
 
-header div.my-left a {
+header.musician div.my-left a {
   padding: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,7 +95,7 @@ header div.my-left a {
   font-family: my-font0;
 }
 
-header div.my-left a img {
+header.musician div.my-left a img {
   margin-right: 15px;
 }
 /*# sourceMappingURL=musicpeo.css.map */
