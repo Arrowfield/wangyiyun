@@ -58,9 +58,9 @@ class Index  extends Controller{
       //echo \think\facade\App::version();
       //return "hello world"
     }
-    public function list(){
-      return "这是我自己定义的路由规则";
-    }
+    // public function list(){
+    //   return "这是我自己定义的路由规则";
+    // }
     public function store(){
       return $this->fetch('index/store');
     }
@@ -72,6 +72,10 @@ class Index  extends Controller{
     }
     public function cart(){
       return $this->fetch('index/cart');
+    }
+    public function list(){
+      return $this->fetch('index/list');
+      
     }
 }
 //模块->控制器->操作

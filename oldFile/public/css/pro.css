@@ -1,9 +1,9 @@
-section #my-container {
+section.list #my-container {
   width: 1100px;
   margin: 0 auto 1rem;
 }
 
-section #my-container > div:first-child {
+section.list #my-container > div:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,20 +12,20 @@ section #my-container > div:first-child {
   font-weight: bold;
 }
 
-section #my-container > div:first-child em:first-child {
+section.list #my-container > div:first-child em:first-child {
   font-family: my-font1;
 }
 
-section #my-container > div:first-child i {
+section.list #my-container > div:first-child i {
   padding: 0 0.5rem;
 }
 
-section #my-container > div:first-child em:last-child {
+section.list #my-container > div:first-child em:last-child {
   color: gray;
   font-style: normal;
 }
 
-section #my-container div.my-first {
+section.list #my-container div.my-first {
   margin-top: 1.2rem;
   padding: 0rem 1.2rem;
   border: 1px solid #ddd;
@@ -35,42 +35,42 @@ section #my-container div.my-first {
   display: flex;
 }
 
-section #my-container div.my-first b {
+section.list #my-container div.my-first b {
   width: 4rem;
   height: 3rem;
   padding-top: 0.8rem;
 }
 
-section #my-container div.my-first b:last-child {
+section.list #my-container div.my-first b:last-child {
   cursor: pointer;
 }
 
-section #my-container div.my-first > ul {
+section.list #my-container div.my-first > ul {
   padding: 0 2rem;
   width: 920px;
 }
 
-section #my-container div.my-first > ul li {
+section.list #my-container div.my-first > ul li {
   float: left;
   margin-right: 1.8rem;
   padding: 0.8rem 0;
 }
 
-section #my-container div.my-first > ul li a {
+section.list #my-container div.my-first > ul li a {
   font-size: 0.8rem;
   color: black;
 }
 
-section #my-container div.my-first > ul li.my-hidden {
+section.list #my-container div.my-first > ul li.my-hidden {
   padding: 0;
   display: none;
 }
 
-section #my-container div.my-first > ul ul.my-ul {
+section.list #my-container div.my-first > ul ul.my-ul {
   padding-left: 0;
 }
 
-section #my-container div.my-second {
+section.list #my-container div.my-second {
   padding: 0rem 1.2rem;
   border-width: 0 1px 1px;
   border-style: solid;
@@ -81,39 +81,39 @@ section #my-container div.my-second {
   display: flex;
 }
 
-section #my-container div.my-second b {
+section.list #my-container div.my-second b {
   width: 4rem;
   height: 3rem;
   padding-top: 0.8rem;
 }
 
-section #my-container div.my-second > ul {
+section.list #my-container div.my-second > ul {
   padding: 0 2rem;
   width: 920px;
 }
 
-section #my-container div.my-second > ul li {
+section.list #my-container div.my-second > ul li {
   float: left;
   margin-right: 1.8rem;
   padding: 0.8rem 0;
 }
 
-section #my-container div.my-second > ul li a {
+section.list #my-container div.my-second > ul li a {
   font-size: 0.8rem;
   color: black;
 }
 
-section #my-container div.my-second li div.my-choice {
+section.list #my-container div.my-second li div.my-choice {
   line-height: 25px;
 }
 
-section #my-container div.my-second li div.my-choice > input {
+section.list #my-container div.my-second li div.my-choice > input {
   width: 68px;
   height: 30px;
   vertical-align: bottom;
 }
 
-section #my-container div.my-second li div.my-choice > button {
+section.list #my-container div.my-second li div.my-choice > button {
   width: 54px;
   height: 30px;
   font-size: 0.8rem;
@@ -122,20 +122,20 @@ section #my-container div.my-second li div.my-choice > button {
   cursor: pointer;
 }
 
-section #my-container div.my-second li div.my-choice > button:focus {
+section.list #my-container div.my-second li div.my-choice > button:focus {
   outline: none;
 }
 
-section #my-container div.my-second li div.my-choice b:first-child {
+section.list #my-container div.my-second li div.my-choice b:first-child {
   font-size: 0.8rem;
   color: gray;
 }
 
-section #my-container > h6.my-list {
+section.list #my-container > h6.my-list {
   font-weight: bold;
 }
 
-section #my-container > h6.my-list b {
+section.list #my-container > h6.my-list b {
   padding-left: 0.8rem;
   color: gray;
   font-size: 1.2rem;
@@ -143,16 +143,16 @@ section #my-container > h6.my-list b {
   cursor: pointer;
 }
 
-section #my-container > h6.my-list b:hover {
+section.list #my-container > h6.my-list b:hover {
   color: black;
 }
 
-section #my-container div.my-remen {
+section.list #my-container div.my-remen {
   width: 1100px;
   margin: 0 auto;
 }
 
-section #my-container div.my-remen ul.my-ul {
+section.list #my-container div.my-remen ul.my-ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,13 +162,13 @@ section #my-container div.my-remen ul.my-ul {
       flex-wrap: wrap;
 }
 
-section #my-container div.my-remen ul.my-ul li {
+section.list #my-container div.my-remen ul.my-ul li {
   width: 263px;
   margin-top: 2rem;
   margin-right: 16px;
 }
 
-section #my-container div.my-remen ul.my-ul li p > a {
+section.list #my-container div.my-remen ul.my-ul li p > a {
   display: block;
   margin-top: 0.4rem;
   height: 40px;
@@ -176,21 +176,21 @@ section #my-container div.my-remen ul.my-ul li p > a {
   color: gray;
 }
 
-section #my-container div.my-remen ul.my-ul li p {
+section.list #my-container div.my-remen ul.my-ul li p {
   margin: 0;
 }
 
-section #my-container div.my-remen ul.my-ul li p span {
+section.list #my-container div.my-remen ul.my-ul li p span {
   color: red;
 }
 
-section #my-container div.my-remen ul.my-ul li img {
+section.list #my-container div.my-remen ul.my-ul li img {
   background: #f5f8f8;
   width: 263px;
   height: 263px;
 }
 
-section #my-container div.my-remen ul.my-ul li:nth-child(4n) {
+section.list #my-container div.my-remen ul.my-ul li:nth-child(4n) {
   margin-right: 0;
 }
 

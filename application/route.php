@@ -17,7 +17,9 @@ Route::rule('store/product','index/Index/store');
 Route::rule('nmusician/web/index','index/Index/musician');
 Route::rule('store/product/detail','index/Index/detail');
 Route::rule('store/cart','index/Index/cart');
+Route::rule('store/product/variouskind','index/Index/list');
 //store/product/detail?id=17994022
+//store/product/variouskind?cid=101000&title=数码影音
 
 return [
     '__pattern__' => [

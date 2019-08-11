@@ -80,7 +80,7 @@
          <ul class="my-list" id="my-list">
              <li v-for="(tmp,index) in list" :key="index">
                  <input type="checkbox" @change="handleChange" v-model="tmp.is_checked" class="my-input my-center">
-                 <img :src="'http://127.0.0.1:3001/'+tmp.md" alt="HTML5">
+                 <img :src="'http://127.0.0.1:3001/'+tmp.md" alt="">
                  <p class="my-detail">
                      <a :href="'./detail.html?pid='+tmp.lid">{{tmp.title}}</a>
                      <span class="intro">{{tmp.subtitle}}</span>
