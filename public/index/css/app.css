@@ -2147,7 +2147,7 @@ header.musician div.my-left a img {
 /*从蘑菇街架过来之后的样式*/
 .detail.my-hr {
   width: 1100px;
-  margin: 90px auto 0;
+  margin: 30px auto 0;
   background: black;
 }
 
@@ -2157,16 +2157,13 @@ header.musician div.my-left a img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: space-between;
 }
 
 .detail.my-right {
   font-size: 14px;
   color: gray;
-  padding: 0 20px;
-  border-right: 1px solid #d4d1d1;
+  width: 580px;
 }
 
 .detail.pro_size span {
@@ -2335,6 +2332,8 @@ header.musician div.my-left a img {
 
 .detail.my_bg1 {
   background-color: #dee2e6;
+  padding:10px;
+  line-height: 30px;
 }
 
 .detail.my_bg2 {
@@ -2381,8 +2380,9 @@ table tr td {
 }
 
 .detail.my_hidden {
-  width: 400px;
+  width: 440px;
   position: relative;
+  border:1px solid #ddd;
   /*overflow-y: hidden;*/
 }
 
@@ -2395,15 +2395,15 @@ table tr td {
 }
 
 .detail.my_btn {
-  width: 1.detail.5rem;
-  height: 1.detail.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .detail.my_input {
-  width: 1.detail.5rem;
-  height: 1.detail.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   text-align: center;
-  vertical-align: top;
+ 
 }
 
 .detail.my_small {

@@ -1,3 +1,60 @@
+  <header class="store">
+      <div class="my-container">
+          <!--开始-->
+          <div>
+              <div>
+                  <span class="float-left" style="margin-top:3px;"><a href="/"><img src="/index/img/wangyi.jpg"
+                              alt="HTML5" class="my-img"></a></span>
+                  <h5>网易云音乐<b class="text-danger">·</b>商城</h5>
+              </div>
+              <div>
+                  <div>
+                      <i class="icon iconfont icon-sousuo"></i>
+                      <input type="text" placeholder="氧气耳机" data-search="find">
+                  </div>
+                  <span>
+                      <i class="icon iconfont icon-shangcheng" data-cart="cart"><span>0</span></i>
+                  </span>
+                  <div class="my-icon">
+                      <div style="border:none;" class="my-hover border-0 my-login login-before">
+                          <b style="line-height:normal;"><a href="#">登录</a></b>
+                      </div>
+                      <ul class="my-response login-before">
+                          <li><a href="../order.html" target="_self">
+                                  <i class="icon iconfont icon-tel"></i>手机号登录</a></li>
+                          <li><a href="#">
+                                  <i class="icon iconfont icon-weixin"></i>微信登录</a></li>
+                          <li><a href="#">
+                                  <i class="icon iconfont icon-qq"></i>QQ登录</a></li>
+                          <li><a href="../index.html">
+                                  <i class="icon iconfont icon-weibo"></i>新浪微博登录</a></li>
+                          <li><a href="../index.html">
+                                  <i class="icon iconfont icon-youxiang"></i>网易邮箱账号登录</a></li>
+                      </ul>
+                      <span class="login-before"></span>
+
+                      <div class="my-hover login-after my-div">
+                          <img src="../img/header01/people.jpg" alt="HTML5" class="my-img1">
+                      </div>
+                      <ul class="my-response login-after my-ul">
+                          <li><a href="../order.html" target="_self">
+                                  <i class="icon iconfont icon-dingdan" data-dingdan='dingdan'></i>我的订单</a></li>
+                          <li><a href="#">
+                                  <i class="icon iconfont icon-youhuiquan"></i>我的优惠券</a></li>
+                          <li><a href="#">
+                                  <i class="icon iconfont icon-shouhuodizhi"></i>我的收货地址</a></li>
+                          <li><a href="../index.html">
+                                  <i class="icon iconfont icon-shouye"></i>网易云音乐首页</a></li>
+                          <li><a href="javascript:;">
+                                  <i class="icon iconfont icon-tuichu"></i>退出</a></li>
+                      </ul>
+                      <span class="login-after my-span"></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
   <section id="app">
       <!--全部使用模块化的方式作业-->
       <all></all>
@@ -17,12 +74,12 @@
               <!--此处实现放大镜效果-->
               <div class="detail my_hidden" style="height:500px">
                   <img src="" alt="" class="detail my_img1">
-                  <div id="mask" class="detail position-absolute d-none"></div>
-                  <!--小正方形-->
-                  <div id="super-mask" class="detail position-absolute"></div>
-                  <!--大的正方形-->
-                  <div id='div-lg' class="detail position-absolute d-none"></div>
-                  <!--用来存放大图片的div-->
+                  <div style="display:none" id="mask" class="detail position-absolute d-none"></div>
+
+                  <div style="display:none" id="super-mask" class="detail position-absolute"></div>
+
+                  <div style="display:none" id='div-lg' class="detail position-absolute d-none"></div>
+
               </div>
               <div class="detail mt-2 my_margin my_card" style="width:400px">
                   <!--放置两个按钮-->
@@ -46,7 +103,8 @@
           <div class="detail my-right">
               <h4 class="detail font-weight-bold" v-text="proDetail.title"></h4>
               <h6>{{proDetail.subtitle}}</h6>
-              <div>
+
+              <div style="">
                   <div class="detail my_bg1 p-2 mb-3">
                       <p><span class="detail font-weight-bold">现价：￥{{proDetail.price}}</span>
                           <span><s>￥172.50</s></span></p>
@@ -70,51 +128,44 @@
                           <a href="#" class="detail lingqu">领取</a>
                       </p>
                   </div>
-                  <p>客服： <button class="detail bg-white">联系客服</button></p>
-                  <p class="detail pro_color">颜色：
-                      <img src="" alt="">
-                      <img src="" alt="">
-                      <img src="" alt="">
-                      <img src="" alt="">
-                      <img src="" alt="">
-                  </p>
-                  <p class="detail pro_size">尺码：
-                      <span>S</span>
-                      <span>M</span>
-                      <span>L</span>
-                      <span>XL</span>
-                      <span>2XL</span>
-                  </p>
-                  <p>数量：
-                      <button @click="sub()" class="detail my_btn">
-                          -
-                      </button><input type="text" v-model="count" class="detail my_input"><button @click="add()"
-                          class="detail my_btn">
-                          +
-                      </button>
-                      <span>库存{{proDetail.sold_count}}件</span>
-                  </p>
-                  <p class="detail mb-4">
-                      <a href="#" class="detail btn bg-danger text-white rounded-0">2人拼团购买</a>
-                      <a href="#" class="detail btn bg-secondary text-white mr-2 ml-2 rounded-0">现价单独购买</a>
-                      <a href="#" class="detail btn bg-danger text-white rounded-0">购物车</a>
-                  </p>
-                  <p>收藏 分享 举报</p>
-                  <p>服务承诺：{{proDetail.promise}}</p>
-                  <p>支付方式：微信 支付宝 微博</p>
+                  <div style="line-height:40px;padding:10px;">
+                      <p>客服： <button class="detail bg-white">联系客服</button></p>
+                      <p class="detail pro_color">颜色：
+                          <img src="" alt="">
+                          <img src="" alt="">
+                          <img src="" alt="">
+                          <img src="" alt="">
+                          <img src="" alt="">
+                      </p>
+                      <p class="detail pro_size">尺码：
+                          <span>S</span>
+                          <span>M</span>
+                          <span>L</span>
+                          <span>XL</span>
+                          <span>2XL</span>
+                      </p>
+                      <p>数量：
+                          <button @click="sub()" class="detail my_btn">
+                              -
+                          </button><input type="text" v-model="count" class="detail my_input"><button @click="add()"
+                              class="detail my_btn">
+                              +
+                          </button>
+                          <span>库存{{proDetail.sold_count}}件</span>
+                      </p>
+                      <p class="detail mb-4">
+                          <a href="#" class="detail btn bg-danger text-white rounded-0">2人拼团购买</a>
+                          <a href="#" class="detail btn bg-secondary text-white mr-2 ml-2 rounded-0">现价单独购买</a>
+                          <a href="#" class="detail btn bg-danger text-white rounded-0">购物车</a>
+                      </p>
+                      <p>收藏 分享 举报</p>
+                      <p>服务承诺：{{proDetail.promise}}</p>
+                      <p>支付方式：微信 支付宝 微博</p>
+                  </div>
               </div>
           </div>
-          <div class="detail my-remai">
-              <h5>热卖推荐</h5>
-              <div class="detail list-hide">
-                  <ul :style="myMargin" class="detail list-unstyled">
-                      <li v-for="(tmp,index) in pic" :key="index">
-                          <img :src="'http://127.0.0.1:3001/'+tmp.md">
-                          <p>￥{{tmp.price}}</p>
-                      </li>
-                  </ul>
-              </div>
-          </div>
+
+
       </div>
   </template>
 
@@ -142,7 +193,7 @@
               template: "#mymagn",
               data: function () {
                   return {
-                      proDetail:{},
+                      proDetail: {},
                       myMargin: "",
                       hideHeight: 0,
                       timer: null,
@@ -180,7 +231,7 @@
                       url: url,
                       type: "GET",
                       success: function (result) {
-                       
+
                           self.pic = result.msg;
                       }
                   }) //里面的this不是指向外面是VUE实例
