@@ -63,9 +63,8 @@
 </header>
 
 
-<div id="demo" class="modal login">
+<div class="modal login" id="demo" >
   <div class="modal-content">
-
     <div class="login">
       <div class="modal-header">
         <span>登录</span>
@@ -149,6 +148,7 @@
 
   </div>
 </div>
+
 <div class="modal">
   <div class="modal-content-one">
     <div class="login-next">
@@ -181,13 +181,16 @@
     </div>
   </div>
 </div>
+
 <script>
   (function () {
     $('.my-login').click(function () {
+      $('#demo').show()
       $('#demo>.modal-content').show()
     })
     $('[data-log="login"]').click(function () {
       $('#demo').hide()
+      $('.modal:not(".login")').show()
       $('.modal-content-one').show()
     })
   })()
