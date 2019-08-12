@@ -403,7 +403,7 @@ header div.my-change::after {
 }
 
 .modal .register-body {
-  padding: 22px 40px;
+  padding: 22px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,7 +412,7 @@ header div.my-change::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 60.1%;
+  width:280px;
   overflow: hidden;
 }
 
