@@ -11,7 +11,7 @@ class MusicLists extends Controller {
         if($music->save()){
             return "新增歌曲成功";
         }else{
-             return "新增歌曲失败";
+            return "新增歌曲失败";
         }
     }
 }

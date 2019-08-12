@@ -75,7 +75,7 @@ class Index  extends Controller{
     }
     public function list(){
       return $this->fetch('index/list');
-      
     }
+    
 }
 //模块->控制器->操作
