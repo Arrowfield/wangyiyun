@@ -269,7 +269,7 @@ header div.my-change::after {
 
 
 /*有关模态框的样式的编写*/
-.modal-content,.modal-content-one {
+.modal-content,.modal-content-one,.modal-content-two,.modal-content-three {
   width: 500px;
   height: 330px;
   overflow: hidden;
