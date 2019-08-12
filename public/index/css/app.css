@@ -444,9 +444,9 @@ header div.my-change::after {
   font-size: 13px;
   position: absolute;
   width: 100%;
-  top: 100%;
+  top: calc(100% - 50px);
   left: 0;
-  margin-top: -52px;
+  
 }
 
 .modal .select {
