@@ -65,7 +65,7 @@
 
 <div id="demo" class="modal login">
   <div class="modal-content">
-   
+
     <div class="login">
       <div class="modal-header">
         <span>登录</span>
@@ -93,8 +93,8 @@
         </ul>
       </div>
     </div>
-    
-    
+
+
     <!--div class="register">
       <div class="modal-header">
         <span>手机号注册</span>
@@ -117,7 +117,7 @@
         <div><a href="javascript:">&lt;返回登录页</a></div>
       </div>
     </div-->
-   
+
     <!--div class="check">
       <div class="modal-header">
         <span>手机号注册</span>
@@ -142,8 +142,15 @@
       <div class="modal-footer">
         <div><a href="javascript:" data-toLogin="toLogin">&lt;返回登录页</a></div>
       </div>
-    </div>
+    </div-->
 
+
+
+
+  </div>
+</div>
+<div class="modal">
+  <div class="modal-content-one">
     <div class="login-next">
       <div class="modal-header">
         <span>手机号登录</span>
@@ -171,15 +178,17 @@
         <div><a href="javascript:">&lt;返回登录页</a></div>
         <a href="#">没有账号？免费注册&gt;</a>
       </div>
-    </div-->
-
+    </div>
   </div>
 </div>
-
 <script>
-  (function(){
-    $('.my-login').click(function(){
+  (function () {
+    $('.my-login').click(function () {
       $('#demo>.modal-content').show()
+    })
+    $('[data-log="login"]').click(function () {
+      $('#demo').hide()
+      $('.modal-content-one').show()
     })
   })()
 </script>

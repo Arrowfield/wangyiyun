@@ -269,7 +269,7 @@ header div.my-change::after {
 
 
 /*有关模态框的样式的编写*/
-.modal-content {
+.modal-content,.modal-content-one {
   width: 500px;
   height: 330px;
   overflow: hidden;
@@ -284,6 +284,8 @@ header div.my-change::after {
   box-shadow: 13px 13px 11px -8px grey;
   display: none;
 }
+
+
 
 .modal-header {
   background: #2D2D2D;
@@ -545,9 +547,7 @@ header div.my-change::after {
   vertical-align: -1px;
 }
 
-.modal .login-next {
-  display: none;
-}
+
 
 .modal .login-next .select {
   margin: 40px 0 10px;
