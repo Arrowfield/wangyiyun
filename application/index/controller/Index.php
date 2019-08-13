@@ -36,8 +36,10 @@ class Index  extends Controller{
       //dump($request);
       //echo $request->method().'<br />';
       //echo $request->param('name');
+      $user = session('userInfo');
+      // echo $user ;
       return $this->fetch('/index/index');
-      //dump(input(''));
+      
     }
     public function db(){
       //插入数据

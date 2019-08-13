@@ -27,11 +27,11 @@ class User extends Controller{
 
     //dump(UserModel);
     $user = UserModel::get(['phone'=>$phone,'upwd'=>$upwd]);
-    echo $user;
+    
     //echo $request->host();
-    //return redirect('http://www.field.com');
+    return redirect('/index/index/index')->with('userInfo',$user);
     //echo $upwd.$phone;
     //$data = ['name' => 'thinkphp','status' => '1'];
-    //return json($data);//输出json
+    //return json($data);//输出json;
   }
 }
