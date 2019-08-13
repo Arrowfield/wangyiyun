@@ -1,7 +1,7 @@
 <?php
-namespace app\index\modal;
-use think\Modal;
+namespace app\index\model;
+use think\Model;
 
-class User extends Modal{
-  //protected $pk = 'uid';
+class User extends Model{
+  protected $pk = 'uid';
 }

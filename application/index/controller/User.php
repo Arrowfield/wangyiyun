@@ -25,9 +25,9 @@ class User extends Controller{
     $phone = $request->param()['phone'];
     $upwd = $request->param()['upwd'];
 
-    dump(UserModel);
-    //$user = UserModel::get(1);
-    //echo $user;
+    //dump(UserModel);
+    $user = UserModel::get(1);
+    echo $user;
     //echo $request->host();
     //return redirect('http://www.field.com');
     //echo $upwd.$phone;
