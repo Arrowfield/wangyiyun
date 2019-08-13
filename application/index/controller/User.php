@@ -2,8 +2,16 @@
 namespace app\index\controller;
 use think\Controller;
 use think\Request;
+use app\index\model\User as UserModel;
+
 class User extends Controller{
   
+  protected $user ;
+
+  function __construct() {
+    //$this->$user = UserModel::instance();
+  }
+
   public function index(){
     return "login sucess";
   }
@@ -17,7 +25,10 @@ class User extends Controller{
     $phone = $request->param()['phone'];
     $upwd = $request->param()['upwd'];
 
-    echo $request->host();
+    dump(UserModel);
+    //$user = UserModel::get(1);
+    //echo $user;
+    //echo $request->host();
     //return redirect('http://www.field.com');
     //echo $upwd.$phone;
     //$data = ['name' => 'thinkphp','status' => '1'];
