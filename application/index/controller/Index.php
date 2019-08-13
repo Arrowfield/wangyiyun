@@ -38,6 +38,7 @@ class Index  extends Controller{
       //echo $request->param('name');
       $user = session('userInfo');
       // echo $user ;
+      $this->assign('userInfo',$user);
       return $this->fetch('/index/index');
       
     }
