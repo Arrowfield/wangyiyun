@@ -12,7 +12,7 @@
 
 use think\Route;
 //页面渲染
-Route::get('api/','api/Index/index');
+Route::get('api','api/Index/index');
 Route::rule('new/:id','index/Index/list');
 Route::rule('store/product','index/Index/store');
 Route::rule('nmusician/web/index','index/Index/musician');
@@ -21,7 +21,8 @@ Route::rule('store/cart','index/Index/cart');
 Route::rule('store/product/variouskind','index/Index/list');
 
 //接口调用
-Route::get('api/user/login',"index/User/login");
+Route::get('/api/user/login',"index/User/login");
+Route::post('/api/user/github','index/User/githubLogin');
 
 //store/product/detail?id=17994022
 //store/product/variouskind?cid=101000&title=数码影音
