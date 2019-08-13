@@ -12,3 +12,7 @@
 + 时间2019-8-10号，项目暂时告一段落
 + X-Powered-By: PHP/7.1.14
 + 继承至蘑菇+node
+
++ git clone -b master https://github.com/top-think/think tp5
+
++ git clone -b master https://github.com/top-think/framework thinkphp
