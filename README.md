@@ -18,3 +18,9 @@
 + 访问自己配置的域名即可
 
 + 注意：配置的路径不能带有中文
++ X-Powered-By: PHP/7.1.14
++ 继承至蘑菇+node
+
++ git clone -b master https://github.com/top-think/think tp5
+
++ git clone -b master https://github.com/top-think/framework thinkphp

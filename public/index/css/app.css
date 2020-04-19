@@ -269,7 +269,7 @@ header div.my-change::after {
 
 
 /*有关模态框的样式的编写*/
-.modal-content {
+.modal-content,.modal-content-one,.modal-content-two,.modal-content-three {
   width: 500px;
   height: 330px;
   overflow: hidden;
@@ -284,6 +284,8 @@ header div.my-change::after {
   box-shadow: 13px 13px 11px -8px grey;
   display: none;
 }
+
+
 
 .modal-header {
   background: #2D2D2D;
@@ -401,7 +403,7 @@ header div.my-change::after {
 }
 
 .modal .register-body {
-  padding: 22px 40px;
+  padding: 22px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -410,7 +412,7 @@ header div.my-change::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 60.1%;
+  width:280px;
   overflow: hidden;
 }
 
@@ -442,9 +444,9 @@ header div.my-change::after {
   font-size: 13px;
   position: absolute;
   width: 100%;
-  top: 100%;
+  top: calc(100% - 50px);
   left: 0;
-  margin-top: -52px;
+  
 }
 
 .modal .select {
@@ -545,9 +547,7 @@ header div.my-change::after {
   vertical-align: -1px;
 }
 
-.modal .login-next {
-  display: none;
-}
+
 
 .modal .login-next .select {
   margin: 40px 0 10px;

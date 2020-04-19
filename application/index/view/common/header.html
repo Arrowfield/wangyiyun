@@ -23,7 +23,7 @@
       <div>视频投稿</div>
 
 
-      <!--隐藏的部分2-->
+
       <div class="my-login" style="padding-bottom:10px;">
         <b><a href="javascript:" style="font-size:13px;" class="goto-login">登录<i
               class="iconfont icon-sanjiao"></i></a></b>
@@ -63,9 +63,8 @@
 </header>
 
 
-<div id="demo" class="modal login">
+<div class="modal login" id="demo">
   <div class="modal-content">
-   
     <div class="login">
       <div class="modal-header">
         <span>登录</span>
@@ -93,8 +92,8 @@
         </ul>
       </div>
     </div>
-    
-    
+
+
     <!--div class="register">
       <div class="modal-header">
         <span>手机号注册</span>
@@ -117,7 +116,7 @@
         <div><a href="javascript:">&lt;返回登录页</a></div>
       </div>
     </div-->
-   
+
     <!--div class="check">
       <div class="modal-header">
         <span>手机号注册</span>
@@ -142,36 +141,87 @@
       <div class="modal-footer">
         <div><a href="javascript:" data-toLogin="toLogin">&lt;返回登录页</a></div>
       </div>
-    </div>
+    </div-->
+
+
+
+
+  </div>
+</div>
+
+<div class="modal">
+  <div class="modal-content-one">
 
     <div class="login-next">
+
       <div class="modal-header">
         <span>手机号登录</span>
         <span data-dismiss="modal" data-change="change" class="my-times">&times;</span>
       </div>
-      <div class="register-body">
-        <div class="select">
-          <select>
-            <option>+86</option>
-            <option>+852</option>
-          </select>
-          <input type="text" id="uname" name="uname" placeholder="请输入手机号">
-        </div>
-        <input type="password" id="upwd" name="upwd" placeholder="请输入密码">
-        <div class="my-check">
-          <div>
-            <input type="checkbox">
-            <em>自动登录</em>
+      <form method="POST" action="/api/user/github">
+        <div class="register-body">
+          <div class="select">
+            <select style="flex:0 0 80px;">
+              <option>+86</option>
+              <option>+852</option>
+            </select>
+            <input style="flex:0 0 200px;" type="text" id="uname" name="phone" placeholder="请输入手机号">
           </div>
-          <em>忘记密码？</em>
-        </div>
-        <button data-login="login">登录</button>
-      </div>
-      <div class="modal-footer my-a">
-        <div><a href="javascript:">&lt;返回登录页</a></div>
-        <a href="#">没有账号？免费注册&gt;</a>
-      </div>
-    </div-->
+          <input style="" type="password" id="upwd" name="upwd" placeholder="请输入密码">
 
+          <div class="my-check">
+            <div>
+              <input type="checkbox">
+              <em>自动登录</em>
+            </div>
+            <em>忘记密码？</em>
+          </div>
+
+          <button type='submit' style="color:white;" data-login="login">登录</button>
+        </div>
+      </form>
+      <div class="modal-footer my-a" style="line-height: 50px;background: #f7f7f7;">
+
+        <div style="padding-left:10px;" class="float-left"><a href="javascript:">&lt;返回登录页</a></div>
+        <a style="padding-right:10px;" class="float-right" href="#">没有账号？免费注册&gt;</a>
+
+      </div>
+
+    </div>
   </div>
 </div>
+
+<div class="modal">
+  <div class="modal-content-two"></div>
+</div>
+
+<div class="modal">
+  <div class="modal-content-three"></div>
+</div>
+
+
+
+<script>
+  (function () {
+    $('.my-login').click(function () {
+      $('#demo').show()
+      $('#demo>.modal-content').show()
+    })
+    $('[data-log="login"]').click(function () {
+      $('#demo').hide()
+      $('.modal:not(".login")').show()
+      $('.modal-content-one').show()
+    })
+
+    $('[type="submit"]').click(function (e) {
+      var phone, upwd
+      phone = $('[name=phone]').val()
+      upwd = $('[name=upwd]').val()
+      if (!phone || !upwd) {
+        alert('请输入登录信息')
+        e.preventDefault()
+      }
+    })
+
+  })()
+</script>

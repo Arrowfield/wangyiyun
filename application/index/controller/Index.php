@@ -36,8 +36,11 @@ class Index  extends Controller{
       //dump($request);
       //echo $request->method().'<br />';
       //echo $request->param('name');
+      $user = session('userInfo');
+      // echo $user ;
+      $this->assign('userInfo',$user);
       return $this->fetch('/index/index');
-      //dump(input(''));
+      
     }
     public function db(){
       //插入数据
@@ -75,7 +78,7 @@ class Index  extends Controller{
     }
     public function list(){
       return $this->fetch('index/list');
-      
     }
+    
 }
 //模块->控制器->操作

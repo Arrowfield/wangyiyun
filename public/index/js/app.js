@@ -7,14 +7,16 @@ $(function () {
 
     $('[data-change=change]').click(function () {
         //if(timer){time=60;clearInterval(timer)}
-        $('#demo').hide()
+        
+        $(this).parents('.modal').hide()
+        $(this).parent().parent().parent().css({top:"50%",left:"50%"})
         //mychange('.login')
     })
 
 
     $('.modal-header').on({
         mousedown: function (e) {
-            var el = $('.modal-content')
+            var el = $(this).parent().parent()
             var os = el.offset();
             var left = e.pageX - os.left,
                 top = e.pageY - os.top;
