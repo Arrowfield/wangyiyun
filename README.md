@@ -10,3 +10,11 @@
 + php think 命令行工具<https://blog.csdn.net/qq_39125684/article/details/80674276>
 + php 安装环境
 + 时间2019-8-10号，项目暂时告一段落
+
++ 启动项目的步骤
++ 1.官网下载基本目录结构<https://www.kancloud.cn/manual/thinkphp5_1/353946>
++ 2.php think run
++ 执行代码 启动项目 无法启动thinkphp的内置服务器 就使用php工具箱搭建基于Apache的服务器 打开域名站点管理 配置域名 修改host文件 将网站目录指向E:\wangyiyun\public即可
++ 访问自己配置的域名即可
+
++ 注意：配置的路径不能带有中文
